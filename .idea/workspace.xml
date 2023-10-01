@@ -5,63 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/data_login.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_actions.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_keywords.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_locators.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Login/invaild_login.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver/LICENSE.chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver/chromedriver_win32.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LuanVan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DungB1910201.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drivers/chrome.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/chrome.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drivers/firefox.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/firefox.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/init.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/init.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/setting.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/setting.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Environment_Test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Environment_Test.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Login/Login.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
