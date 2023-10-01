@@ -1,0 +1,10 @@
+NAME_PAGE:  http://localhost:4200/login
+BROWSER: chrome
+CHROME_DRIVER_PATH_WINS:  chromedriver/chromedriver.exe
+CHROME_DRIVER_PATH_UNIX:  ""
+# Website-Under-Test URL
+ENV: "DEV"
+ENVIRONMENT:
+  DEV:
+#    WEB_URL:  http://localhost:4200/login
+    LANGUAGE: "EN"

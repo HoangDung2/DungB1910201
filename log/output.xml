@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230930 20:00:37.235" rpa="false" schemaversion="4">
+<suite id="s1" name="Invaild Login" source="D:\LuanVan\DungB1910201\Tests\ui\Login\invaild_login.robot">
+<test id="s1-t1" name="TC-01: Validate Contains Unfill Username And Password." line="9">
+<kw name="Validate The Data Username And Password OF Login">
+<arg>${TC_01.USERNAME}</arg>
+<arg>${TC_01.PASSWORD}</arg>
+<kw name="Given User Open Browser And Go To Website" library="Environment_Test">
+<kw name="Open Chrome Browser And Go To Login Page" library="Environment_Test">
+<arg>${NAME_PAGE}</arg>
+<doc>Open Chrome Browser and go to login page</doc>
+<kw name="Evaluate" library="BuiltIn">
+<var>${system}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:37.627" level="INFO">${system} = Windows</msg>
+<status status="PASS" starttime="20230930 20:00:37.615" endtime="20230930 20:00:37.628"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:37.628" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002442F51F250&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:37.628" endtime="20230930 20:00:37.629"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Linux'</arg>
+<arg>Run Keywords</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>ignore-certificate-errors</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size\=1920,1080</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230930 20:00:37.629" endtime="20230930 20:00:37.629"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${driver_path}</var>
+<arg>'${system}'=='Linux'</arg>
+<arg>Set Variable</arg>
+<arg>${CHROME_DRIVER_PATH_UNIX}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20230930 20:00:37.630" endtime="20230930 20:00:37.630"/>
+</kw>
+<msg timestamp="20230930 20:00:37.630" level="INFO">${driver_path} = D:\LuanVan\DungB1910201/chromedriver/chromedriver.exe</msg>
+<status status="PASS" starttime="20230930 20:00:37.629" endtime="20230930 20:00:37.630"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${kwargs}</var>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230930 20:00:37.631" level="INFO">${kwargs} = {'executable_path': 'D:\\LuanVan\\DungB1910201/chromedriver/chromedriver.exe'}</msg>
+<status status="PASS" starttime="20230930 20:00:37.630" endtime="20230930 20:00:37.631"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230930 20:00:37.631" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230930 20:00:37.631" endtime="20230930 20:00:38.861"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Windows'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 20:00:38.862" endtime="20230930 20:00:38.972"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:38.862" endtime="20230930 20:00:38.972"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 20:00:38.973" level="INFO">Opening url 'http://localhost:4200/login'</msg>
+<status status="PASS" starttime="20230930 20:00:38.972" endtime="20230930 20:00:40.864"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:37.615" endtime="20230930 20:00:40.865"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:37.614" endtime="20230930 20:00:40.865"/>
+</kw>
+<kw name="Then Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:40.866" endtime="20230930 20:00:40.891"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:40.891" endtime="20230930 20:00:40.908"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:40.865" endtime="20230930 20:00:40.909"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:00:41.557" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:40.909" endtime="20230930 20:00:41.557"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:40.909" endtime="20230930 20:00:41.558"/>
+</kw>
+<kw name="When User input Username And Password" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Username" library="login_actions">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:41.559" endtime="20230930 20:00:41.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:00:41.600" level="INFO">Typing text '' into text field 'css=input[id='username']'.</msg>
+<status status="PASS" starttime="20230930 20:00:41.598" endtime="20230930 20:00:41.673"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:41.559" endtime="20230930 20:00:41.673"/>
+</kw>
+<kw name="Input Password" library="login_actions">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:41.674" endtime="20230930 20:00:41.686"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:00:41.687" level="INFO">Typing text '' into text field 'css=input[id='password']'.</msg>
+<status status="PASS" starttime="20230930 20:00:41.686" endtime="20230930 20:00:41.730"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:41.673" endtime="20230930 20:00:41.730"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:41.558" endtime="20230930 20:00:41.730"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:00:42.691" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:41.730" endtime="20230930 20:00:42.692"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:41.730" endtime="20230930 20:00:42.692"/>
+</kw>
+<kw name="Then Verify Username and Password Is Invaid" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:42.695" endtime="20230930 20:00:42.722"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:42.723" endtime="20230930 20:00:42.749"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:42.693" endtime="20230930 20:00:42.749"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230930 20:00:42.749" endtime="20230930 20:00:42.750"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230930 20:00:42.750" endtime="20230930 20:00:42.751"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:42.693" endtime="20230930 20:00:42.751"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:00:43.395" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:42.752" endtime="20230930 20:00:43.395"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:42.751" endtime="20230930 20:00:43.395"/>
+</kw>
+<kw name="And Click Button Submit" library="login_actions">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSumit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:43.396" endtime="20230930 20:00:43.414"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSumit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230930 20:00:43.415" level="INFO">Clicking element 'xpath=//button[contains(@text(),'')]'.</msg>
+<status status="PASS" starttime="20230930 20:00:43.414" endtime="20230930 20:00:43.463"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:43.396" endtime="20230930 20:00:43.463"/>
+</kw>
+<kw name="Then Verify Failed Login Message" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${contentMessFail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:43.463" endtime="20230930 20:00:43.479"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${contentMessFail}</arg>
+<arg>${infoMessFail}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20230930 20:00:43.480" level="FAIL">'xpath=//div[@class='swal2-popup swal2-modal swal2-icon-error swal2-show']//h2' does not contain 'Đăng nhập thất bại'</msg>
+<status status="FAIL" starttime="20230930 20:00:43.480" endtime="20230930 20:00:43.480"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:43.463" endtime="20230930 20:00:43.481"/>
+</kw>
+<kw name="And Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20230930 20:00:43.481" endtime="20230930 20:00:43.481"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:37.613" endtime="20230930 20:00:43.482"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230930 20:00:43.482" endtime="20230930 20:00:45.734"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:37.613" endtime="20230930 20:00:45.734">'xpath=//div[@class='swal2-popup swal2-modal swal2-icon-error swal2-show']//h2' does not contain 'Đăng nhập thất bại'</status>
+</test>
+<test id="s1-t2" name="TC-02: Validate Contains Fill Username And Unfill Password." line="10">
+<kw name="Validate The Data Username And Password OF Login">
+<arg>${TC_02.USERNAME}</arg>
+<arg>${TC_02.PASSWORD}</arg>
+<kw name="Given User Open Browser And Go To Website" library="Environment_Test">
+<kw name="Open Chrome Browser And Go To Login Page" library="Environment_Test">
+<arg>${NAME_PAGE}</arg>
+<doc>Open Chrome Browser and go to login page</doc>
+<kw name="Evaluate" library="BuiltIn">
+<var>${system}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:45.737" level="INFO">${system} = Windows</msg>
+<status status="PASS" starttime="20230930 20:00:45.737" endtime="20230930 20:00:45.737"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:45.737" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002442F54AC10&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:45.737" endtime="20230930 20:00:45.738"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Linux'</arg>
+<arg>Run Keywords</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>ignore-certificate-errors</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size\=1920,1080</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230930 20:00:45.738" endtime="20230930 20:00:45.738"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${driver_path}</var>
+<arg>'${system}'=='Linux'</arg>
+<arg>Set Variable</arg>
+<arg>${CHROME_DRIVER_PATH_UNIX}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20230930 20:00:45.740" endtime="20230930 20:00:45.740"/>
+</kw>
+<msg timestamp="20230930 20:00:45.740" level="INFO">${driver_path} = D:\LuanVan\DungB1910201/chromedriver/chromedriver.exe</msg>
+<status status="PASS" starttime="20230930 20:00:45.738" endtime="20230930 20:00:45.740"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${kwargs}</var>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230930 20:00:45.740" level="INFO">${kwargs} = {'executable_path': 'D:\\LuanVan\\DungB1910201/chromedriver/chromedriver.exe'}</msg>
+<status status="PASS" starttime="20230930 20:00:45.740" endtime="20230930 20:00:45.741"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230930 20:00:45.741" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230930 20:00:45.741" endtime="20230930 20:00:46.881"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Windows'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 20:00:46.882" endtime="20230930 20:00:46.995"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:46.882" endtime="20230930 20:00:46.995"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 20:00:46.995" level="INFO">Opening url 'http://localhost:4200/login'</msg>
+<status status="PASS" starttime="20230930 20:00:46.995" endtime="20230930 20:00:49.862"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:45.737" endtime="20230930 20:00:49.862"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:45.737" endtime="20230930 20:00:49.863"/>
+</kw>
+<kw name="Then Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:49.864" endtime="20230930 20:00:49.887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:49.887" endtime="20230930 20:00:49.904"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:49.863" endtime="20230930 20:00:49.904"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:00:50.480" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:49.905" endtime="20230930 20:00:50.480"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:49.905" endtime="20230930 20:00:50.480"/>
+</kw>
+<kw name="When User input Username And Password" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Username" library="login_actions">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:50.481" endtime="20230930 20:00:50.494"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:00:50.495" level="INFO">Typing text 'invalidusername' into text field 'css=input[id='username']'.</msg>
+<status status="PASS" starttime="20230930 20:00:50.494" endtime="20230930 20:00:50.575"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:50.481" endtime="20230930 20:00:50.575"/>
+</kw>
+<kw name="Input Password" library="login_actions">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:50.575" endtime="20230930 20:00:50.589"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:00:50.590" level="INFO">Typing text '' into text field 'css=input[id='password']'.</msg>
+<status status="PASS" starttime="20230930 20:00:50.589" endtime="20230930 20:00:50.642"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:50.575" endtime="20230930 20:00:50.642"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:50.481" endtime="20230930 20:00:50.642"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:00:51.342" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:50.643" endtime="20230930 20:00:51.343"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:50.642" endtime="20230930 20:00:51.343"/>
+</kw>
+<kw name="Then Verify Username and Password Is Invaid" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:51.344" endtime="20230930 20:00:51.362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:00:51.363" endtime="20230930 20:00:51.385"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:51.344" endtime="20230930 20:00:51.385"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20230930 20:00:51.386" level="FAIL">'css=input[id='username']' does not contain 'invalidusername'</msg>
+<status status="FAIL" starttime="20230930 20:00:51.385" endtime="20230930 20:00:51.386"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20230930 20:00:51.387" endtime="20230930 20:00:51.387"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:51.343" endtime="20230930 20:00:51.388"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<status status="NOT RUN" starttime="20230930 20:00:51.388" endtime="20230930 20:00:51.388"/>
+</kw>
+<kw name="And Click Button Submit" library="login_actions">
+<status status="NOT RUN" starttime="20230930 20:00:51.388" endtime="20230930 20:00:51.389"/>
+</kw>
+<kw name="Then Verify Failed Login Message" library="login_keywords">
+<status status="NOT RUN" starttime="20230930 20:00:51.389" endtime="20230930 20:00:51.389"/>
+</kw>
+<kw name="And Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20230930 20:00:51.389" endtime="20230930 20:00:51.389"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:45.735" endtime="20230930 20:00:51.389"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230930 20:00:51.390" endtime="20230930 20:00:55.044"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:45.735" endtime="20230930 20:00:55.044">'css=input[id='username']' does not contain 'invalidusername'</status>
+</test>
+<test id="s1-t3" name="TC-03: Validate Contains Unfill Username And Fill Password." line="11">
+<kw name="Validate The Data Username And Password OF Login">
+<arg>${TC_03.USERNAME}</arg>
+<arg>${TC_03.PASSWORD}</arg>
+<kw name="Given User Open Browser And Go To Website" library="Environment_Test">
+<kw name="Open Chrome Browser And Go To Login Page" library="Environment_Test">
+<arg>${NAME_PAGE}</arg>
+<doc>Open Chrome Browser and go to login page</doc>
+<kw name="Evaluate" library="BuiltIn">
+<var>${system}</var>
+<arg>platform.system()</arg>
+<arg>platform</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:55.048" level="INFO">${system} = Windows</msg>
+<status status="PASS" starttime="20230930 20:00:55.048" endtime="20230930 20:00:55.048"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230930 20:00:55.049" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002442F5777D0&gt;</msg>
+<status status="PASS" starttime="20230930 20:00:55.048" endtime="20230930 20:00:55.049"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Linux'</arg>
+<arg>Run Keywords</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>ignore-certificate-errors</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<arg>AND</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size\=1920,1080</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230930 20:00:55.049" endtime="20230930 20:00:55.050"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${driver_path}</var>
+<arg>'${system}'=='Linux'</arg>
+<arg>Set Variable</arg>
+<arg>${CHROME_DRIVER_PATH_UNIX}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${EXECDIR}/${CHROME_DRIVER_PATH_WINS}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20230930 20:00:55.050" endtime="20230930 20:00:55.051"/>
+</kw>
+<msg timestamp="20230930 20:00:55.051" level="INFO">${driver_path} = D:\LuanVan\DungB1910201/chromedriver/chromedriver.exe</msg>
+<status status="PASS" starttime="20230930 20:00:55.050" endtime="20230930 20:00:55.051"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${kwargs}</var>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230930 20:00:55.052" level="INFO">${kwargs} = {'executable_path': 'D:\\LuanVan\\DungB1910201/chromedriver/chromedriver.exe'}</msg>
+<status status="PASS" starttime="20230930 20:00:55.051" endtime="20230930 20:00:55.052"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230930 20:00:55.052" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230930 20:00:55.052" endtime="20230930 20:00:56.148"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${system}'=='Windows'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 20:00:56.149" endtime="20230930 20:00:56.266"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:56.148" endtime="20230930 20:00:56.266"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 20:00:56.266" level="INFO">Opening url 'http://localhost:4200/login'</msg>
+<status status="PASS" starttime="20230930 20:00:56.266" endtime="20230930 20:02:16.970"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:55.047" endtime="20230930 20:02:16.970"/>
+</kw>
+<status status="PASS" starttime="20230930 20:00:55.047" endtime="20230930 20:02:16.970"/>
+</kw>
+<kw name="Then Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:16.971" endtime="20230930 20:02:16.996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:16.996" endtime="20230930 20:02:17.013"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:16.971" endtime="20230930 20:02:17.013"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:02:17.591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:02:17.014" endtime="20230930 20:02:17.592"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:17.014" endtime="20230930 20:02:17.592"/>
+</kw>
+<kw name="When User input Username And Password" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Username" library="login_actions">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:17.593" endtime="20230930 20:02:17.604"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:02:17.605" level="INFO">Typing text '' into text field 'css=input[id='username']'.</msg>
+<status status="PASS" starttime="20230930 20:02:17.604" endtime="20230930 20:02:17.680"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:17.592" endtime="20230930 20:02:17.680"/>
+</kw>
+<kw name="Input Password" library="login_actions">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:17.681" endtime="20230930 20:02:17.693"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 20:02:17.694" level="INFO">Typing text 'invalidpassword' into text field 'css=input[id='password']'.</msg>
+<status status="PASS" starttime="20230930 20:02:17.693" endtime="20230930 20:02:17.758"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:17.681" endtime="20230930 20:02:17.758"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:17.592" endtime="20230930 20:02:17.758"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230930 20:02:18.432" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230930 20:02:17.759" endtime="20230930 20:02:18.432"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:17.758" endtime="20230930 20:02:18.432"/>
+</kw>
+<kw name="Then Verify Username and Password Is Invaid" library="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Verify That from Fill In Username And password Are Displayed" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorUsername}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:18.433" endtime="20230930 20:02:18.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locatorPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 20:02:18.447" endtime="20230930 20:02:18.460"/>
+</kw>
+<status status="PASS" starttime="20230930 20:02:18.433" endtime="20230930 20:02:18.460"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorUsername}</arg>
+<arg>${username}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230930 20:02:18.460" endtime="20230930 20:02:18.461"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${locatorPassword}</arg>
+<arg>${password}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20230930 20:02:18.461" level="FAIL">'css=input[id='password']' does not contain 'invalidpassword'</msg>
+<status status="FAIL" starttime="20230930 20:02:18.461" endtime="20230930 20:02:18.462"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:02:18.433" endtime="20230930 20:02:18.462"/>
+</kw>
+<kw name="And Capture and Save Screenshot" library="login_keywords">
+<status status="NOT RUN" starttime="20230930 20:02:18.462" endtime="20230930 20:02:18.462"/>
+</kw>
+<kw name="And Click Button Submit" library="login_actions">
+<status status="NOT RUN" starttime="20230930 20:02:18.463" endtime="20230930 20:02:18.463"/>
+</kw>
+<kw name="Then Verify Failed Login Message" library="login_keywords">
+<status status="NOT RUN" starttime="20230930 20:02:18.463" endtime="20230930 20:02:18.464"/>
+</kw>
+<kw name="And Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" starttime="20230930 20:02:18.464" endtime="20230930 20:02:18.465"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:55.045" endtime="20230930 20:02:18.465"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230930 20:02:18.466" endtime="20230930 20:02:22.098"/>
+</kw>
+<status status="FAIL" starttime="20230930 20:00:55.045" endtime="20230930 20:02:22.098">'css=input[id='password']' does not contain 'invalidpassword'</status>
+</test>
+<status status="FAIL" starttime="20230930 20:00:37.238" endtime="20230930 20:02:22.098"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Invaild Login">Invaild Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

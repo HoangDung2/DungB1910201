@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/data_login.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_actions.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_keywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/modules/Login/login_locators.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/Login/invaild_login.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver/LICENSE.chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver/chromedriver_win32.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LuanVan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DungB1910201.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drivers/chrome.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/chrome.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drivers/firefox.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/firefox.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/commons/init.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/init.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/setting.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/setting.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Environment_Test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Environment_Test.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/Login/Login.robot" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Roaming/Python/Python311/site-packages/robot/libraries/BuiltIn.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Tests/Environment_Test.robot" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2Vkzo8pREQVEH0sPkWjlVal2bEI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Examp-RF&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="" />
+      <created>1695395038062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695395038062</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
