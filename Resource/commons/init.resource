@@ -13,4 +13,8 @@ Resource    ../../Resource/modules/Home/home_locator.robot
 #----Login----
 Resource    ../../Resource/modules/Login/login_actions.robot
 Resource    ../../Resource/modules/Login/login_locators.robot
+Resource    ../../Resource/modules/Login/login_keywords.robot
+#----Data----
 Variables    ../../Data/data_login.yml
+#----Environment----
+Resource    ../../Tests/Environment_Test.robot

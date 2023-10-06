@@ -1,9 +1,8 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
-#Test Setup  User Open Browser And Go To Website
 Test Template   Validate The Data Username And Password OF Login Successfully
 Test Teardown   Close Browser
-*** Variables ***
+Test Tags   Login
 *** Test Cases ***
 TC-05: Validate Login Username And Password Should Be Successfully.  ${TC_05.USERNAME}   ${TC_05.PASSWORD}
 *** Keywords ***
