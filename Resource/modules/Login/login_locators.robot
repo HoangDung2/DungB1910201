@@ -1,8 +1,9 @@
 *** Variables ***
 ${locatorUsername}  css=input[id='username']
 ${locatorPassword}  css=input[id='password']
-${contentMessFail}  xpath=//div[@class='swal2-popup swal2-modal swal2-icon-error swal2-show']//h2
-${btnSumit}     xpath=//button[contains(@text(),'')]
+${locatorMess}  xpath=//div[@id='swal2-html-container']
+${btnSumit}     xpath=//button[@type='submit']
 #----Message Login----
-${infoMessFail}     Đăng nhập thất bại
-${infoIDFail}
+${messFail}     Đăng nhập thất bại
+${messCompleteinfo}     Vui lòng điền đầy đủ thông tin
+${messCheckinfo}    Vui lòng kiểm tra lại tài khoản và mật khẩu

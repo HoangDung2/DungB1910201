@@ -3,13 +3,19 @@ TC_01:
   PASSWORD: ""
 
 TC_02:
-  USERNAME: "invalidusername"
+  USERNAME: invalidusername
   PASSWORD: ""
 
 TC_03:
   USERNAME: ""
-  PASSWORD: "invalidpassword"
+  PASSWORD: invalidpassword
 
 TC_04:
-  USERNAME: "B191024012312"
+  USERNAME: "text"
   PASSWORD: "123"
+
+TC_05:
+  USERNAME: "B1910240"
+  PASSWORD: "123"
+
+

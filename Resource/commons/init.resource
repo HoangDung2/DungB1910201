@@ -1,4 +1,5 @@
 *** Settings ***
+Library             XML
 Library             Screenshot
 Library             Collections
 Library             JsonValidator

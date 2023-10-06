@@ -11,5 +11,8 @@ Input Password
     Wait Until Element Is Visible    ${locatorPassword}
     Input Text    ${locatorPassword}    ${password}
 Click Button Submit
-    Wait Until Element Is Visible    ${btnSumit}
-    Click Element   ${btnSumit}
+    [Arguments]  ${locator}
+    Wait Until Element Is Visible    ${locator}
+    Click Element   ${locator}
+Wait Notification Shoulde Be Displayed
+    Sleep  1
