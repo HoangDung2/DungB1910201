@@ -7,3 +7,5 @@ ${btnSumit}     xpath=//button[@type='submit']
 ${messFail}     Đăng nhập thất bại
 ${messCompleteinfo}     Vui lòng điền đầy đủ thông tin
 ${messCheckinfo}    Vui lòng kiểm tra lại tài khoản và mật khẩu
+
+

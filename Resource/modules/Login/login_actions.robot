@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
-Resource    login_locators.robot
 *** Keywords ***
 Input Username
     [Arguments]   ${username}
@@ -14,5 +13,3 @@ Click Button Submit
     [Arguments]  ${locator}
     Wait Until Element Is Visible    ${locator}
     Click Element   ${locator}
-Wait Notification Shoulde Be Displayed
-    Sleep  1

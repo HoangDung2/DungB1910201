@@ -11,7 +11,6 @@ Verify Menu Home Icon
             Element Should Be Visible    ${Temp}
             Append To List    ${list}    ${Temp}
     END
-    Log To Console    ${list}
 Verify Dashboard Home Page
     ${list}     Create List
         FOR     ${element}  IN  @{lishDashboar}
@@ -20,16 +19,9 @@ Verify Dashboard Home Page
             Element Should Be Visible    ${Temp}
             Append To List    ${list}    ${Temp}
     END
-    Log To Console  ${list}
 Verify Slogan And Logo Home PAge
-    #custom key này lại
-    Wait Until Element Is Visible    ${iconLogo}
-    Wait Until Element Is Visible    ${sloganHome_1}
-    Wait Until Element Is Visible    ${sloganHome_2}
-    ${text_logo}=   Get Text    ${iconLogo}
-    ${text_slogan1}=    Get Text    ${sloganHome_1}
-    ${text_slogan2}=    Get Text    ${sloganHome_2}
-    Should Be Equal As Strings    ${text_logo}    ${logoHome}
-    Should Be Equal As Strings    ${text_slogan1}   ${sloganMess_1}
-    Should Be Equal As Strings    ${text_slogan2}   ${sloganMess_2}
+    Compare Text    ${iconLogo}     ${logoHome}
+    Compare Text    ${sloganHome_1}     ${sloganMess_1}
+    Compare Text    ${sloganHome_2}     ${sloganMess_2}
+
 

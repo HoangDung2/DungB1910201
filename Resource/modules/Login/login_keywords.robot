@@ -21,9 +21,7 @@ Verify Failed Login Message
     Wait Until Element Is Visible    ${locator}
     ${text}=    Get Text    ${locator}
     Should Contain   ${text}  ${mess}
-Capture and Save Screenshot
-    Capture Page Screenshot
-Verify Home Page Shoulde Be Displayed
+Verify Home Page Should Be Displayed
     Verify Menu Home Icon
     Verify Dashboard Home Page
     Verify Slogan And Logo Home Page

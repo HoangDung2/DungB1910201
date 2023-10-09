@@ -5,7 +5,10 @@ Library             Collections
 Library             JsonValidator
 Library             Process
 Library             OperatingSystem
-Library             SeleniumLibrary
+Library             String
+Library             DatabaseLibrary
+#Library             SeleniumLibrary
+Library             AutoLibrary
 Resource            common_keyword.resource
 #----Home----
 Resource    ../../Resource/modules/Home/home_actions.robot
@@ -14,6 +17,13 @@ Resource    ../../Resource/modules/Home/home_locator.robot
 Resource    ../../Resource/modules/Login/login_actions.robot
 Resource    ../../Resource/modules/Login/login_locators.robot
 Resource    ../../Resource/modules/Login/login_keywords.robot
+#----InformationStudent
+Resource    ../../Resource/modules/InformationStudent/info_locators.robot
+Resource    ../../Resource/modules/InformationStudent/info_keywords.robot
+#----RoomType----
+Resource    ../../Resource/modules/RoomType/room_actions.robot
+Resource    ../../Resource/modules/RoomType/room_keywords.robot
+Resource    ../../Resource/modules/RoomType/room_locators.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 #----Environment----

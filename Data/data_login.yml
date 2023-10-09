@@ -15,7 +15,22 @@ TC_04:
   PASSWORD: "123"
 
 TC_05:
-  USERNAME: "B1910240"
+  USERNAME: "text@gmail.com"
   PASSWORD: "123"
 
+TC_06:
+  USERNAME: "0866422045"
+  PASSWORD: "123"
+
+TC_07:
+  USERNAME: "@!@#!@#!@#"
+  PASSWORD: "123"
+
+TC_08:
+  USERNAME: "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdea"
+  PASSWORD: "123"
+
+TC_09:
+  USERNAME: "B1910240"
+  PASSWORD: "123"
 
