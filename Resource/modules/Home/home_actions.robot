@@ -11,6 +11,7 @@ Verify Menu Home Icon
             Element Should Be Visible    ${Temp}
             Append To List    ${list}    ${Temp}
     END
+
 Verify Dashboard Home Page
     ${list}     Create List
         FOR     ${element}  IN  @{lishDashboar}
@@ -19,9 +20,19 @@ Verify Dashboard Home Page
             Element Should Be Visible    ${Temp}
             Append To List    ${list}    ${Temp}
     END
+
 Verify Slogan And Logo Home PAge
     Compare Text    ${iconLogo}     ${logoHome}
     Compare Text    ${sloganHome_1}     ${sloganMess_1}
     Compare Text    ${sloganHome_2}     ${sloganMess_2}
 
+Click Nav Service
+    Wait Until Element Is Visible   ${locatorService}
+    Click Element   ${locatorService}
+    Sleep    2s
+
+Click Nav MaterialRepair
+    Wait Until Element Is Visible   ${locatorMaterialRepair}
+    Click Element    ${locatorMaterialRepair}
+    Sleep    2s
 

@@ -6,6 +6,17 @@ class  ElementKeywords(LibraryComponent):
         self.selenium_keyword = LibraryComponent(ctx)
         self.selenium_waiting = WaitingKeywords(ctx)
     @keyword
+    def dymanic_xpath(self,info,locator):
+        """
+        :param info:
+        :param locator:
+        :return:
+        """
+        temp="{}".format(locator)
+        locator1=temp.format(info)
+        self.selenium_waiting.is_visible(locator1)
+        return locator1
+    @keyword
     def compare_text(self,locator,string):
         """
         :param locator: Input locator get value

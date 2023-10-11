@@ -30,3 +30,19 @@ Student Login Into Dormitory System
 Wait Notification Should Be Displayed
     Sleep  1
 
+Scroll From Top to Bottom of Page And Capture Page Screenshot
+    Capture Page Screenshot
+    ${scroll_height}=    Execute JavaScript    return Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    # Chia chiều cao thành 3 phần
+    ${part_height}=    Evaluate    int(${scroll_height} / 3)
+    Execute JavaScript    window.scrollTo(0, ${part_height})
+    Capture Page Screenshot
+    Sleep    1s
+    Execute JavaScript    window.scrollTo(0, ${part_height} * 2)
+    Capture Page Screenshot
+    Sleep    1s
+    Execute JavaScript    window.scrollTo(0, ${scroll_height})
+    Sleep    1s
+    Capture Page Screenshot
+
+

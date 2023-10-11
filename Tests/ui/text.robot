@@ -27,5 +27,17 @@ ${a}     Máy lạnh
 #    Log To Console    Difference in days: ${difference.days}
 Test_1:ABC
     [Tags]  test123
-    Get Element Table    ${a}  ${cooking}
+    Verify Room Should Be Displayed
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Set Viewport Size    1920    1080
+Scroll From Top to Bottom of Page And Capture Page Screenshot
+    Open Browser    https://example.com    chrome
+    # Your test steps here
+    Click Element   //button[@id='your-button-id']   # Example action
+
+    # Use Execute JavaScript to scroll to the bottom of the page
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+
+    Capture Page Screenshot    full=True   # Capture the screenshot after scrolling
+    Close Browser
 
