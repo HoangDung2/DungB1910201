@@ -4,7 +4,9 @@ Test Teardown   Close Browser
 Test Tags   RoomType
 *** Test Cases ***
 TC-01:Validate Room Type Have Air_conditioned And Number All.
-       Given Student Login Into Dormitory System     ${TC_09.USERNAME}   ${TC_09.PASSWORD}
+       [Documentation]  This test case verifes then All Room Type Have Air_conditioned shoulde be displayed After Login
+       [Tags]   CheckAllRoomAir
+       Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed
        And Capture Page Screenshot
        When Navigate To The RoomType Page By Click Nav Link RoomType
@@ -15,7 +17,9 @@ TC-01:Validate Room Type Have Air_conditioned And Number All.
        And Verifyl Room Have All Air_conditioned Should Be Displayed
        And Scroll From Top to Bottom of Page And Capture Page Screenshot
 TC-02:Validate Room Type Have Cooking And Number All.
-       Given Student Login Into Dormitory System     ${TC_09.USERNAME}   ${TC_09.PASSWORD}
+       [Documentation]  This test case verifes then All Room Type Have Cooking shoulde be displayed After Login
+       [Tags]   CheckAllRoomCook
+       Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed
        And Capture Page Screenshot
        When Navigate To The RoomType Page By Click Nav Link RoomType
@@ -26,7 +30,9 @@ TC-02:Validate Room Type Have Cooking And Number All.
        And Verify Room Have All Cooking Should Be Displayed
        And Scroll From Top to Bottom of Page And Capture Page Screenshot
 TC-03:Validate Room Type Have Colab 'Air_conditioned,Cook' And Number All.
-       Given Student Login Into Dormitory System     ${TC_09.USERNAME}   ${TC_09.PASSWORD}
+       [Documentation]  This test case verifes then All Room Type Have Collab Air_condi and Cookiing shoulde be displayed After Login
+       [Tags]   CheckAllRoomCollab
+       Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed
        And Capture Page Screenshot
        When Navigate To The RoomType Page By Click Nav Link RoomType

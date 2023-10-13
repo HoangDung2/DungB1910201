@@ -5,26 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resource/modules/ConnectDB/connect_database.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_airCond.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_ariAndCook.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_cooking.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valida_roomtype_allNumber.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/elementkeywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/elementkeywords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/tablekeywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/tablekeywords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/data_login.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_login.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/init.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/init.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_actions.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home/home_locator.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_locators.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/RoomType/room_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/RoomType/room_keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/RoomType/room_locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/RoomType/room_locators.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/setting.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/setting.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ui/InfoStudent/valid_info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/InfoStudent/valid_info.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/text.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/text.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/Login/invalid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Login/invalid_login.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_airCond.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_airCond.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_ariAndCook.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_ariAndCook.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_cooking.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_cooking.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valida_roomtype_allNumber.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valida_roomtype_allNumber.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,11 +112,6 @@
         <line-breakpoint enabled="true" type="robot-line">
           <url>file://$PROJECT_DIR$/Libs/AutoLibrary/keyword/elementkeywords.py</url>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="robot-line">
-          <url>file://$PROJECT_DIR$/Tests/ui/Login/valid_login.robot</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

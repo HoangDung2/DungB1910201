@@ -30,7 +30,6 @@ TC_08:
   USERNAME: "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdea"
   PASSWORD: "123"
 
-TC_09:
-  USERNAME: "B1910240"
-  PASSWORD: "123"
+USERNAME: "B1910240"
+PASSWORD: "123"
 

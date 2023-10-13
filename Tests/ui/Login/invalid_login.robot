@@ -15,6 +15,9 @@ TC-07: Validate Contains Fill Form Login Input Username By Special characters.  
 TC-08: Validate Contains Fill Form Login Input Username > 50 characters.    ${TC_08.USERNAME}  ${TC_08.PASSWORD}    ${locatorMess}  ${messCheckinfo}
 *** Keywords ***
 Validate The Data Username And Password OF Login Fail
+    [Documentation]  This test case verifes then a student login failly
+    ...              and verify all case notification will be displayed if login failly
+    [Tags]  LoginFailly
     [Arguments]     ${username}     ${password}     ${locatorMessen}    ${infoMessen}
     Given User Open Browser And Go To Website
     Then Verify That From Fill In Username And Password Are Displayed

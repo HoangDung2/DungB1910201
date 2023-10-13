@@ -11,8 +11,11 @@ TC-02:Validate Room Type Have Cooking And Number 6 people.    ${TC_09.USERNAME} 
 TC-03:Validate Room Type Have Cooking And Number 8 people.    ${TC_09.USERNAME}   ${TC_09.PASSWORD}   ${messCooking}   ${number_8}
 *** Keywords ***
 Validate Student Choose Room Cooking And Number People Of RoomType
+       [Documentation]  This test case verifies then All Case Room Type Have Cooking
+       ...              And Number input by user it will be displayed the conditon on After Login
+       [Tags]  CheckRoomCook
        [Arguments]  ${username}  ${password}   ${messCooking}     ${number}
-       Given Student Login Into Dormitory System     ${TC_09.USERNAME}   ${TC_09.PASSWORD}
+       Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed
        And Capture Page Screenshot
        When Navigate To The RoomType Page By Click Nav Link RoomType
