@@ -20,7 +20,7 @@ ${MessData}     Dữ Liệu Không Trùng Khớp
 ${messService}  Bạn phải là sinh viên ở phòng mới đăng ký dịch vụ được
 ${mesMaterialRepair}    Bạn phải là sinh viên ở phòng mới đăng ký sửa chữa được
 ${messFail_Homepage}  Có lỗi xảy ra
-#${MSSV}  Mã số sinh viên
+${MSSV}  Mã số sinh viên
 #${NS}   Ngày sinh
 #${HoTen}    Họ tên
 #${NganhHoc}  Ngành học

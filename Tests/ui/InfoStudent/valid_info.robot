@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
 Test Teardown   Close Browser
-Test Tags   Info
+#Test Tags   Info
+Test Tags   LV
 *** Test Cases ***
 TC-01: Veryfi Info Student After Login And Check ID Username With MSSV
     [Documentation]     This test case verifies then input Id username by student the same

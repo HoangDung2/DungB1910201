@@ -3,12 +3,22 @@ Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 Test Teardown   Close Browser
 Test Template   Validate Student Choose AirCond And Cooking Type And Number People Of RoomType
-Test Tags   RoomType12345
+#Test Tags   RoomType12345
+Test Tags   LV
 *** Variables ***
 *** Test Cases ***
-TC-01:Validate Room Type Have Colab 'May Lanh,Cook' And Number 4 people.  ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_4}
-TC-02:Validate Room Type Have Colab 'May Lanh,Cook' And Number 6 people.    ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_6}
-TC-03:Validate Room Type Have Colab 'May Lanh,Cook' And Number 8 people.    ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_8}
+TC-01:Validate Room Type Have Colab AirConditioned And Cooking And Number 4 people.
+       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       ...              And 4 people input by user it will be displayed the conditon on After Login
+       ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_4}
+TC-02:Validate Room Type Have Colab AirConditioned And Cooking' And Number 6 people.
+       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       ...              And 6 people input by user it will be displayed the conditon on After Login
+       ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_6}
+TC-03:Validate Room Type Have Colab AirConditioned And Cooking' And Number 8 people.
+       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       ...              And 8 people input by user it will be displayed the conditon on After Login
+       ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_8}
 *** Keywords ***
 Validate Student Choose AirCond And Cooking Type And Number People Of RoomType
        [Documentation]  This test case verifies then All Case Room Type Have AirConditioned And Cooking

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/data_login.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_login.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/InformationStudent/info_locators.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ui/InfoStudent/valid_info.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/InfoStudent/valid_info.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ui/Login/invalid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Login/invalid_login.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Login/valid_login.robot" afterDir="false" />

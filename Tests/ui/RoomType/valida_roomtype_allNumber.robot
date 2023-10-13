@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
 Test Teardown   Close Browser
-Test Tags   RoomType
+#Test Tags   RoomType
+Test Tags   LV
 *** Test Cases ***
 TC-01:Validate Room Type Have Air_conditioned And Number All.
        [Documentation]  This test case verifes then All Room Type Have Air_conditioned shoulde be displayed After Login

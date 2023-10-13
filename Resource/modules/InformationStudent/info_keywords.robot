@@ -8,7 +8,7 @@ Navigate To The Info Student Page By Click Nav Link Info Student
     Sleep    2s
 Check ID Username The Same MSSV in Sudent Page
     [Arguments]     ${id}
-    ${id_table}=    AutoLibrary.Get Element Table    ${MSSV}  ${locatorInfotalble}
+    ${id_table}=    AutoLibrary.Get Element Table  ${MSSV}  ${locatorInfotalble}
     Should Be Equal    ${id_table}    ${id}
 Verify Info Student Page Shoulde Be Displayed
     Compare Text    ${tilteInfo}    ${messInfo}
