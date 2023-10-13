@@ -8,6 +8,7 @@ Library             OperatingSystem
 Library             String
 Library             DatabaseLibrary
 Library             AutoLibrary
+#Library             Pillow
 Resource            common_keyword.resource
 #----Home----
 Resource    ../../Resource/modules/Home/home_actions.robot

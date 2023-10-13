@@ -65,7 +65,7 @@ Click Nav Link MaterialRepair Then Register
     ${text_lctTiltelMessFail}=  Get Text    ${lctTiltelMessFail}
     Should Be Equal As Strings    ${text_lctMessFail}   ${mesMaterialRepair}
     Should Be Equal As Strings    ${text_lctTiltelMessFail}    ${messFail_Homepage}
-    Click Element   xpath=//button[@type="button"][contains(text(),"OK")]
+
 
 Click Nav Link Service Then Register
     Click Nav Service
@@ -75,4 +75,7 @@ Click Nav Link Service Then Register
     ${text_lctTiltelMessFail}=  Get Text    ${lctTiltelMessFail}
     Should Be Equal As Strings    ${text_lctMessFail}   ${messService}
     Should Be Equal As Strings    ${text_lctTiltelMessFail}    ${messFail_Homepage}
+
+
+Click Button 'OK'
     Click Element   xpath=//button[@type="button"][contains(text(),"OK")]

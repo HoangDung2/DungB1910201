@@ -1,6 +1,7 @@
 from SeleniumLibrary.base import keyword, LibraryComponent
 from SeleniumLibrary.keywords import WaitingKeywords
 import os
+import shutil
 from PIL import Image
 class ImageKeyWords(LibraryComponent):
     def __init__(self, ctx):
@@ -25,7 +26,7 @@ class ImageKeyWords(LibraryComponent):
         return image_count
 
     @keyword
-    def get_image_files(seft, path):
+    def get_image_files(setf, path):
         """
 
         :param path:Input Path Folder
@@ -39,7 +40,7 @@ class ImageKeyWords(LibraryComponent):
                     image_files.append(os.path.join(root, file))
         return image_files
     @keyword
-    def clear_image_folder(seft, path):
+    def clear_image_folder(self, path):
         """
 
         :param path: Input Path Folder
@@ -51,3 +52,11 @@ class ImageKeyWords(LibraryComponent):
                 if any(file.lower().endswith(ext) for ext in image_extensions):
                     file_path = os.path.join(root, file)
                     os.remove(file_path)
+
+    @keyword
+    def copy_image_folder(self,source_folder, destination_folder):
+        try:
+            shutil.copytree(source_folder, destination_folder)
+            print(f"File will copy '{source_folder}' change '{destination_folder}'")
+        except Exception as e:
+            print(f"Fail: {e}")

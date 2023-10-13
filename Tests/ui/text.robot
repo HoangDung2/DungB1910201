@@ -1,10 +1,12 @@
 *** Settings ***
 Resource        ../../Resource/commons/init.resource
 Test Tags   Login123
+Test Teardown   Close Browser
 #Library     SeleniumLibrary
-Library    DateTime
+#Library    DateTime
+#Library    SeleniumLibrary
 *** Variables ***
-${root_path}   D:/LuanVan/DungB1910201
+#${root_path}   D:/LuanVan/DungB1910201
 ${ss}   sreenshot
 *** Variables ***
 ${a}     Máy lạnh
@@ -25,19 +27,19 @@ ${a}     Máy lạnh
 #    ${difference}    Evaluate    $date1_obj - $date2_obj
 #
 #    Log To Console    Difference in days: ${difference.days}
-Test_1:ABC
-    [Tags]  test123
-    Verify Room Should Be Displayed
-    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
-    Set Viewport Size    1920    1080
-Scroll From Top to Bottom of Page And Capture Page Screenshot
-    Open Browser    https://example.com    chrome
-    # Your test steps here
-    Click Element   //button[@id='your-button-id']   # Example action
+TC_1:ABC
+    [Tags]  TEST123
+    User Open Browser And Go To Website
+    Capture and Save Screenshot
 
-    # Use Execute JavaScript to scroll to the bottom of the page
-    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
-
-    Capture Page Screenshot    full=True   # Capture the screenshot after scrolling
-    Close Browser
+#Scroll From Top to Bottom of Page And Capture Page Screenshot
+#    Open Browser    https://example.com    chrome
+#    # Your test steps here
+#    Click Element   //button[@id='your-button-id']   # Example action
+#
+#    # Use Execute JavaScript to scroll to the bottom of the page
+#    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+#
+#    Capture Page Screenshot    full=True   # Capture the screenshot after scrolling
+#    Close Browser
 
