@@ -1,6 +1,7 @@
 from SeleniumLibrary.base import keyword, LibraryComponent
 from SeleniumLibrary.keywords import WaitingKeywords
 from .elementkeywords import ElementKeywords
+from .timekeywords import TimeKeywords
 from selenium.webdriver.support.ui import WebDriverWait
 class TableKeyWords(LibraryComponent):
     def __init__(self, ctx):
@@ -8,6 +9,7 @@ class TableKeyWords(LibraryComponent):
         self.selenium_keyword = LibraryComponent(ctx)
         self.selenium_waiting = WaitingKeywords(ctx)
         self.selenium_elementkey=ElementKeywords(ctx)
+        self.selenium_timekey = TimeKeywords(ctx)
     @keyword
     def get_element_table(self,info,locator):
         """
@@ -37,8 +39,13 @@ class TableKeyWords(LibraryComponent):
         store=[]
         try:
             for i in list:
-                temp = self.get_element_table(i,locator)
-                store.append(temp)
+                if i == "Ngày sinh":
+                    temp = self.get_element_table(i,locator)
+                    temp_time = self.selenium_timekey.convert_time(temp)
+                    store.append(temp_time)
+                else:
+                    temp = self.get_element_table(i,locator)
+                    store.append(temp)
         except Exception as e:
             raise AssertionError("Exception when checking whether element '{}' is enabled: {}".format(locator, e))
         return store

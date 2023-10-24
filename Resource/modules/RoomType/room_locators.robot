@@ -13,10 +13,16 @@ ${locartorValuetimedk}    (xpath=//form//span[text()='Thời gian đăng ký:']/
 # lấy số lượng phòng sll
 ${locatorInfoRoom}  xpath=//app-room//div[@class="card-body"]//div//div[@class="d-flex justify-content-between"]//span[contains(text(),'{}')]//following-sibling::span
 ${locartorRoom}     xpath=//app-room
+${locatorType}      xpath=//app-room//h5[contains(text(),"{}")]
+# truyen vao ten phong
 ${messStatusroom}   xpath=//app-room//div[@class="card-body"]//div//div[@class="text-center"]//span[@class="text-center text-success"]
+${locatorStatusRepair}     xpath=//app-room//div[@class="card-body"]//div[@class="text-center"]//following::span[text()='Đang sửa chữa']
+${locatorStatusAccept}      xpath=//app-room//div[@class="card-body"]//div[@class="text-center"]//following::span[text()='Hoạt động tốt']
+# hoạt động tốt
 ${messNotify}   xpath=//div[@class="col-sm-4 text-danger"]//text()
 #----Mess----
 ${messRoomType}  Chọn dãy phòng phù hợp với nhu cầu bạn
+${messStatusRepair}     Đang sửa chữa
 ${messChoseRoom}    Loại dãy phòng
 ${messAirConditioned}   Có máy lạnh
 ${messCooking}  Cho phép nấu ăn

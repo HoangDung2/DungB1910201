@@ -10,23 +10,19 @@ Check ID Username The Same MSSV in Sudent Page
     [Arguments]     ${id}
     ${id_table}=    AutoLibrary.Get Element Table  ${MSSV}  ${locatorInfotalble}
     Should Be Equal    ${id_table}    ${id}
-Verify Info Student Page Shoulde Be Displayed
+Verify Info Student Page Should Be Displayed
     Compare Text    ${tilteInfo}    ${messInfo}
     Compare Text    ${tilteInfo_1}  ${messInfo_1}
     Compare Text    ${tilteInfo_2}  ${messInfo_2}
+
 Verify Room Is't Displayed
     ${temp}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
     ${length_temp}=   Get Length    ${temp}
-    IF    ${length_temp} == 0
-        RETURN  True
-    END
     Should Be Equal    ${length_temp}    0
+
 Verify Day  Is't Displayed
     ${temp}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
     ${length_temp}=   Get Length    ${temp}
-    IF    ${length_temp} == 0
-        RETURN  True
-    END
     Should Be Equal    ${length_temp}    0
 
 Verify Day And Room Is't Displayed
@@ -36,8 +32,35 @@ Verify Day And Room Is't Displayed
     ${length_temp_1}=   Get Length    ${temp_1}
     IF    '${length_temp}' == '${length_temp_1}'
         ${ss}=  Set Variable    ${length_temp}
-    END
+    ELSE
     Should Be Equal    '${ss}'    '0'
+
+Verify Row And Room Is't Displayed If Have Connect DB Delete
+    [Arguments]  ${MSSV}
+    ${text_day}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
+    ${text_room}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
+    ${list}=  Get Row And Room In Infostudent   ${MSSV}
+    IF  not ${list}
+        RETURN  Next Step
+    ELSE
+        Should Be Equal As Strings    ${list}[0]    ${text_day}
+        Should Be Equal As Strings    ${list}[1]    ${text_room}
+        Delete Register Room Student And Reload Page    ${MSSV}
+    END
+Verify Row And Room Have Displayed
+    [Arguments]  ${MSSV}
+    ${text_day}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
+    ${text_room}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
+    IF  '${text_day}'==''
+        Pass Execution  Student Have't Register A Room
+    ELSE
+        ${list}=  Get Row And Room In Infostudent   ${MSSV}
+        Should Be Equal As Strings    ${list}[0]    ${text_day}
+        Should Be Equal As Strings    ${list}[1]    ${text_room}
+    END
+
+
+
 
 Check All Info Sudent With Databse
     [Arguments]  ${MSSV}

@@ -1,5 +1,6 @@
 *** Settings ***
 Resource        home_locator.robot
+#Library    SeleniumLibrary
 Resource    ../../../Resource/commons/init.resource
 *** Keywords ***
 # Custom cai key nay
@@ -35,4 +36,9 @@ Click Nav MaterialRepair
     Wait Until Element Is Visible   ${locatorMaterialRepair}
     Click Element    ${locatorMaterialRepair}
     Sleep    2s
+
+Click Nav RoomType
+    Wait Until Element Is Visible   ${locatorRoomType}
+    Click Element   ${locatorRoomType}
+    Sleep    2s 
 

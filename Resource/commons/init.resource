@@ -8,6 +8,8 @@ Library             OperatingSystem
 Library             String
 Library             DatabaseLibrary
 Library             AutoLibrary
+Library             DateTime
+Library             RequestsLibrary
 #Library             Pillow
 Resource            common_keyword.resource
 #----Home----
@@ -24,9 +26,14 @@ Resource    ../../Resource/modules/InformationStudent/info_keywords.robot
 Resource    ../../Resource/modules/RoomType/room_actions.robot
 Resource    ../../Resource/modules/RoomType/room_keywords.robot
 Resource    ../../Resource/modules/RoomType/room_locators.robot
+#----BookingRoom-----
+Resource    ../../Resource/modules/BookingRoom/booking_actions.robot
+Resource    ../../Resource/modules/BookingRoom/booking_keywords.robot
+Resource    ../../Resource/modules/BookingRoom/booking_locators.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 Variables    ../setting.yml
 Resource    ../../Resource/modules/ConnectDB/connect_database.robot
+Variables    ../../Data/data_infoPay.yml
 #----Environment----
 Resource    ../../Tests/Environment_Test.robot

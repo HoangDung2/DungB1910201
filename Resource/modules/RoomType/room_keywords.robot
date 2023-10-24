@@ -21,10 +21,11 @@ Navigate To The RoomType Page By Click Nav Link RoomType
     Sleep    1s
 
 Verify RoomType Page Should Be Displayed
-    Compare Text    ${locatorRoomtype}     ${messRoomType}
-    Compare Text    ${locatorChoseRoom}    ${messChoseRoom}
+         Compare Text    ${locatorRoomtype}     ${messRoomType}
+         Compare Text    ${locatorChoseRoom}    ${messChoseRoom}
 
-Verify Room Have 'May Lanh' Should Be Displayed
+
+Verify Room Have Air_conditioned Should Be Displayed
     [Arguments]     ${number}
     ${number_room_db}=  Get Length Number Room Have Number Of People And Air_conditioned    ${number}
     Wait Until Element Is Visible    ${locartorRoom}

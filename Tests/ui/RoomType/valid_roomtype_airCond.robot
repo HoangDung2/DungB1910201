@@ -34,5 +34,5 @@ Validate Student Choose AirCond Type And Number People Of RoomType
        And Capture and Save Screenshot
        And Click Choose Box Have Text  ${messAirConditioned}
        And Click Choose Room With The Number Of People   ${number}
-       Then Verify Room Have 'May Lanh' Should Be Displayed  ${number}
+       Then Verify Room Have Air_conditioned Should Be Displayed  ${number}
        And Scroll From Top to Bottom of Page And Capture Page Screenshot

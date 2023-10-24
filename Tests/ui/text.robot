@@ -31,7 +31,18 @@ TC_1:ABC
     [Tags]  TEST123
     User Open Browser And Go To Website
     Capture and Save Screenshot
-
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
+    Wait Notification Should Be Displayed
+    Capture and Save Screenshot
 #Scroll From Top to Bottom of Page And Capture Page Screenshot
 #    Open Browser    https://example.com    chrome
 #    # Your test steps here

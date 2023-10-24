@@ -7,10 +7,11 @@ ${sloganHome_1}         xpath=//div[@data-aos='fade-up']//h1
 ${sloganHome_2}     xpath=//div[@data-aos='fade-up']//h1/following-sibling::h2
 ${locatorService}   xpath=//header//nav//li//a[contains(text(),"Dịch vụ")]
 ${locatorMaterialRepair}    xpath=//header//nav//li//a[contains(text(),"Sửa chữa vật chất")]
+${locatorRoomType}      xpath=//header//nav//li//span[contains(text(),"Loại phòng")]
 #----Messen----
 ${logoHome}     DORMITORY...
 ${sloganMess_1}   Chúng tôi là gia đình, không chỉ là nơi ở .
 ${sloganMess_2}   Tạo kỷ niệm tại ký túc xá - Nơi bạn gọi là nhà
 #----List Name----
 @{listMenuIcon}     Hòa đồng   Thân thiện   Nơi ở   Tiết kiệm   An toàn
-@{lishDashboar}     Trang chủ   Sửa chữa vật chất   Thông tin cá nhân   Dịch vụ   Lịch sử đặt phòng   Đăng xuất
+@{lishDashboar}     Trang chủ   Sửa chữa vật chất   Thông tin cá nhân   Dịch vụ    Đăng xuất
