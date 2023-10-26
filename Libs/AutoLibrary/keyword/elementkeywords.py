@@ -25,9 +25,9 @@ class  ElementKeywords(LibraryComponent):
         """
         self.selenium_keyword.find_element(locator)
         self.selenium_waiting.wait_until_element_is_visible(locator)
-        element=self.find_element(locator)
-        text_element=element.text
-        if  text_element == string:
+        element = self.find_element(locator)
+        text_element = element.text
+        if text_element == string:
             return True
         else:
             return False

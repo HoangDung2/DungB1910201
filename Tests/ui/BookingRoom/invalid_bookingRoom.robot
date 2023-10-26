@@ -4,7 +4,7 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
 Test Teardown   Close Browser
 #Test Tags   BookingRoom
-#Test Tags   LV
+Test Tags   LV
 *** Variables ***
 ${name_roomtype}    A3
 *** Test Cases ***

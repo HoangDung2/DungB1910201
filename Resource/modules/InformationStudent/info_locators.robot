@@ -7,6 +7,7 @@ ${tilteInfo}    xpath=//div[@class="container"]//div[@class="section-title mt-5"
 ${tilteInfo_1}    xpath=//div[@class="container"]//div[@class="section-title mt-5"]//p
 ${tilteInfo_2}    xpath=//section[@class="container"]//*[contains(text(),"Thông tin sinh viên và dịch vụ đã đăng ký")]
 ${locatorInfotalble}    xpath=//table//tbody//td[contains(text(),'{}')]//following-sibling::td[1]
+${locartor_statusRoom}  xpath=//div[@class="text-danger"]
 
 ${lctTiltelMessFail}  xpath=//h2[@class="swal2-title"]
 ${lctMessFail}  xpath=//h2[@class="swal2-title"]//following-sibling::div[@id="swal2-html-container"]

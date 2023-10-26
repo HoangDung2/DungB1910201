@@ -30,15 +30,19 @@ Verify Slogan And Logo Home PAge
 Click Nav Service
     Wait Until Element Is Visible   ${locatorService}
     Click Element   ${locatorService}
-    Sleep    2s
+    Sleep    1s
 
 Click Nav MaterialRepair
     Wait Until Element Is Visible   ${locatorMaterialRepair}
     Click Element    ${locatorMaterialRepair}
-    Sleep    2s
+    Sleep    1s
 
 Click Nav RoomType
     Wait Until Element Is Visible   ${locatorRoomType}
     Click Element   ${locatorRoomType}
-    Sleep    2s 
+    Sleep    1s
 
+Click Nav FeedBack
+    Wait Until Element Is Visible   ${locatorFeedBack}
+    Click Element   ${locatorFeedBack}
+    Sleep    1s

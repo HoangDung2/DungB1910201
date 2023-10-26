@@ -8,6 +8,7 @@ ${sloganHome_2}     xpath=//div[@data-aos='fade-up']//h1/following-sibling::h2
 ${locatorService}   xpath=//header//nav//li//a[contains(text(),"Dịch vụ")]
 ${locatorMaterialRepair}    xpath=//header//nav//li//a[contains(text(),"Sửa chữa vật chất")]
 ${locatorRoomType}      xpath=//header//nav//li//span[contains(text(),"Loại phòng")]
+${locatorFeedBack}      xpath=//header//nav//li//a[contains(text(),"Sửa chữa vật chất")]
 #----Messen----
 ${logoHome}     DORMITORY...
 ${sloganMess_1}   Chúng tôi là gia đình, không chỉ là nơi ở .

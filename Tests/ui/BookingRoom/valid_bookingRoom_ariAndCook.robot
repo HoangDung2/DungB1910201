@@ -4,8 +4,8 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
 Test Teardown   Close Browser
 Test Template   Validate Student Have Booking Room AirCond And Cooking Type And Number People Of RoomType
-Test Tags   BookingRoom_AriCooking
-#Test Tags   LV
+#Test Tags   BookingRoom_AriCooking
+Test Tags   LV
 *** Test Cases ***
 TC_35: Validate Student Have Booking Room Have Cooking Type And 4 Of RoomType   ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}    ${number_4}
 TC_36: Validate Student Have Booking Room Have Cooking Type And 6 Of RoomType   ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}    ${number_6}

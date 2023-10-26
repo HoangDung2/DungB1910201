@@ -106,3 +106,62 @@ Delete Register Room Student And Reload Page
     Disconnect From Database
     Reload Page
     Wait Notification Should Be Displayed
+
+Update Time From Dabata
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_add} =    Set Variable    6
+    ${future_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_add} days
+    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${future_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${current_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+
+#---Material----
+Update Time After Registration From Databa
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_subtract} =    Set Variable    1
+    ${days_to_add} =    Set Variable    7
+    ${day_30}=      Set Variable    30
+    ${yet_datetime} =    Subtract Time From Date    ${current_datetime}    ${days_to_subtract} days
+    ${past_datetime} =    Subtract Time From Date    ${yet_datetime}    ${day_30} days
+    ${future_datetime} =    Add Time To Date    ${past_datetime}    ${days_to_add} days
+    Update Time From Table    `sesmester` SET `end_date` = '${yet_datetime}',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
+
+Update Time Before Registration From Databa
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_subtract} =    Set Variable    1
+    ${days_to_add} =    Set Variable    7
+    ${future_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_add} days
+    ${past_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_subtract} days
+    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
+
+Update Time From Dabata Registration Material
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_add} =    Set Variable    15
+    ${future_datetime} =    Subtract Time From Date    ${current_datetime}    ${days_to_add} days
+    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${current_datetime}', `registration_end_date` = '${current_datetime}', `registration_start_date` = '${future_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
+
+
+TEST123
+    Connect Database Xampp
+    [Arguments]   ${MSSV_Infostudent}
+    Connect Database Xampp
+    ${results}=    Query  SELECT student.user_id FROM student WHERE student.number_student = '${MSSV_Infostudent}';
+    Delete All Rows From Table   room_feedback WHERE dormitory.room_feedback.student_id =${results}[0][0];
+    Query   Commit
+    Disconnect From Database

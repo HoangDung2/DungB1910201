@@ -5,7 +5,7 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Teardown   Close Browser
 Test Template   Validate Student Have Booking Room Have AirCond Type And Number People Of RoomType
 #Test Tags   BookingRoom_AirCond
-#Test Tags   LV
+Test Tags   LV
 *** Test Cases ***
 TC_29: Validate Student Have Booking Room Have AirCond Type And 4 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_4}
 TC_30: Validate Student Have Booking Room Have AirCond Type And 6 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_6}
@@ -36,4 +36,4 @@ Validate Student Have Booking Room Have AirCond Type And Number People Of RoomTy
         And Capture and Save Screenshot
         And Verify Register successfully
         And Capture and Save Screenshot
-        And Validate InfoStudent Page The Same Database     ${USERNAME}
+        Andgit  Validate InfoStudent Page The Same Database     ${USERNAME}

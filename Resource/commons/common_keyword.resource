@@ -8,6 +8,7 @@ Student Login Into Dormitory System
     User Open Browser And Go To Website
     Verify That from Fill In Username And password Are Displayed
     User input Username And Password    ${username}     ${password}
+    Capture and Save Screenshot
     Click Button Submit     ${btnSumit}
 
 Capture and Save Screenshot
@@ -110,5 +111,7 @@ Save File Image Prev And Clear File Current Test All
 #    Save File Image If Exits Test All
     Clear Image In File If Exits Test All
 
-Keyword Break
-    RETURN  Fail
+Close Browser Set Up Time
+#    Run Keyword And Ignore Error    Update Time From Dabata
+    Run Keyword And Ignore Error    Close Browser
+

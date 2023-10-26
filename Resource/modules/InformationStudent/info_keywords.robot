@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
-Resource    info_locators.robot
 *** Keywords ***
 Navigate To The Info Student Page By Click Nav Link Info Student
     Wait Until Element Is Visible    ${locatorInfo}
@@ -30,10 +29,10 @@ Verify Day And Room Is't Displayed
     ${temp_1}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
     ${length_temp}=   Get Length    ${temp}
     ${length_temp_1}=   Get Length    ${temp_1}
-    IF    '${length_temp}' == '${length_temp_1}'
+    IF  '${length_temp}' == '${length_temp_1}'
         ${ss}=  Set Variable    ${length_temp}
-    ELSE
-    Should Be Equal    '${ss}'    '0'
+        Should Be Equal    '${ss}'    '0'
+    END
 
 Verify Row And Room Is't Displayed If Have Connect DB Delete
     [Arguments]  ${MSSV}
@@ -51,15 +50,19 @@ Verify Row And Room Have Displayed
     [Arguments]  ${MSSV}
     ${text_day}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
     ${text_room}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
+    ${status}=  Get Text    ${locartor_statusRoom}
     IF  '${text_day}'==''
         Pass Execution  Student Have't Register A Room
+#    ELSE IF     '${status}'=='Chưa thanh toán'
+#        Pass Execution    Student Have't Payment For Room
     ELSE
         ${list}=  Get Row And Room In Infostudent   ${MSSV}
         Should Be Equal As Strings    ${list}[0]    ${text_day}
         Should Be Equal As Strings    ${list}[1]    ${text_room}
     END
-
-
+Validate Student Has Previously Registered For The Room
+    [Arguments]  ${MSSV}
+    Verify Row And Room Have Displayed  ${MSSV}
 
 
 Check All Info Sudent With Databse

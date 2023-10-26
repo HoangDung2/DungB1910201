@@ -14,7 +14,7 @@ TC_10: Veryfi Info Student After Login And Check ID Username With MSSV
     Then Verify Home Page Should Be Displayed
     And Capture and Save Screenshot
     When Navigate To The Info Student Page By Click Nav Link Info Student
-    Then Verify Info Student Page Shoulde Be Displayed
+    Then Verify Info Student Page Should Be Displayed
     And Check ID Username The Same MSSV in Sudent Page  ${USERNAME}
     And Capture and Save Screenshot
 TC_11: Verify Student Has Not Registered For room And Registered Service Or MaterialRepair
@@ -25,7 +25,7 @@ TC_11: Verify Student Has Not Registered For room And Registered Service Or Mate
     Then Verify Home Page Should Be Displayed
     And Capture and Save Screenshot
     When Navigate To The Info Student Page By Click Nav Link Info Student
-    Then Verify Info Student Page Shoulde Be Displayed
+    Then Verify Info Student Page Should Be Displayed
     And Capture and Save Screenshot
     Then Verify Day And Room Is't Displayed
     And Click Nav Link MaterialRepair Then Register
@@ -44,7 +44,7 @@ TC_12: Verify All Info Student The Same Database
     Then Verify Home Page Should Be Displayed
     And Capture and Save Screenshot
     When Navigate To The Info Student Page By Click Nav Link Info Student
-    Then Verify Info Student Page Shoulde Be Displayed
+    Then Verify Info Student Page Should Be Displayed
     And Capture and Save Screenshot
     And Check All Info Sudent With Databse  ${USERNAME}
     And Capture and Save Screenshot

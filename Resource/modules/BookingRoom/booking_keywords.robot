@@ -3,7 +3,7 @@
 Resource    ../../../Resource/commons/init.resource
 *** Keywords ***
 Navigate To The Info Student Page By Click Nav Link Roomtype
-         Click Nav RoomType
+    Click Nav RoomType
 
 Input Name Row Any Have In RoomType Page
     [Arguments]  ${name_roomType}

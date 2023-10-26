@@ -1,0 +1,119 @@
+TC_43:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "No"
+  NUMBER_METERIAL:  "No"
+  MESS: "Vui lòng điền đầy đủ thông tin"
+
+TC_44:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "No"
+  MESS: "Vui lòng điền đầy đủ thông tin"
+
+TC_45:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "No"
+  NUMBER_METERIAL:  "5"
+  MESS: "Vui lòng điền đầy đủ thông tin"
+
+TC_46:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "6"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_47:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "9999999"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_48:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "10"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_49:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "-1"
+  MESS: "Nhập số lượng lớn hơn hoặc bằng 1"
+
+TC_50:
+  TIME: "HappyCase"
+  SELECT_METERIAL: "Thay khoen khóa cửa"
+  NUMBER_METERIAL:  "0"
+  MESS: "Nhập số lượng lớn hơn hoặc bằng 1"
+
+TC_51:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "5"
+  MESS: "Học kỳ này chưa hoạt động"
+
+TC_52:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "1"
+  MESS: "Học kỳ này chưa hoạt động"
+
+TC_53:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "6"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_54:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "10"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_55:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "99999"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_56:
+  TIME: "After"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "0"
+  MESS: "Nhập số lượng lớn hơn hoặc bằng 1"
+
+TC_57:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "5"
+  MESS: "Học kỳ này chưa hoạt động"
+
+TC_58:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "1"
+  MESS: "Học kỳ này chưa hoạt động"
+
+TC_59:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "6"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_60:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "10"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_61:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "99999"
+  MESS: "Nhập số lượng bé hơn hoặc bằng 5"
+
+TC_62:
+  TIME: "Before"
+  SELECT_METERIAL: "Bể gạch nền"
+  NUMBER_METERIAL:  "0"
+  MESS: "Nhập số lượng lớn hơn hoặc bằng 1"
