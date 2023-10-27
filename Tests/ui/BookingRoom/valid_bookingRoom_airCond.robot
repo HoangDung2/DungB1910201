@@ -36,4 +36,4 @@ Validate Student Have Booking Room Have AirCond Type And Number People Of RoomTy
         And Capture and Save Screenshot
         And Verify Register successfully
         And Capture and Save Screenshot
-        Andgit  Validate InfoStudent Page The Same Database     ${USERNAME}
+        And Validate InfoStudent Page The Same Database     ${USERNAME}
