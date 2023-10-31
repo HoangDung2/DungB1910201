@@ -53,22 +53,29 @@ Save File Image If Exits Test Suite
     END
 
 #Capture and Save Screenshot
-#    [Documentation]     Take A screentshot And Save File Test All, limit 99 image
+#    [Documentation]     Take A screentshot And Save File Test Suite, limit 9 image
 #    ${name_tag}=    Split String     ${TEST_NAME}    :
-#    ${prevTag}=    Set Variable      ${root_path}/${TEST_TAGS}[1]/${name_tag}[0]/${name_tag}[1]
+#    ${prevTag}=    Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]
 #    ${length_image}=   Count Image File  ${prevTag}
 #    IF    '${length_image}' == '0'
 #         ${i}=  Set Variable    1
 #         Set Global Variable    ${i}
 #    ELSE
 #        ${file_image}=  Get Image Files     ${prevTag}
-#        Log   ${file_image}
-#        ${get_value_image}=     Split String     ${file_image}[${length_image-1}]   .
-#        ${value_image}=  Evaluate  ${get_value_image}[0][-1]
-#        ${i}=   Set Variable    ${value_image+1}
+#        ${get_value_image}=     Split String     ${file_image}[0]   .
+#        ${Number}=    Split String    ${get_value_image}[0]   SS_
+#        ${ssNumber}=  Evaluate    ${Number}[1]
+#        ${max}=     Set Variable  ${ssNumber}
+#        FOR    ${element}    IN    @{file_image}
+#            ${get_value_image_1}=     Split String     ${element}   .
+#            ${Number_1}=    Split String    ${get_value_image_1}[0]   SS_
+#            ${ssNumber_1}=  Evaluate    ${Number_1}[1]
+#            ${max}=  Evaluate    max(${max},${ssNumber_1})
+#            ${i}=   Set Variable    ${max+1}
+#        END
 #    END
-#    Capture Page Screenshot     ${root_path}/${TEST_TAGS}[1]/${name_tag}[0]/${name_tag}[1]/${name_tag}[0]_SS${i}.png
-#    File Should Exist    ${root_path}/${TEST_TAGS}[1]/${name_tag}[0]/${name_tag}[1]/${name_tag}[0]_SS${i}.png
+#    Capture Page Screenshot     ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
+#    File Should Exist    ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
 
 Clear Image In File If Exits Test All
     ${name_tag}=    Split String     ${TEST_NAME}    :
@@ -112,6 +119,7 @@ Save File Image Prev And Clear File Current Test All
     Clear Image In File If Exits Test All
 
 Close Browser Set Up Time
-#    Run Keyword And Ignore Error    Update Time From Dabata
+    Run Keyword And Ignore Error    Update Time From Dabata
     Run Keyword And Ignore Error    Close Browser
+
 

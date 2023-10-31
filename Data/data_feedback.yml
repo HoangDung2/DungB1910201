@@ -117,3 +117,7 @@ TC_62:
   SELECT_METERIAL: "Bể gạch nền"
   NUMBER_METERIAL:  "0"
   MESS: "Nhập số lượng lớn hơn hoặc bằng 1"
+
+#------- USERNAME_ PassWord
+USER_FEEDBACK: "B1910241"
+PASS_FEEDBACK: "123"

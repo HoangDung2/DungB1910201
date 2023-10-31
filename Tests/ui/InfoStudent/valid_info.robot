@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
-Test Teardown   Close Browser
+Test Teardown   Close Browser Set Up Time
 #Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Setup     Save File Image Prev And Clear File Current Test All
 #Test Tags   Info
@@ -27,7 +27,7 @@ TC_11: Verify Student Has Not Registered For room And Registered Service Or Mate
     When Navigate To The Info Student Page By Click Nav Link Info Student
     Then Verify Info Student Page Should Be Displayed
     And Capture and Save Screenshot
-    Then Verify Day And Room Is't Displayed
+    Then Verify Row And Room Is't Displayed If Have Connect DB Delete  ${USERNAME}
     And Click Nav Link MaterialRepair Then Register
     And Wait Notification Should Be Displayed
     And Capture and Save Screenshot

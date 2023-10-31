@@ -2,14 +2,23 @@
 Resource    ../../../Resource/commons/init.resource
 Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
-Test Teardown   Close Browser
+Test Teardown   Close Browser Set Up Time
 Test Template   Validate Student Have Booking Room Have Cooking Type And Number People Of RoomType
 #Test Tags   BookingRoom_Cooking
 Test Tags   LV
 *** Test Cases ***
-TC_32: Validate Student Have Booking Room Have Cooking Type And 4 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_4}
-TC_33: Validate Student Have Booking Room Have Cooking Type And 6 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_6}
-TC_34: Validate Student Have Booking Room Have Cooking Type And 8 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_8}
+TC_32: Validate Student Have Booking Room Have Cooking Type And 4 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomCooking
+    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_4}
+TC_33: Validate Student Have Booking Room Have Cooking Type And 6 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomCooking
+    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_6}
+TC_34: Validate Student Have Booking Room Have Cooking Type And 8 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomCooking
+    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_8}
 *** Keywords ***
 Validate Student Have Booking Room Have Cooking Type And Number People Of RoomType
         [Arguments]    ${USERNAME}   ${PASSWORD}   ${messCooking}   ${number_people}

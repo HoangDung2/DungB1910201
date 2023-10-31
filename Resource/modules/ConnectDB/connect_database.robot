@@ -2,10 +2,6 @@
 Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 #Test Tags   DB
-*** Variables ***
-${bit_cook}  1
-${bit_air}   1
-${results}
 *** Keywords ***
 Connect Database Xampp
     Connect To Database    pymysql  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}
@@ -110,9 +106,11 @@ Delete Register Room Student And Reload Page
 Update Time From Dabata
     Connect Database Xampp
     ${current_datetime} =    Get Current Date
-    ${days_to_add} =    Set Variable    6
-    ${future_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_add} days
-    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${future_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${current_datetime}' WHERE `sesmester`.`id` = 2;
+    ${days_to_add} =    Set Variable    7
+    ${dat_30d}=  Set Variable    30
+    ${future_datetime} =    Add Time To Date    ${current_datetime}   ${days_to_add} days
+    ${end_date}=    Add Time To Date    ${future_datetime}  ${dat_30d} days
+    Update Time From Table    `sesmester` SET `end_date` = '${end_date}',`start_date` = '${future_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${current_datetime}' WHERE `sesmester`.`id` = 2;
     Query   Commit
     Disconnect From Database
 
@@ -126,7 +124,7 @@ Update Time After Registration From Databa
     ${yet_datetime} =    Subtract Time From Date    ${current_datetime}    ${days_to_subtract} days
     ${past_datetime} =    Subtract Time From Date    ${yet_datetime}    ${day_30} days
     ${future_datetime} =    Add Time To Date    ${past_datetime}    ${days_to_add} days
-    Update Time From Table    `sesmester` SET `end_date` = '${yet_datetime}',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
+    Update Time From Table  `sesmester` SET `end_date` = '${yet_datetime}',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
     Query   Commit
     Disconnect From Database
     Reload Page
@@ -139,7 +137,7 @@ Update Time Before Registration From Databa
     ${days_to_add} =    Set Variable    7
     ${future_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_add} days
     ${past_datetime} =    Add Time To Date    ${current_datetime}    ${days_to_subtract} days
-    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
+    Update Time From Table  `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${past_datetime}', `registration_end_date` = '${future_datetime}', `registration_start_date` = '${past_datetime}' WHERE `sesmester`.`id` = 2;
     Query   Commit
     Disconnect From Database
     Reload Page
@@ -155,8 +153,53 @@ Update Time From Dabata Registration Material
     Disconnect From Database
     Reload Page
     Wait Notification Should Be Displayed
+#------Booking----------
+
+Update Time Before Registration From Databa BookingRoom
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${day_to_add} =    Set Variable    1
+    ${week_to_add} =    Set Variable    7
+    ${day_30}=      Set Variable    30
+    ${yet_datetime} =    Add Time To Date    ${current_datetime}    ${day_to_add} days
+    ${past_datetime} =    Add Time To Date    ${yet_datetime}    ${week_to_add} days
+    ${future_datetime} =    Add Time To Date    ${past_datetime}    ${day_30} days
+    Update Time From Table    `sesmester` SET `end_date` = '${future_datetime}',`start_date` = '${past_datetime}', `registration_end_date` = '${past_datetime}', `registration_start_date` = '${yet_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
 
 
+Update Time After Registration From Databa BookingRoom
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${day_to_subtract} =    Set Variable    1
+    ${week_to_subtract} =    Set Variable    7
+    ${day_30}=      Set Variable    30
+    ${yet_datetime} =    Subtract Time From Date    ${current_datetime}    ${day_to_subtract} days
+    ${pasted_datetime} =    Subtract Time From Date   ${yet_datetime}    ${week_to_subtract} days
+    ${future_datetime} =    Add Time To Date    ${yet_datetime}    ${day_30} days
+    Update Time From Table    `sesmester` SET `end_date` = '${future_datetime}',`start_date` = '${yet_datetime}', `registration_end_date` = '${yet_datetime}', `registration_start_date` = '${pasted_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
+
+
+Update Time From Dabata Check-In Period Overlaps With Stay Period
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_add} =    Set Variable    15
+    ${future_datetime} =    Subtract Time From Date    ${current_datetime}    ${days_to_add} days
+    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${future_datetime}', `registration_end_date` = '2023-12-31', `registration_start_date` = '${future_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
+    Reload Page
+    Wait Notification Should Be Displayed
+
+
+#----Prepare Data Test
 TEST123
     Connect Database Xampp
     [Arguments]   ${MSSV_Infostudent}
@@ -165,3 +208,19 @@ TEST123
     Delete All Rows From Table   room_feedback WHERE dormitory.room_feedback.student_id =${results}[0][0];
     Query   Commit
     Disconnect From Database
+
+Delete Services And Reload Page
+    [Documentation]     ${results}[0][0] this is ID services
+    ...                 ${results}[0][1] this id Student
+    [Arguments]   ${MSSV_Infostudent}   ${name_services}
+    Connect Database Xampp
+    ${results}=     Query   SELECT r.service_id, r.student_id FROM register_services r INNER JOIN student s ON s.user_id = r.student_id INNER JOIN services se ON se.id = r.service_id WHERE s.number_student = '${MSSV_Infostudent} ' AND se.name = '${name_services}';
+    IF  not ${results}
+        RETURN  Next Step
+    ELSE
+        Delete All Rows From Table   register_services WHERE register_services.service_id =${results}[0][0] AND register_services.student_id=${results}[0][1];
+        Query   Commit
+        Disconnect From Database
+        Reload Page
+        Wait Notification Should Be Displayed
+    END

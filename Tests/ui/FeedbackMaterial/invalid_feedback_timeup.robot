@@ -5,45 +5,45 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Teardown   Close Browser Set Up Time
 Test Template   Validata Student Have Content Material And Number But Register Time Up or Over Time
 #Test Tags   FeedBack
-#Test Tags   LV
+Test Tags   LV
 *** Test Cases ***
 TC_51: Validata Student Have Choose Content Material And Fill Number Of 5 But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_51.TIME}   ${TC_51.SELECT_METERIAL}    ${TC_51.NUMBER_METERIAL}    ${TC_51.MESS}
+     [Tags]     FeedBackFaily
+     ${USERNAME}   ${PASS_FEEDBACK}  ${TC_51.TIME}   ${TC_51.SELECT_METERIAL}    ${TC_51.NUMBER_METERIAL}    ${TC_51.MESS}
 TC_52: Validata Student Have Choose Content Material And Fill Number Of 1 But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_52.TIME}   ${TC_52.SELECT_METERIAL}    ${TC_52.NUMBER_METERIAL}    ${TC_52.MESS}
+     [Tags]     FeedBackFaily
+     ${USERNAME}   ${PASS_FEEDBACK}  ${TC_52.TIME}   ${TC_52.SELECT_METERIAL}    ${TC_52.NUMBER_METERIAL}    ${TC_52.MESS}
 TC_53: Validata Student Have Choose Content Material And Fill Number Of 6 But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_53.TIME}   ${TC_53.SELECT_METERIAL}    ${TC_53.NUMBER_METERIAL}    ${TC_53.MESS}
+     [Tags]     FeedBackFaily
+     ${USERNAME}   ${PASS_FEEDBACK}  ${TC_53.TIME}   ${TC_53.SELECT_METERIAL}    ${TC_53.NUMBER_METERIAL}    ${TC_53.MESS}
 TC_54: Validata Student Have Choose Content Material And Fill 2 Number But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_54.TIME}   ${TC_54.SELECT_METERIAL}    ${TC_54.NUMBER_METERIAL}    ${TC_54.MESS}
+     [Tags]     FeedBackFaily
+     ${USERNAME}   ${PASS_FEEDBACK}  ${TC_54.TIME}   ${TC_54.SELECT_METERIAL}    ${TC_54.NUMBER_METERIAL}    ${TC_54.MESS}
 TC_55: Validata Student Have Choose Content Material And Fill Infinity But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_55.TIME}   ${TC_55.SELECT_METERIAL}    ${TC_55.NUMBER_METERIAL}    ${TC_55.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_55.TIME}   ${TC_55.SELECT_METERIAL}    ${TC_55.NUMBER_METERIAL}    ${TC_55.MESS}
 TC_56: Validata Student Have Choose Content Material And Fill Number Of 0 But Is't Register time
-     [Tags]     1
-     ${USERNAME}   ${PASSWORD}  ${TC_56.TIME}   ${TC_56.SELECT_METERIAL}    ${TC_56.NUMBER_METERIAL}    ${TC_56.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_56.TIME}   ${TC_56.SELECT_METERIAL}    ${TC_56.NUMBER_METERIAL}    ${TC_56.MESS}
 
 TC_57: Validata Student Have Choose Content Material And Fill Number Of 5 But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_57.TIME}   ${TC_57.SELECT_METERIAL}    ${TC_57.NUMBER_METERIAL}    ${TC_57.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_57.TIME}   ${TC_57.SELECT_METERIAL}    ${TC_57.NUMBER_METERIAL}    ${TC_57.MESS}
 TC_58: Validata Student Have Choose Content Material And Fill Number Of 1 But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_58.TIME}   ${TC_58.SELECT_METERIAL}    ${TC_58.NUMBER_METERIAL}    ${TC_58.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_58.TIME}   ${TC_58.SELECT_METERIAL}    ${TC_58.NUMBER_METERIAL}    ${TC_58.MESS}
 TC_59: Validata Student Have Choose Content Material And Fill Number Of 6 But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_59.TIME}   ${TC_59.SELECT_METERIAL}    ${TC_59.NUMBER_METERIAL}    ${TC_59.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_59.TIME}   ${TC_59.SELECT_METERIAL}    ${TC_59.NUMBER_METERIAL}    ${TC_59.MESS}
 TC_60: Validata Student Have Choose Content Material And Fill 2 Number But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_60.TIME}   ${TC_60.SELECT_METERIAL}    ${TC_60.NUMBER_METERIAL}    ${TC_60.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_60.TIME}   ${TC_60.SELECT_METERIAL}    ${TC_60.NUMBER_METERIAL}    ${TC_60.MESS}
 TC_61: Validata Student Have Choose Content Material And Fill Infinity But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_61.TIME}   ${TC_61.SELECT_METERIAL}    ${TC_61.NUMBER_METERIAL}    ${TC_61.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_61.TIME}   ${TC_61.SELECT_METERIAL}    ${TC_61.NUMBER_METERIAL}    ${TC_61.MESS}
 TC_62: Validata Student Have Choose Content Material And Fill Number Of 0 But Register Over Time
-     [Tags]     2
-     ${USERNAME}   ${PASSWORD}  ${TC_62.TIME}   ${TC_62.SELECT_METERIAL}    ${TC_62.NUMBER_METERIAL}    ${TC_62.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_62.TIME}   ${TC_62.SELECT_METERIAL}    ${TC_62.NUMBER_METERIAL}    ${TC_62.MESS}
 *** Keywords ***
 Validata Student Have Content Material And Number But Register Time Up or Over Time
         [Documentation]  This test case verifies then All Case Register Material Time Up

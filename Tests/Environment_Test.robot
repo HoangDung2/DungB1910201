@@ -40,7 +40,7 @@ Open Chrome Browser And Go To Login Page
     [Arguments]  ${web_url}
     ${system}=    Evaluate    platform.system()    platform
     ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Run Keyword If  '${system}'=='Windows'    Run Keywords
+    Run Keyword If  '${system}'=='Linux'    Run Keywords
     ...         Call Method    ${chrome_options}   add_argument    test-type
     ...    AND  Call Method    ${chrome_options}   add_argument    ignore-certificate-errors
     ...    AND  Call Method    ${chrome_options}   add_argument    --disable-extensions
@@ -52,7 +52,7 @@ Open Chrome Browser And Go To Login Page
     ...     ELSE    Set Variable    ${EXECDIR}/${CHROME_DRIVER_PATH_WINS}
     ${kwargs}=  BuiltIn.Create Dictionary  executable_path=${driver_path}
     Create Webdriver    Chrome    chrome_options=${chrome_options}    executable_path=${driver_path}
-    Run Keyword If  '${system}'=='Linux'  Maximize Browser Window
+    Run Keyword If  '${system}'=='Windows'  Maximize Browser Window
     Go To   ${web_url}
 
 #Open Firefox Browser And Go To Login Page

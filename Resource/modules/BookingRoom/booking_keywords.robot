@@ -103,3 +103,23 @@ Veryfi Error Message Student Have Register Room
     Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa
     Compare Text     ${locatorTitleMess_1}   Vui lòng chọn loại phòng khác !
     Click Element    ${submit_messfail}
+
+Veryfi Error Message Have Previous Register Room
+    Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa
+    Compare Text     ${locatorTitleMess_1}   Sinh viên này đã đăng ký học kỳ này rồi
+    Click Element    ${submit_messfail}
+
+Veryfi Error Message Have't Register Time
+    Compare Text     ${locatorTitleMess}     Đã hết hạn đăng ký
+    Compare Text     ${locatorTitleMess_1}   Vui lòng quay lại sau
+    Click Element    ${submit_messfail}
+
+Veryfi Error Message Have Over Time
+    Compare Text     ${locatorTitleMess}     Đã hết hạn đăng ký
+    Compare Text     ${locatorTitleMess_1}   Vui lòng quay lại sau
+    Click Element    ${submit_messfail}
+
+    #Veryfi Error Message Student Have Check-In Period Overlaps With Stay Period
+#    Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa
+#    Compare Text     ${locatorTitleMess_1}   Sinh viên này đã đăng ký học kỳ này rồi
+#    Click Element    ${submit_messfail}

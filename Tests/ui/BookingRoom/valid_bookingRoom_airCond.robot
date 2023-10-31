@@ -2,16 +2,25 @@
 Resource    ../../../Resource/commons/init.resource
 Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
-Test Teardown   Close Browser
-Test Template   Validate Student Have Booking Room Have AirCond Type And Number People Of RoomType
+Test Teardown   Close Browser Set Up Time
+Test Template   Validate Student Have Booking Room About AirCond Type And Number People Of RoomType
 #Test Tags   BookingRoom_AirCond
 Test Tags   LV
 *** Test Cases ***
-TC_29: Validate Student Have Booking Room Have AirCond Type And 4 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_4}
-TC_30: Validate Student Have Booking Room Have AirCond Type And 6 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_6}
-TC_31: Validate Student Have Booking Room Have AirCond Type And 8 Of RoomType   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_8}
+TC_29: Validate Student Have Booking Room Have AirCond Type And 4 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomAirCond
+    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_4}
+TC_30: Validate Student Have Booking Room Have AirCond Type And 6 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomAirCond
+    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_6}
+TC_31: Validate Student Have Booking Room Have AirCond Type And 8 Of RoomType
+    [Documentation]
+    [Tags]  BookingRoomAirCond
+    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_8}
 *** Keywords ***
-Validate Student Have Booking Room Have AirCond Type And Number People Of RoomType
+Validate Student Have Booking Room About AirCond Type And Number People Of RoomType
         [Arguments]   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}    ${number_people}
         [Documentation]
         Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}

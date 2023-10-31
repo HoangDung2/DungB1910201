@@ -6,13 +6,17 @@ Test Teardown   Close Browser
 #Library    DateTime
 #Library    SeleniumLibrary
 *** Variables ***
+${a}    	B1910201
+${name}     Gửi xe máy
 #${root_path}   D:/LuanVan/DungB1910201
 *** Test Cases ***
 TC_1:ABC
     [Tags]  123
     User Open Browser And Go To Website
+    Update Time From Dabata
+#    Delete Services And Reload Page     ${USERNAME}      ${name}
 #    TEST123     ${USERNAME}
-     Update Time From Dabata Registration Material
+#     Update Time From Dabata Registration Material
 #    Update Time Before Registration From Databa
 #    Update Time After Registration From Databa
 #Scroll From Top to Bottom of Page And Capture Page Screenshot

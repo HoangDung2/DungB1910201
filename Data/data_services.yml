@@ -1,0 +1,17 @@
+TC_66:
+  TIME: "HappyCase"
+  LICENSE_PLATE: "No"
+  NAME_SERVICE:  "Gửi xe đạp"
+
+TC_67:
+  TIME: "HappyCase"
+  LICENSE_PLATE: "83P1-57895"
+  NAME_SERVICE:  "Gửi xe máy"
+
+TC_68:
+  TIME: "HappyCase"
+  LICENSE_PLATE: "No"
+  NAME_SERVICE:  "Vệ sinh khu vực"
+#----User & Pass Service
+USER_SERVICE: "B1910241"
+PASS_SERVICE: "123"

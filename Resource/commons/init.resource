@@ -32,11 +32,15 @@ Resource    ../../Resource/modules/BookingRoom/booking_locators.robot
 #----FeedbackMaterial----
 Resource    ../../Resource/modules/FeedbackMaterial/feedback_keywords.robot
 Resource    ../../Resource/modules/FeedbackMaterial/feedback_locators.robot
+#----RegisterServices
+Resource    ../../Resource/modules/RegisterServices/services_keywords.robot
+Resource    ../../Resource/modules/RegisterServices/services_locartors.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 Variables    ../setting.yml
 Resource    ../../Resource/modules/ConnectDB/connect_database.robot
 Variables   ../../Data/data_feedback.yml
 Variables    ../../Data/data_infoPay.yml
+Variables    ../../Data/data_services.yml
 #----Environment----
 Resource    ../../Tests/Environment_Test.robot

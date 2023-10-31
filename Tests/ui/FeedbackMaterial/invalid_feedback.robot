@@ -5,32 +5,32 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Teardown   Close Browser Set Up Time
 Test Template   Validata Student Have Content Material And Number
 #Test Tags   FeedBack
-#Test Tags   LV
+Test Tags   LV
 *** Test Cases ***
 TC_43: Validata Student Have Unchoose Content Material And Unchoose Number
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_43.TIME}   ${TC_43.SELECT_METERIAL}    ${TC_43.NUMBER_METERIAL}    ${TC_43.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_43.TIME}   ${TC_43.SELECT_METERIAL}    ${TC_43.NUMBER_METERIAL}    ${TC_43.MESS}
 TC_44: Validata Student Have Choose Content Material And Unfill Number
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_44.TIME}   ${TC_44.SELECT_METERIAL}    ${TC_44.NUMBER_METERIAL}    ${TC_44.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_44.TIME}   ${TC_44.SELECT_METERIAL}    ${TC_44.NUMBER_METERIAL}    ${TC_44.MESS}
 TC_45: Validata Student Have Unchoose Content Material And Fill Number
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_45.TIME}   ${TC_45.SELECT_METERIAL}    ${TC_45.NUMBER_METERIAL}    ${TC_45.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_45.TIME}   ${TC_45.SELECT_METERIAL}    ${TC_45.NUMBER_METERIAL}    ${TC_45.MESS}
 TC_46: Validata Student Have Unchoose Content Material And Fill Number Of 6
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_46.TIME}   ${TC_46.SELECT_METERIAL}    ${TC_46.NUMBER_METERIAL}    ${TC_46.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_46.TIME}   ${TC_46.SELECT_METERIAL}    ${TC_46.NUMBER_METERIAL}    ${TC_46.MESS}
 TC_47: Validata Student Have Unchoose Content Material And Fill Infinity Number
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_47.TIME}   ${TC_47.SELECT_METERIAL}    ${TC_47.NUMBER_METERIAL}    ${TC_47.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_47.TIME}   ${TC_47.SELECT_METERIAL}    ${TC_47.NUMBER_METERIAL}    ${TC_47.MESS}
 TC_48: Validata Student Have Unchoose Content Material And Fill 2 Number
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_48.TIME}   ${TC_48.SELECT_METERIAL}    ${TC_48.NUMBER_METERIAL}    ${TC_48.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_48.TIME}   ${TC_48.SELECT_METERIAL}    ${TC_48.NUMBER_METERIAL}    ${TC_48.MESS}
 TC_49: Validata Student Have Unchoose Content Material And Fill Negative Number 1
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_49.TIME}   ${TC_49.SELECT_METERIAL}    ${TC_49.NUMBER_METERIAL}    ${TC_49.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_49.TIME}   ${TC_49.SELECT_METERIAL}    ${TC_49.NUMBER_METERIAL}    ${TC_49.MESS}
 TC_50: Validata Student Have Unchoose Content Material And Fill Number Of 0
-#    [Tags]  [FeedBack]
-     ${USERNAME}   ${PASSWORD}  ${TC_50.TIME}   ${TC_50.SELECT_METERIAL}    ${TC_50.NUMBER_METERIAL}    ${TC_50.MESS}
+     [Tags]     FeedBackFaily
+     ${USER_FEEDBACK}   ${PASS_FEEDBACK}  ${TC_50.TIME}   ${TC_50.SELECT_METERIAL}    ${TC_50.NUMBER_METERIAL}    ${TC_50.MESS}
 *** Keywords ***
 Validata Student Have Content Material And Number
         [Documentation]  This test case verifies then All Case Register Material Fail

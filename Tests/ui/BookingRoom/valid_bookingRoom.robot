@@ -2,7 +2,7 @@
 Resource    ../../../Resource/commons/init.resource
 Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
-Test Teardown   Close Browser
+Test Teardown   Close Browser Set Up Time
 #Test Tags   BookingRoom
 Test Tags   LV
 *** Variables ***
@@ -34,7 +34,7 @@ TC_25: Validate Student Have Booking Room In RoomType The Select Any
 
 TC_38: Validate Student Have Air_conditioned And Number All
         [Documentation]     This test case validate student booking  any room if students are eligible to register for a room
-        [Tags]  BookingRoom_CollabAll
+        [Tags]  BookingRoomAirCond
         Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
         Then Verify Home Page Should Be Displayed
         And Capture and Save Screenshot
@@ -60,7 +60,7 @@ TC_38: Validate Student Have Air_conditioned And Number All
 
 TC_39: Validate Student Have Cooking And Number All
         [Documentation]     This test case validate student booking  any room if students are eligible to register for a room
-        [Tags]  BookingRoom_CollabAll
+        [Tags]  BookingRoomCooking
         Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
         Then Verify Home Page Should Be Displayed
         And Capture and Save Screenshot

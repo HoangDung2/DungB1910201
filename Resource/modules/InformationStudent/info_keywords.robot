@@ -46,11 +46,12 @@ Verify Row And Room Is't Displayed If Have Connect DB Delete
         Should Be Equal As Strings    ${list}[1]    ${text_room}
         Delete Register Room Student And Reload Page    ${MSSV}
     END
+
 Verify Row And Room Have Displayed
     [Arguments]  ${MSSV}
     ${text_day}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
     ${text_room}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
-    ${status}=  Get Text    ${locartor_statusRoom}
+#    ${status}=  Get Text    ${locartor_statusRoom}
     IF  '${text_day}'==''
         Pass Execution  Student Have't Register A Room
 #    ELSE IF     '${status}'=='Chưa thanh toán'
@@ -60,6 +61,7 @@ Verify Row And Room Have Displayed
         Should Be Equal As Strings    ${list}[0]    ${text_day}
         Should Be Equal As Strings    ${list}[1]    ${text_room}
     END
+
 Validate Student Has Previously Registered For The Room
     [Arguments]  ${MSSV}
     Verify Row And Room Have Displayed  ${MSSV}

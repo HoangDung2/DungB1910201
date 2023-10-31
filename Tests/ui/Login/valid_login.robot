@@ -3,7 +3,7 @@ Resource    ../../../Resource/commons/init.resource
 #Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Setup     Save File Image Prev And Clear File Current Test All
 Test Template   Validate The Data Username And Password OF Login Successfully
-Test Teardown   Close Browser
+Test Teardown   Close Browser Set Up Time
 #Test Tags   Login
 Test Tags   LV
 *** Test Cases ***
