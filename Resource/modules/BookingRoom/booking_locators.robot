@@ -5,7 +5,7 @@ ${locatorSroll}  xpath=//table//thead//th[3]
 ${locatorTitleMess}     css=div>h2[class='swal2-title']
 ${locatorTitleMess_1}   css=div>div[id=swal2-html-container]
 ${submit_register}      xpath=//div[@class="swal2-actions"]//button[text()='Có']
-${submit_messfail}      xpath=//div[@class="swal2-actions"]//button[text()='OK']
+${submit_messfail}     xpath=//div[@class="swal2-actions"]//button[text()='OK']
 ${locatorSuccess}       xpath=//div[contains(@class,"swal2-backdrop-show")]//h2
 ${locatorSuccess_1}     xpath=//div[contains(@class,"swal2-backdrop-show")]//div[@id="swal2-html-container"]
 ${confirm_Succes}       xpath=//div[contains(@class,"swal2-backdrop-show")]//div[@class="swal2-actions"]//button[text()='OK']

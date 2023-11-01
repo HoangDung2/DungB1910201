@@ -11,6 +11,18 @@ Student Login Into Dormitory System
     Capture and Save Screenshot
     Click Button Submit     ${btnSumit}
 
+Student Login Into Dormitory System And Check All Information In InForStudent Page
+        [Arguments]     ${username}     ${password}
+        Student Login Into Dormitory System     ${username}   ${password}
+        Verify Home Page Should Be Displayed
+        Capture and Save Screenshot
+        Navigate To The Info Student Page By Click Nav Link Info Student
+        Verify Info Student Page Should Be Displayed
+        Check All Info Sudent With Databse  ${username}
+        Verify Row And Room Have Displayed  ${username}
+        Capture and Save Screenshot
+        Check Status Room Have't Pay For Room
+
 Capture and Save Screenshot
     [Documentation]     Take A screentshot And Save File Test Suite, limit 9 image
     ${name_tag}=    Split String     ${TEST_NAME}    :
@@ -97,6 +109,11 @@ Save File Image If Exits Test All
 Wait Notification Should Be Displayed
     Sleep    2s
 
+Wait Page Should Be Displayed
+    Sleep    2s
+Waiting Reload Page
+    Sleep    2s
+
 Scroll From Top to Bottom of Page And Capture Page Screenshot
     ${scroll_height}=    Execute JavaScript    return Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     ${part_height}=    Evaluate    int(${scroll_height} / 3)
@@ -113,6 +130,7 @@ Scroll From Top to Bottom of Page And Capture Page Screenshot
 Save File Image Prev And Clear File Current Test Suite
 #    Save File Image If Exits Test Suite
     Clear Image In File If Exits Test Suite
+    Update Time From Dabata
 
 Save File Image Prev And Clear File Current Test All
 #    Save File Image If Exits Test All
@@ -122,4 +140,10 @@ Close Browser Set Up Time
     Run Keyword And Ignore Error    Update Time From Dabata
     Run Keyword And Ignore Error    Close Browser
 
+Close Browser Set Up Time Payment
+    Run Keyword And Ignore Error    Update Time From Dabata
+    Run Keyword And Ignore Error    Close Browser
+    Run Keyword And Ignore Error    Update Status Payment In Infor Student
 
+
+    

@@ -13,7 +13,11 @@ ${name}     Gửi xe máy
 TC_1:ABC
     [Tags]  123
     User Open Browser And Go To Website
-    Update Time From Dabata
+    Update Status Payment In Infor Student
+#    Update Time From Dabata Check-In Period Overlaps With Stay Period
+#    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}
+#    Log To Console    ${list}
+#    Update Time From Dabata
 #    Delete Services And Reload Page     ${USERNAME}      ${name}
 #    TEST123     ${USERNAME}
 #     Update Time From Dabata Registration Material

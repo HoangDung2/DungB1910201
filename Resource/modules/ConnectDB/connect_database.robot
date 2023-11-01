@@ -79,7 +79,7 @@ Get Row And Room In Infostudent
     [Arguments]   ${MSSV_Infostudent}
     ${File}=    create list
     Connect Database Xampp
-    ${query_sql}=    Set Variable   SELECT contract.room_type, contract.number_room FROM student INNER JOIN contract ON student.user_id = contract.student_id WHERE student.number_student='${MSSV_Infostudent}';
+    ${query_sql}=    Set Variable   SELECT contract.room_type, contract.number_room FROM student INNER JOIN contract ON student.id = contract.student_id WHERE student.number_student='${MSSV_Infostudent}';
     ${results}=  Query    ${query_sql}
     Log    ${results}
     Disconnect From Database
@@ -224,3 +224,13 @@ Delete Services And Reload Page
         Reload Page
         Wait Notification Should Be Displayed
     END
+
+
+#----- Prepare Case Payment Happycase Tear Down
+Update Status Payment In Infor Student
+    [Documentation]  Keywords have get text row and room in infostudent page then compare ui
+    Connect Database Xampp
+    ${results}=    Query   SELECT student.id FROM student Where student.number_student = '${USER_PAYMENT}';
+    Update Time From Table   `contract` SET `status` = '0' WHERE `contract`.`student_id` = ${results}[0][0];
+    Update Time From Table   `register_services` SET `status` = '0' WHERE `register_services`.`student_id` = ${results}[0][0];
+    Disconnect From Database

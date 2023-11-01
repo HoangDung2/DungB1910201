@@ -35,6 +35,9 @@ Resource    ../../Resource/modules/FeedbackMaterial/feedback_locators.robot
 #----RegisterServices
 Resource    ../../Resource/modules/RegisterServices/services_keywords.robot
 Resource    ../../Resource/modules/RegisterServices/services_locartors.robot
+#----Payment-----
+Resource    ../../Resource/modules/Payment/payment_keywords.robot
+Resource    ../../Resource/modules/Payment/payment_locartors.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 Variables    ../setting.yml

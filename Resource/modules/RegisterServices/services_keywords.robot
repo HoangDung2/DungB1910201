@@ -66,14 +66,28 @@ Update Time According To TCs Service
     END
 
 Check If The Service Student Wanna Register Has Connect DB Delete
-    [Arguments]     ${MSSV}     ${name_service}
-    ${text_day}=    AutoLibrary.Get Element Table  ${day}   ${locatorInfotalble}
-    ${text_room}=    AutoLibrary.Get Element Table  ${room}   ${locatorInfotalble}
-    ${list}=  Get Row And Room In Infostudent   ${MSSV}
-    IF  '${text_day}'==''
-        RETURN  Next Step
-    ELSE
-        Should Be Equal As Strings    ${list}[0]    ${text_day}
-        Should Be Equal As Strings    ${list}[1]    ${text_room}
+    [Arguments]      ${MSSV}  ${name_service}
+    ${locator_text}=     Dymanic Xpath  ${name_service}  ${name_tableServices}
+    ${status}=  Run Keyword And Return Status    Element Should Be Visible  ${locator_text}
+    IF  '${status}'== 'True'
+        ${get_text}=    Get Text    ${locator_text}
+        Should Be Equal As Strings    ${get_text}    ${name_service}
         Delete Services And Reload Page   ${MSSV}   ${name_service}
+    ELSE
+        RETURN  Next Step
     END
+
+Check Service Then Student Is Previously Registered
+    [Arguments]   ${name_service}
+    ${locator_text}=     Dymanic Xpath  ${name_service}  ${name_tableServices}
+    ${get_text}=    Get Text    ${locator_text}
+    Should Be Equal As Strings    ${name_service}    ${get_text}
+
+Verify Notification Register Faily Should Be Displayed
+    [Arguments]     ${mess_1}   ${mess_2}
+    Compare Text    ${locatorSuccess}     ${mess_1}
+    Compare Text    ${locatorSuccess_1}     ${mess_2}
+    Click Element   ${submit_messfail_1}
+
+Click Confirm Register
+   Sleep    0.5s
