@@ -5,6 +5,9 @@ jsonschema-specifications==2023.7.1
 numpy==1.26.1
 pandas==2.1.1
 pyjsonselect==0.2.2
+PySocks==1.7.1
+python-dateutil==2.8.2
+pytz==2023.3.post1
 PyMySQL==1.1.0
 PyYAML==6.0.1
 robotframework==6.1.1
@@ -16,4 +19,6 @@ robotframework-requests==0.9.5
 robotframework-seleniumlibrary==6.1.2
 rpds-py==0.10.3
 selenium==4.3.0
+requests==2.31.0
+
 
