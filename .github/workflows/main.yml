@@ -18,9 +18,12 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Run Robot Framework tests
         run: |
-          robot -d Report -L TRACE:DEBUG -P./Libs .\Tests\ui\Payment\valid_cancel_payment.robot
+          robot -d Report -L TRACE:DEBUG -P./Libs Tests/ui/Payment/valid_cancel_payment.robot
         env:
           ROBOT_SYSLOG_FILE: "Drivers/chrome.yml"
 
