@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Payment/invalid_infoCard_payment.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Payment/invalid_voucher_payment.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_cancel_payment.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_voucher_payment.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/data_infoPay.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_infoPay.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/commons/init.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/init.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Payment/payment_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Payment/payment_keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/Payment/payment_locartors.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Payment/payment_locartors.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RegisterServices/valid_services.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RegisterServices/valid_services.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/text.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/text.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
