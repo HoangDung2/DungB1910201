@@ -23,13 +23,13 @@ jobs:
 
       - name: Set up Apache
         run: |
-          sudo apt-get update
-          sudo apt-get install apache2
+          apt-get update
+          apt-get install apache2
 
       - name: Set up MySQL
         run: |
-          sudo apt-get update
-          sudo apt-get install mysql-server
+          apt-get update
+          apt-get install mysql-server
 
       - name: Run Robot Framework tests
 
