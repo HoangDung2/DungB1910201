@@ -5,7 +5,9 @@ Test Teardown   Close Browser Set Up Time Payment
 Test Template   Validate Notification Student Pay Online And Input Info Card Payment
 Test Tags   LV
 *** Test Cases ***
-TC_93: Validate Notification Student Pay Online And Unfill Info Card Payment    ${USER_PAYMENT} ${PASS_PAYMENT}  ${TC_93.ID_CARD}    ${TC_93.NAME_PAY}    ${TC_93.DATE_PAY}
+TC_93: Validate Notification Student Pay Online And Unfill Info Card Payment
+    [Documentation]
+    ${USER_PAYMENT} ${PASS_PAYMENT}  ${TC_93.ID_CARD}    ${TC_93.NAME_PAY}    ${TC_93.DATE_PAY}
 *** Keywords ***
 Validate Notification Student Pay Online And Input Info Card Payment
         [Documentation]
@@ -16,8 +18,8 @@ Validate Notification Student Pay Online And Input Info Card Payment
         Then Verify VNPAY Page Should Be Displayed
         And Capture and Save Screenshot
         And Student Input Info Card Need Payment  ${id_card}     ${name_pay}    ${date_pay}
-        And Waiting Reload Page
         And Capture and Save Screenshot
+        And Verify Error Should Be Displayed
 
 
 
