@@ -8,7 +8,7 @@ pyjsonselect==0.2.2
 PyMySQL==1.1.0
 PyYAML==6.0.1
 robotframework==6.1.1
-robotframework-databaselibrary==1.3.1
+DatabaseLibrary
 robotframework-excellib==2.0.1
 robotframework-jsonvalidator==2.0.0
 robotframework-pythonlibcore==4.2.0

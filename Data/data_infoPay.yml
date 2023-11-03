@@ -43,3 +43,7 @@ TC_90:
   CONDITION: "Input Code"
   CODE: "abc123@!3"
 
+TC_93:
+  ID_CARD: ""
+  NAME_PAY: ""
+  DATE_PAY: ""

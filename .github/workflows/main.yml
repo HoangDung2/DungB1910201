@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Connect DB
+        run: mysql-connector-python
+
       - name: Run Robot Framework tests
         run: |
           robot -d Report -L TRACE:DEBUG -P./Libs Tests/ui/Payment/valid_cancel_payment.robot
