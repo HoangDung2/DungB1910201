@@ -24,8 +24,6 @@ jobs:
       - name: Run Robot Framework tests
         run: |
           robot -d Report -L TRACE:DEBUG -P./Libs Tests/ui/Payment/valid_cancel_payment.robot
-        env:
-          ROBOT_SYSLOG_FILE: "Drivers/chrome.yml"
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
