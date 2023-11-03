@@ -1,5 +1,4 @@
 *** Settings ***
-Variables        ../Drivers/chrome.yml
 Resource        ../Resource/commons/init.resource
 *** Keywords ***
 User Open Browser And Go To Website
