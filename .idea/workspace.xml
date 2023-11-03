@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/modules/ConnectDB/connect_database.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/ConnectDB/connect_database.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/setting.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/setting.yml" afterDir="false" />

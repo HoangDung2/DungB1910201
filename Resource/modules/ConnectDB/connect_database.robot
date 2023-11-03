@@ -2,12 +2,6 @@
 Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 #Test Tags   DB
-*** Variables ***
-${DBHOST}    127.0.0.1
-${DBPORT}    3306
-${DBUSER}    root
-${DBPASS}    ""
-${DBNAME}    dormitory
 *** Keywords ***
 Connect Database Xampp
     Connect To Database    pymysql  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}
