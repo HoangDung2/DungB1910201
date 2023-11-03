@@ -15,8 +15,7 @@ Validate Notification Student Pay Online And Input Info Card Payment
         And Wait Page Should Be Displayed
         Then Verify VNPAY Page Should Be Displayed
         And Capture and Save Screenshot
-#        ------
-        And Student Input Info Card Need Payment  ${id_card}     ${name_pay}     ${date_pay}
+        And Student Input Info Card Need Payment  ${id_card}     ${name_pay}    ${date_pay}
         And Waiting Reload Page
         And Capture and Save Screenshot
 
