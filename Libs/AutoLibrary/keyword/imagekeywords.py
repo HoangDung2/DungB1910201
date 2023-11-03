@@ -2,7 +2,6 @@ from SeleniumLibrary.base import keyword, LibraryComponent
 from SeleniumLibrary.keywords import WaitingKeywords
 import os
 import shutil
-from PIL import Image
 class ImageKeyWords(LibraryComponent):
     def __init__(self, ctx):
         LibraryComponent.__init__(self, ctx)

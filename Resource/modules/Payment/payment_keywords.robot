@@ -15,6 +15,16 @@ Verify VNPAY Page Should Be Displayed
     Compare Text    ${locator_TitlePayment}     ${mess_TitlePayment}
     Compare Text    ${locator_Tiltbill}     ${mess_TitleBill}
 
+
+Student Input Info Card Need Payment
+    [Arguments] ${id_card}  ${name_pay}  ${date_pay}
+    Wait Until Element Is Visible    ${locator_inputDigits}
+    Wait Until Element Is Visible    ${locator_inputNameCard}
+    Wait Until Element Is Visible    ${locator_inputDate}
+    Input Text    ${locator_inputDigits}   ${id_card}
+    Input Text    ${locator_inputNameCard}    ${name_pay}
+    Input Text    ${locator_inputDate}    ${date_pay}
+
 Input Full Info Card Need Payment
     Wait Until Element Is Visible    ${locator_inputDigits}
     Wait Until Element Is Visible    ${locator_inputNameCard}
