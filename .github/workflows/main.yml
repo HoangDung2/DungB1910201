@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Connect DB
-        run: mysql-connector-python
+        run: pip install robotframework-databaselibrary
 
       - name: Run Robot Framework tests
         run: |
