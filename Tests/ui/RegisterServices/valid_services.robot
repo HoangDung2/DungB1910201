@@ -5,7 +5,7 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Teardown   Close Browser Set Up Time
 Test Template   Validate Student Have Register Services
 #Test Tags   RegisterServices
-#Test Tags   LV
+Test Tags   LV
 *** Test Cases ***
 TC_66: Validate Student Have Send Bicycles Register
     [Documentation]

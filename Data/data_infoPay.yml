@@ -12,3 +12,34 @@ TC_81:
 
 TC_82:
   STATUS: "Yes"
+
+TC_83:
+  METHOD: "Click"
+
+TC_84:
+  METHOD: "Code"
+
+TC_85:
+  CONDITION: "Over Number"
+  CODE: ""
+
+TC_86:
+  CONDITION: "Invalid Time"
+  CODE: ""
+
+TC_87:
+  CONDITION: "Input Code"
+  CODE: "aaaaaaa"
+
+TC_88:
+  CONDITION: "Input Code"
+  CODE: "123456"
+
+TC_89:
+  CONDITION: "Input Code"
+  CODE: "abc123"
+
+TC_90:
+  CONDITION: "Input Code"
+  CODE: "abc123@!3"
+

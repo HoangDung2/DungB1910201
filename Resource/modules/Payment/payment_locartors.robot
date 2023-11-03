@@ -13,12 +13,38 @@ ${locator_inputOTP}  css=input[id="otpvalue"]
 ${button_confirm}   css=button[id="btnConfirm"]
 ${locator_succesPayment}      xpath=//div[contains(text(),"Đã thanh toán")]
 ${locator_discount}     xpath=//span[contains(text(),"Chọn hoặc nhập mã")]
-${locator_voucher}      xpath=//div[@id="listPromotions"]//div[@class="ubtn-inner"]//span[contains(text(),"Áp dụng")]
+${locator_voucher}      xpath=//div[@id="listPromotions"]//span[contains(text(),"Áp dụng")]
+
+${locator_code_voucher}     xpath=//div[@id="listPromotions"]//span[contains(text(),"Áp dụng")]//ancestor::div[@class="col-auto promo-right"]//preceding::div[contains(@class,"row-8 align-items-center")]//div[@class="col"]
+${locator_IP_Voucher}   css=input[id="inputPromoManual"]
+${submit_code_voucher}  css=button[id="btnPromoManual"]
+${cancel_payment}   css=a[data-bs-target="#modalCancelPayment"]
+${locator_voucher_overNu}   xpath=//div[@id="listPromotions"]//div[contains(text(),"Số lần sử dụng")]//ancestor::div[@class="promo-left-inner"]//child::div[contains(@class,"row-8 align-items-center")]//div[@class="col"]
+${img_voucher_overNu}   xpath=//div[@id="listPromotions"]//div[contains(text(),"Số lần sử dụng")]//ancestor::div[@class="row row-0 align-items-center"]
+
+${locator_voucher_indvalTime}   xpath=//div[@id="listPromotions"]//div[contains(text(),"Không đáp ứng")]//ancestor::div[@class="promo-left-inner"]//child::div[contains(@class,"row-8 align-items-center")]//div[@class="col"]
+${img_voucher_invali_time}   xpath=//div[@id="listPromotions"]//div[contains(text(),"Không đáp ứng")]//ancestor::div[@class="row row-0 align-items-center"]
+
+${locator_error_overNu}     xpath=//div[@class="col title weight5 error-message"]
 
 ${locator_valueDiscount}    css=span[id="promoDiscountAmount"]
 ${locator_valuebill}     xpath=//div[contains(text(),"Giá trị đơn hàng")]//parent::div//following-sibling::div//div
 ${locator_billPayment}      css=span[id="totalAmountDt"]
+
+${locator_mess_cancel}  css=div[class="header"]
+${locator_mess_cancel_1}  css=div[class="content"]>p
+${locator_alert_cancel}     xpath=//h2[contains(text(),"Hủy thanh toán")]
+${locator_alert_cancel_1}   xpath=//div[@id="modalCancelPayment"]//child::div[contains(@class,"modal-body")]
+${button_cancel_alert}  xpath=//span[contains(text(),'Xác nhận hủy')]
 #-----mess
 ${mess_TitlePayment}    Thanh toán qua Ngân hàng NCB
 ${mess_TitleBill}   Thông tin đơn hàng
 ${mess_succesPayment}   Đã thanh toán
+${mess_error_overN}  Quý khách đã sử dụng hết số lượt khuyến mại của chương trình
+${mess_error_InvaliT}   Mã khuyến mại không hợp lệ
+
+${mess_alert_1}     Hủy thanh toán
+${mess_alert_2}     Quý khách có chắc chắn muốn hủy thanh toán giao dịch này?
+
+${mess_cancel_1}    Thanh toán thất bại.
+${mess_cancel_2}    Giao dịch của bạn đã bị hủy bỏ

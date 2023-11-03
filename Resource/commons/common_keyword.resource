@@ -48,6 +48,33 @@ Capture and Save Screenshot
     Capture Page Screenshot     ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
     File Should Exist    ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
 
+
+Capture Element and Save Screenshot
+    [Documentation]     Take A screentshot And Save File Test Suite, limit 9 image
+    [Arguments]     ${locator_element}
+    ${name_tag}=    Split String     ${TEST_NAME}    :
+    ${prevTag}=    Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]
+    ${length_image}=   Count Image File  ${prevTag}
+    IF    '${length_image}' == '0'
+         ${i}=  Set Variable    1
+         Set Global Variable    ${i}
+    ELSE
+        ${file_image}=  Get Image Files     ${prevTag}
+        ${get_value_image}=     Split String     ${file_image}[0]   .
+        ${Number}=    Split String    ${get_value_image}[0]   SS_
+        ${ssNumber}=  Evaluate    ${Number}[1]
+        ${max}=     Set Variable  ${ssNumber}
+        FOR    ${element}    IN    @{file_image}
+            ${get_value_image_1}=     Split String     ${element}   .
+            ${Number_1}=    Split String    ${get_value_image_1}[0]   SS_
+            ${ssNumber_1}=  Evaluate    ${Number_1}[1]
+            ${max}=  Evaluate    max(${max},${ssNumber_1})
+            ${i}=   Set Variable    ${max+1}
+        END
+    END
+    Capture Element Screenshot    ${locator_element}     ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
+    File Should Exist    ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_SS_${i}.png
+
 Clear Image In File If Exits Test Suite
     ${name_tag}=    Split String     ${TEST_NAME}    :
     ${prevTag}=    Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]
