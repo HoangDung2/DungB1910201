@@ -24,6 +24,8 @@ Student Input Info Card Need Payment
     Input Text    ${locator_inputDigits}   ${id_card}
     Input Text    ${locator_inputNameCard}    ${name_pay}
     Input Text    ${locator_inputDate}    ${date_pay}
+    Click Element    ${button_continue}
+
 
 Input Full Info Card Need Payment
     Wait Until Element Is Visible    ${locator_inputDigits}

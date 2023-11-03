@@ -21,12 +21,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Connect DB
-        run: pip install robotframework-databaselibrary
+      - name: Set up MySQL Variables
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        run: echo "Database setup complete"
 
       - name: Run Robot Framework tests
         run: |
           robot -d Report -L TRACE:DEBUG -P./Libs Tests/ui/Payment/valid_cancel_payment.robot
+        
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
