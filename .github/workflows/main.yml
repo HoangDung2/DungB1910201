@@ -21,6 +21,16 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Set up Apache
+        run: |
+          sudo apt-get update
+          sudo apt-get install apache2
+
+      - name: Set up MySQL
+        run: |
+          sudo apt-get update
+          sudo apt-get install mysql-server
+
       - name: Run Robot Framework tests
 
         run: |
