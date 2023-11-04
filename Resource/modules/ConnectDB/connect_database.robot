@@ -4,14 +4,14 @@ Resource    ../../../Resource/commons/init.resource
 #Test Tags   DB
 *** Variables ***
 ${dbapiModuleName}  pymysql
-#${db}    127.0.0.1
+${dbHost}    127.0.0.1
 ${DBPORT}    3306
 ${dbUsername}    root
-${dbPassword}    ''
+${dbPassword}    Chanel@123
 ${dbName}    dormitory
 *** Keywords ***
 Connect Database Xampp
-    Connect To Database   ${dbapiModuleName}  ${dbName}    ${dbUsername}    ${dbPassword}    ${DBPORT}
+    Connect To Database   ${dbapiModuleName}  ${DBNAME}    ${dbUsername}    ${dbPassword}    ${dbHost}    ${DBPORT}
 
 Get Length Number Room Have Number Of People And Air_conditioned
     [Arguments]     ${NUMBER}
