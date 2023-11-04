@@ -2,6 +2,13 @@
 Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 #Test Tags   DB
+*** Variables ***
+${bapiModuleName}  mysql.connector
+${DBHOST}    127.0.0.1
+${DBPORT}    3306
+${DBUSER}    root
+${DBPASS}    ${EMPTY}
+${DBNAME}    dormitory
 *** Keywords ***
 Connect Database Xampp
     Connect To Database   ${bapiModuleName}  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}

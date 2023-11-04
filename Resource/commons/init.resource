@@ -40,7 +40,7 @@ Resource    ../../Resource/modules/Payment/payment_keywords.robot
 Resource    ../../Resource/modules/Payment/payment_locartors.robot
 #----Data----
 Variables    ../../Data/data_login.yml
-Variables    ../setting.yml
+#Variables    ../setting.yml
 Resource    ../../Resource/modules/ConnectDB/connect_database.robot
 Variables   ../../Data/data_feedback.yml
 Variables    ../../Data/data_infoPay.yml
