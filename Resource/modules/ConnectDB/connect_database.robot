@@ -11,7 +11,7 @@ ${dbPassword}    Chanel@123
 ${dbName}    dormitory
 *** Keywords ***
 Connect Database Xampp
-    Connect To Database   ${dbapiModuleName}  ${DBNAME}    ${dbUsername}    ${dbPassword}    ${dbHost}    ${DBPORT}
+    Connect To Database   ${dbapiModuleName}  ${dbName}    ${dbUsername}    ${dbPassword}    ${dbHost}    ${DBPORT}
 
 Get Length Number Room Have Number Of People And Air_conditioned
     [Arguments]     ${NUMBER}
