@@ -4,7 +4,7 @@ Resource    ../../../Resource/commons/init.resource
 #Test Tags   DB
 *** Keywords ***
 Connect Database Xampp
-    Connect To Database    pymysql ${bapiModuleName}  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}
+    Connect To Database   ${bapiModuleName}  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}
 
 Get Length Number Room Have Number Of People And Air_conditioned
     [Arguments]     ${NUMBER}
