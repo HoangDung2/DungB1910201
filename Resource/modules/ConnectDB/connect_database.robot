@@ -3,15 +3,15 @@ Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 #Test Tags   DB
 *** Variables ***
-${bapiModuleName}  pymysql
-${DBHOST}    127.0.0.1
+${dbapiModuleName}  pymysql
+#${db}    127.0.0.1
 ${DBPORT}    3306
-${DBUSER}    root
-${DBPASS}    ${EMPTY}
-${DBNAME}    dormitory
+${dbUsername}    root
+${dbPassword}    ${EMPTY}
+${dbName}    dormitory
 *** Keywords ***
 Connect Database Xampp
-    Connect To Database   ${bapiModuleName}  ${DBNAME}    ${DBUSER}    ${DBPASS}    ${DBHOST}    ${DBPORT}
+    Connect To Database   ${dbapiModuleName}  ${dbName}    ${dbUsername}    ${dbPassword}    ${DBPORT}
 
 Get Length Number Room Have Number Of People And Air_conditioned
     [Arguments]     ${NUMBER}
