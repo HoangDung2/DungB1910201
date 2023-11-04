@@ -3,7 +3,7 @@ Resource    ../../../Resource/commons/init.resource
 #Library     SeleniumLibrary
 #Test Tags   DB
 *** Variables ***
-${bapiModuleName}  mysql.connector
+${bapiModuleName}  pymysql
 ${DBHOST}    127.0.0.1
 ${DBPORT}    3306
 ${DBUSER}    root
