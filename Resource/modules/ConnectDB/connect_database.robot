@@ -7,7 +7,7 @@ ${dbapiModuleName}  pymysql
 #${db}    127.0.0.1
 ${DBPORT}    3306
 ${dbUsername}    root
-${dbPassword}    ${EMPTY}
+${dbPassword}    ''
 ${dbName}    dormitory
 *** Keywords ***
 Connect Database Xampp
