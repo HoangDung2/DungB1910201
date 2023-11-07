@@ -235,9 +235,15 @@ Delete Services And Reload Page
 
 #----- Prepare Case Payment Happycase Tear Down
 Update Status Payment In Infor Student
-    [Documentation]  Keywords have get text row and room in infostudent page then compare ui
-    Connect Database Xampp
-    ${results}=    Query   SELECT student.id FROM student Where student.number_student = '${USER_PAYMENT}';
-    Update Time From Table   `contract` SET `status` = '0' WHERE `contract`.`student_id` = ${results}[0][0];
-    Update Time From Table   `register_services` SET `status` = '0' WHERE `register_services`.`student_id` = ${results}[0][0];
-    Disconnect From Database
+    [Arguments]     ${MSSV}
+    IF   '${MSSV}' == 'B1910244'
+        RETURN  Next Step
+    ELSE
+        Connect Database Xampp
+        ${results}=    Query   SELECT student.id FROM student Where student.number_student = '${MSSV}';
+        Update Time From Table   `contract` SET `status` = '0' WHERE `contract`.`student_id` = ${results}[0][0];
+        Update Time From Table   `register_services` SET `status` = '0' WHERE `register_services`.`student_id` = ${results}[0][0];
+        Disconnect From Database
+    END
+
+

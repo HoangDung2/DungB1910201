@@ -5,6 +5,10 @@ ${locator_registerServices}     xpath=//a[contains(text(),"{}")]//parent::h4//pa
 ${locator_licensePlate}    xpath=//a[contains(text(),"Gửi xe máy")]//parent::h4/following-sibling::input
 ${info_licensePlate}    xpath=//table[@class="table"]//tbody//td[contains(text(),"Gửi xe đạp")]/following-sibling::td[2]
 ${name_tableServices}   xpath=//table[@class="table"]//tbody//td[contains(text(),"{}")]
+
+${locator_payment_service}  xpath=//table[@class="table"]//tbody//td[contains(text(),"{}")]//following-sibling::td[3]//div[@class="payment"]
+${locator_inva_payment}     xpath=//table[@class="table"]//tbody//td[contains(text(),"{}")]//following-sibling::td[3]//div[@class="p-2"]
+
 ${submit_messfail_1}     xpath=//div[@class="swal2-actions"]//button[text()='OK']
 #-----mess----
 ${mess_services}    DỊCH VỤ

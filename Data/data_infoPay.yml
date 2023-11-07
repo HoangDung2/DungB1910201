@@ -47,3 +47,51 @@ TC_93:
   ID_CARD: ""
   NAME_PAY: ""
   DATE_PAY: ""
+
+TC_94:
+  ID_CARD: "0123456789123456789"
+  NAME_PAY: "aaaaaaa"
+  DATE_PAY: "1112"
+
+TC_95:
+  STATUS: "No"
+  NAME_SERVICE:  "Gửi xe máy"
+
+TC_96:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Gửi xe máy"
+
+TC_97:
+  STATUS: "No"
+  NAME_SERVICE:  "Gửi xe đạp"
+
+TC_98:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Gửi xe đạp"
+
+TC_99:
+  STATUS: "No"
+  NAME_SERVICE:  "Vệ sinh khu vực"
+
+TC_100:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Vệ sinh khu vực"
+#------------ Usesername And Pass Word Have paid all services and room
+USER_PAID: "B1910244"
+PASS_PAID: "123"
+
+TC_101:
+  STATUS: "Yes"
+
+TC_102:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Gửi xe đạp"
+
+TC_103:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Gửi xe máy"
+
+TC_104:
+  STATUS: "Yes"
+  NAME_SERVICE:  "Vệ sinh khu vực"
+

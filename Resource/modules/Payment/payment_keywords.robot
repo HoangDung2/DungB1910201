@@ -17,14 +17,16 @@ Verify VNPAY Page Should Be Displayed
 
 
 Student Input Info Card Need Payment
-    [Arguments] ${id_card}  ${name_pay}  ${date_pay}
+    [Arguments]     ${id_card}  ${name_pay}  ${date_pay}
     Wait Until Element Is Visible    ${locator_inputDigits}
     Wait Until Element Is Visible    ${locator_inputNameCard}
     Wait Until Element Is Visible    ${locator_inputDate}
     Input Text    ${locator_inputDigits}   ${id_card}
+    Click Element   ${button_continue}
     Input Text    ${locator_inputNameCard}    ${name_pay}
     Input Text    ${locator_inputDate}    ${date_pay}
-    Click Element    ${button_continue}
+    Click Element   ${button_continue}
+
 
 
 Input Full Info Card Need Payment
@@ -181,6 +183,7 @@ Click In 'Hủy thanh toán' Then Cancel
     Wait Until Element Is Visible   ${cancel_payment}
     Click Element    ${cancel_payment}
     Wait Notification Should Be Displayed
+
 Alert Cancel Should Be Displayed
     Compare Text    ${locator_alert_cancel}     ${mess_alert_1}
     Compare Text    ${locator_alert_cancel_1}     ${mess_alert_2}
@@ -189,3 +192,32 @@ Alert Cancel Should Be Displayed
 Verify Nofication Cancel Should Be Displayed
     Compare Text    ${locator_mess_cancel}     ${mess_cancel_1}
     Compare Text    ${locator_mess_cancel_1}     ${mess_cancel_2}
+
+Verify Error Should Be Displayed
+    Wait Notification Should Be Displayed
+
+Check If The Service Student Wanna Payment Has't Return Nofication
+    [Arguments]  ${name_service}
+    ${locator_text}=     Dymanic Xpath   ${name_service}    ${locator_inva_payment}
+    ${status}=  Run Keyword And Return Status    Element Should Contain     ${locator_text}   ${mess_invali_payment}
+    IF  '${status}'== 'True'
+        ${locator_payment}=     Dymanic Xpath  ${name_service}  ${locator_payment_service}
+        Wait Until Element Is Visible    ${locator_payment}
+        Click Element    ${locator_payment}
+    ELSE
+        Pass Execution  Student Have't Register Services Then Don't Payment Online
+    END
+
+Check If The Room Student Wanna Payment Has't Return Nofication
+    ${text}=  Get Text  ${locator_succesPayment}
+    IF    '${text}' == '${mess_succesPayment}'
+           Pass Execution    Student Have Done Payment Online Room
+    ELSE
+           Check Status Room Have't Pay For Room
+    END
+    
+Verify Online Payment Service Succeslly
+    [Arguments]    ${name_service}
+    ${locator_text}=     Dymanic Xpath   ${name_service}    ${locator_inva_payment}
+    ${status}=  Run Keyword And Return Status    Element Should Contain     ${locator_text}   ${mess_vali_payment}
+    Should Be Equal As Strings    ${status}    True

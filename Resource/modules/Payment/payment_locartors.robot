@@ -36,6 +36,11 @@ ${locator_mess_cancel_1}  css=div[class="content"]>p
 ${locator_alert_cancel}     xpath=//h2[contains(text(),"Hủy thanh toán")]
 ${locator_alert_cancel_1}   xpath=//div[@id="modalCancelPayment"]//child::div[contains(@class,"modal-body")]
 ${button_cancel_alert}  xpath=//span[contains(text(),'Xác nhận hủy')]
+
+${locator_mess_cardID}  css=div[id="err-card"]>ul>li
+${locator_mess_namPay}  css=ul[id="parsley-id-7"]>li
+${locator_messDate}  css=ul[id="parsley-id-9"]>li
+
 #-----mess
 ${mess_TitlePayment}    Thanh toán qua Ngân hàng NCB
 ${mess_TitleBill}   Thông tin đơn hàng
@@ -48,3 +53,5 @@ ${mess_alert_2}     Quý khách có chắc chắn muốn hủy thanh toán giao 
 
 ${mess_cancel_1}    Thanh toán thất bại.
 ${mess_cancel_2}    Giao dịch của bạn đã bị hủy bỏ
+${mess_invali_payment}  CHƯA THANH TOÁN
+${mess_vali_payment}     ĐÃ THANH TOÁN

@@ -13,14 +13,15 @@ ${b}    B1910241
 *** Test Cases ***
 TC_1:ABC
     [Tags]  123
-    User Open Browser And Go To Website
+    Read Email
+#    User Open Browser And Go To Website
 #    Update Status Payment In Infor Student
 #    Update Time From Dabata Check-In Period Overlaps With Stay Period
 #    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}
 #    Log To Console    ${list}
 #    Update Time From Dabata
 #    Delete Services And Reload Page     ${USERNAME}      ${name}
-    TEST123     ${b}
+#    TEST123     ${b}
 #     Update Time From Dabata Registration Material
 #    Update Time Before Registration From Databa
 #    Update Time After Registration From Databa

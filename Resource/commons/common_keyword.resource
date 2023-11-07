@@ -21,7 +21,6 @@ Student Login Into Dormitory System And Check All Information In InForStudent Pa
         Check All Info Sudent With Databse  ${username}
         Verify Row And Room Have Displayed  ${username}
         Capture and Save Screenshot
-        Check Status Room Have't Pay For Room
 
 Capture and Save Screenshot
     [Documentation]     Take A screentshot And Save File Test Suite, limit 9 image
@@ -168,9 +167,13 @@ Close Browser Set Up Time
     Run Keyword And Ignore Error    Close Browser
 
 Close Browser Set Up Time Payment
+    [Arguments]     ${MSSV}
     Run Keyword And Ignore Error    Update Time From Dabata
     Run Keyword And Ignore Error    Close Browser
-    Run Keyword And Ignore Error    Update Status Payment In Infor Student
+    Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}
 
 
-    
+#  ------
+
+Read Mail Text
+    Open Mailbox
