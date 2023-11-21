@@ -1,7 +1,7 @@
 *** Settings ***
 Resource        ../../Resource/commons/init.resource
 Test Tags   Login123
-Test Teardown   Close Browser
+Test Teardown  Close Browser
 #Library     SeleniumLibrary
 #Library    DateTime
 #Library    SeleniumLibrary
@@ -13,8 +13,8 @@ ${b}    B1910241
 *** Test Cases ***
 TC_1:ABC
     [Tags]  123
+    User Open Browser And Go To Website     ${NAME_PAGE_STUDENT}
     Read Email
-#    User Open Browser And Go To Website
 #    Update Status Payment In Infor Student
 #    Update Time From Dabata Check-In Period Overlaps With Stay Period
 #    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}

@@ -41,7 +41,7 @@ class TableKeyWords(LibraryComponent):
             for i in list:
                 if i == "Ngày sinh":
                     temp = self.get_element_table(i,locator)
-                    temp_time = self.selenium_timekey.convert_time(temp)
+                    temp_time = self.selenium_timekey.convert_time_data(temp)
                     store.append(temp_time)
                 else:
                     temp = self.get_element_table(i,locator)

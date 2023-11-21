@@ -1,5 +1,4 @@
 *** Settings ***
-#Library    SeleniumLibrary
 Resource    ../../../Resource/commons/init.resource
 *** Keywords ***
 Navigate To The Info Student Page By Click Nav Link Roomtype
@@ -26,11 +25,7 @@ Select The Room According To The Previous Condition Steps
 Register Room Any In List Eligible
     [Documentation]     Input MSSV Then Get Gender Register Room
     [Arguments]  ${MSSV}
-    ${scrollHeight}=    Execute JavaScript    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight)
-    ${scrollPosition}=    Evaluate    (1/3) * ${scrollHeight}
-    Execute JavaScript    window.scrollTo(0, ${scrollPosition})
-    Sleep    2s
-    Capture and Save Screenshot
+    Scroll To Bottom
     ${gender_sv}=   Get All Info Student    ${MSSV}
     ${locator}=     Dymanic Xpath  ${gender_sv}[6]  ${locatorRoom}
     ${elements}=    Get WebElements  ${locator}
@@ -91,8 +86,14 @@ Verify Error Message Is Displayed
     Click Element    ${submit_messfail}
 
 Click In RoomType Have Status Being Repaired
-    Compare Text  ${locatorStatusRepair}  ${messStatusRepair}
-    Click Element   ${locatorStatusRepair}
+    ${return_status}=   Run Keyword And Return Status    Element Should Be Visible    ${locatorStatusRepair}
+    IF    '${return_status}'== 'True'
+            Compare Text  ${locatorStatusRepair}  ${messStatusRepair}
+            Click Element   ${locatorStatusRepair}
+    ELSE
+            Pass Execution    No Room Under Repair
+    END
+
 
 Verify Error Message Are Being Repaired Is Displayed
     Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa

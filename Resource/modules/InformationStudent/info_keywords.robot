@@ -104,6 +104,42 @@ Click Nav Link Service Then Register
     Should Be Equal As Strings    ${text_lctMessFail}   ${messService}
     Should Be Equal As Strings    ${text_lctTiltelMessFail}    ${messFail_Homepage}
 
-
 Click Button 'OK'
     Click Element   xpath=//button[@type="button"][contains(text(),"OK")]
+
+#------------------Admin----------
+Navigate To The Info Admin Page
+    Wait Until Element Is Visible   ${lct_info_user_admin}
+    Click Element    ${lct_info_user_admin}
+    Wait Until Element Is Visible   ${locator_nav_info}
+    Click Element    ${locator_nav_info}
+
+Verify Info Admin Page Should Be Displayed
+    Compare Text    ${title_admin}      ${messTitle_Admin}
+    Element Should Be Visible    ${logo_admin}
+
+Check All Info Admin With Databse
+    [Documentation]  Return List tu 0-7
+    ...              0: SĐT , 1: Địa chỉ, 2: Giới tính, 3 ID
+    ...              4: Ngày sinh
+    [Arguments]    ${id}
+    ${data_db}=  Get All Info Admin  ${id}
+    ${i}=    Set Variable    0
+    ${list}=  create list
+    FOR    ${element}    IN    @{list_info_admin}
+           IF    '${element}' == 'Ngày sinh'
+                ${locator}=     Dymanic Xpath   ${element}    ${lct_table_info_admin}
+                ${text}=  Get value    ${locator}
+                ${covert}=  Convert Time Data   ${text}
+                Should Be Equal As Strings  ${data_db}[${i}]   ${covert}
+                ${i}=    Evaluate   ${i} + 1
+           ELSE
+                ${locator}=     Dymanic Xpath   ${element}    ${lct_table_info_admin}
+                ${text}=  Get value    ${locator}
+                Should Be Equal As Strings   ${data_db}[${i}]   ${text}
+                ${i}=    Evaluate   ${i} + 1
+           END
+    END
+   ${email_name}=   Get Name And Email Admin    ${id}
+   Compare Text  ${locator_name_admin}  ${email_name}[0]
+   Compare Text  ${locator_mail_admin}  ${email_name}[1]

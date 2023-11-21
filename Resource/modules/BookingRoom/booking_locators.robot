@@ -16,3 +16,5 @@ ${messSuccess}      Thành công
 ${messSuccess_1}    Đăng ký phòng thành công
 ${mess_Fail_1}    Vui lòng chọn phòng phù hợp với giới tính của bạn
 ${room_full}       Room Full Slot Or RoomType Have't Suitable For Student Gender
+
+

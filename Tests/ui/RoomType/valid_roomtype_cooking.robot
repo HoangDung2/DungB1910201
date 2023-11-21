@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
-#Test Setup     Save File Image Prev And Clear File Current Test Suite
-Test Setup     Save File Image Prev And Clear File Current Test All
+Test Setup     Save File Image Prev And Clear File Current Test Suite
+#Test Setup     Save File Image Prev And Clear File Current Test All
 Test Teardown   Close Browser Set Up Time
 Test Template   Validate Student Choose Room Cooking And Number People Of RoomType
 #Test Tags   RoomType

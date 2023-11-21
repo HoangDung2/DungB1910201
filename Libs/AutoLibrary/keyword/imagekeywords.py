@@ -45,7 +45,7 @@ class ImageKeyWords(LibraryComponent):
         :param path: Input Path Folder
         :return: Delete All fill Png
         """
-        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp']
+        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.webm']
         for root, dirs, files in os.walk(path):
             for file in files:
                 if any(file.lower().endswith(ext) for ext in image_extensions):
@@ -59,3 +59,8 @@ class ImageKeyWords(LibraryComponent):
             print(f"File will copy '{source_folder}' change '{destination_folder}'")
         except Exception as e:
             print(f"Fail: {e}")
+
+    @keyword
+    def create_folder(self,path):
+        if not os.path.exists(path):
+            os.makedirs(path)

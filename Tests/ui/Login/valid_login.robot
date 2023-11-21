@@ -15,7 +15,7 @@ TC_09: Validate Login Username And Password Should Be Successfully
 *** Keywords ***
 Validate The Data Username And Password OF Login Successfully
     [Arguments]     ${username}     ${password}
-    Given User Open Browser And Go To Website
+    Given User Open Browser And Go To Website   ${NAME_PAGE_STUDENT}
     Then Verify That from Fill In Username And password Are Displayed
     And Capture and Save Screenshot
     When User input Username And Password   ${username}     ${password}

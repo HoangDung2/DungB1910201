@@ -8,6 +8,7 @@ class  ElementKeywords(LibraryComponent):
     @keyword
     def dymanic_xpath(self,info,locator):
         """
+        Input 1 agrumment
         :param info:
         :param locator:
         :return:
@@ -16,6 +17,22 @@ class  ElementKeywords(LibraryComponent):
         locator1=temp.format(info)
         self.selenium_waiting.is_visible(locator1)
         return locator1
+    @keyword
+    def dymanic_xpath_more(self, info1, info2, locator):
+        """
+        :param info1:
+        :param info2:
+        :param locator:
+        :return:
+        """
+
+        xpath=locator.format(info1, info2)
+        # temp = "{} {}".format(info1, info2)
+        #
+        # locator_with_info = temp.format(locator)
+        self.selenium_waiting.is_visible(xpath)
+        return xpath
+
     @keyword
     def compare_text(self,locator,string):
         """
@@ -31,3 +48,18 @@ class  ElementKeywords(LibraryComponent):
             return True
         else:
             return False
+
+    @keyword
+    def convert_value_integer(self,string):
+        try:
+            if isinstance(string, int):
+                return string
+            else:
+                integer_value = int(string.replace(',', ''))
+                return integer_value
+        except ValueError as e:
+            print("Error:", e)
+    @keyword
+    def clear_element_arr(self,arry):
+        arry.clear()
+

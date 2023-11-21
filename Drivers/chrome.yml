@@ -1,4 +1,5 @@
-NAME_PAGE:  http://localhost:4200/login
+NAME_PAGE_STUDENT:  http://localhost:4200/login
+NAME_PAGE_ADMIN:    http://localhost:4401/login
 BROWSER: chrome
 CHROME_DRIVER_PATH_WINS:  chromedriver/chromedriver.exe
 CHROME_DRIVER_PATH_UNIX:  ""

@@ -17,7 +17,7 @@ Input Motorbike License Plate If Student Regisvices Send Motorbike
          Wait Until Element Is Visible    ${locator_licensePlate}
          Input Text  ${locator_licensePlate}    ${name_licensePlate}
          ${text}=   Get Value    ${locator_licensePlate}
-         ${status}=  Run Keyword And Return Status   Should Match Regexp   ${text}  [0-9]{2}-[A-Z]{1}[0-9A-Z]{1}\s?\d{5}$
+         ${status}=  Run Keyword And Return Status   Should Match Regexp   ${text}  [0-9]{2}[A-Z]{1}[0-9A-Z]{1}-\s?\d{5}$
          IF    '${status}' == 'Fail'
              Pass Execution    The Student Entered An Invalid License Plate Number
          END

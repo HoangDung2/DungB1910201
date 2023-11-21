@@ -2,7 +2,8 @@
 Resource        ../Resource/commons/init.resource
 *** Keywords ***
 User Open Browser And Go To Website
-	Open Chrome Browser And Go To Login Page   ${NAME_PAGE}
+    [Arguments]     ${url}
+	Open Chrome Browser And Go To Login Page   ${url}
 Set Environment From Settings
     FOR   ${key}   IN   @{ENVIRONMENT.${ENV}.keys()}
         ${value}=    Get From Dictionary    ${ENVIRONMENT.${ENV}}    ${key}

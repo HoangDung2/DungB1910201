@@ -8,7 +8,7 @@ class  TimeKeywords(LibraryComponent):
         self.selenium_keyword = LibraryComponent(ctx)
         self.selenium_waiting = WaitingKeywords(ctx)
     @keyword
-    def convert_time(self,time_str):
+    def convert_time_data(self,time_str):
         """
         :param time:
         :return:

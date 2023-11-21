@@ -5,7 +5,7 @@ ${root_path}   D:/LuanVan/DungB1910201/Sreenshot
 *** Keywords ***
 Student Login Into Dormitory System
     [Arguments]     ${username}     ${password}
-    User Open Browser And Go To Website
+    User Open Browser And Go To Website   ${NAME_PAGE_STUDENT}
     Verify That from Fill In Username And password Are Displayed
     User input Username And Password    ${username}     ${password}
     Capture and Save Screenshot
@@ -21,6 +21,13 @@ Student Login Into Dormitory System And Check All Information In InForStudent Pa
         Check All Info Sudent With Databse  ${username}
         Verify Row And Room Have Displayed  ${username}
         Capture and Save Screenshot
+Admin Login Into Dormitory Manage System
+    [Arguments]     ${username}     ${password}
+    User Open Browser And Go To Website   ${NAME_PAGE_ADMIN}
+    Verify That from Fill In Username And password Are Displayed
+    User input Username And Password    ${username}     ${password}
+    Capture and Save Screenshot
+    Click Button Submit     ${iptSubmit}
 
 Capture and Save Screenshot
     [Documentation]     Take A screentshot And Save File Test Suite, limit 9 image
@@ -140,6 +147,18 @@ Wait Page Should Be Displayed
 Waiting Reload Page
     Sleep    2s
 
+Scroll To Bottom
+    ${scrollHeight}=    Execute JavaScript    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight)
+    ${scrollPosition}=    Evaluate    (1/3) * ${scrollHeight}
+    Execute JavaScript    window.scrollTo(0, ${scrollPosition})
+    Sleep    2s
+    Capture and Save Screenshot
+Scroll To Top
+    ${scrollHeight}=    Execute JavaScript    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight)
+    ${scrollPosition}=    Evaluate    (1/3) * ${scrollHeight}
+    Execute JavaScript    window.scrollTo(${scrollPosition}, 0)
+    Sleep    2s
+
 Scroll From Top to Bottom of Page And Capture Page Screenshot
     ${scroll_height}=    Execute JavaScript    return Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     ${part_height}=    Evaluate    int(${scroll_height} / 3)
@@ -156,6 +175,7 @@ Scroll From Top to Bottom of Page And Capture Page Screenshot
 Save File Image Prev And Clear File Current Test Suite
 #    Save File Image If Exits Test Suite
     Clear Image In File If Exits Test Suite
+    Start Video
     Update Time From Dabata
 
 Save File Image Prev And Clear File Current Test All
@@ -163,6 +183,7 @@ Save File Image Prev And Clear File Current Test All
     Clear Image In File If Exits Test All
 
 Close Browser Set Up Time
+    Run Keyword And Ignore Error    Stop Video Recording    alias=None
     Run Keyword And Ignore Error    Update Time From Dabata
     Run Keyword And Ignore Error    Close Browser
 
@@ -170,9 +191,14 @@ Close Browser Set Up Time Payment
     [Arguments]     ${MSSV}
     Run Keyword And Ignore Error    Update Time From Dabata
     Run Keyword And Ignore Error    Close Browser
+    Run Keyword And Ignore Error    Stop Video Recording    alias=None
     Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}
-
-
+Start Video
+    ${name_tag}=    Split String     ${TEST_NAME}    :
+    ${path_folder}  Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]
+    ${prevTag}=    Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]/${name_tag}[0]_Video
+    Create Folder   ${path_folder}
+    Start Video Recording    alias=None    name=${prevTag}    fps=None    size_percentage=1    embed=True    embed_width=100px    monitor=1
 #  ------
 
 Read Mail Text

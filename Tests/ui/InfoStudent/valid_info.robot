@@ -17,7 +17,7 @@ TC_10: Veryfi Info Student After Login And Check ID Username With MSSV
     Then Verify Info Student Page Should Be Displayed
     And Check ID Username The Same MSSV in Sudent Page  ${USERNAME}
     And Capture and Save Screenshot
-TC_11: Verify Student Has Not Registered For room And Registered Service Or MaterialRepair
+TC_11: Verify Student Has Not Registered For Room And Registered Service Or MaterialRepair
     [Documentation]     This test case verifies then Student Have't Registered Room
     ...                 If Have't Registered Room then Don't Registered Service Or MaterialRepair After Login
     [Tags]  CheckRegisteredRoom

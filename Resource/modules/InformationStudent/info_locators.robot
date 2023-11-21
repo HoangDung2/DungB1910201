@@ -12,7 +12,6 @@ ${locartor_statusRoom}  xpath=//div[@class="text-danger"]
 ${lctTiltelMessFail}  xpath=//h2[@class="swal2-title"]
 ${lctMessFail}  xpath=//h2[@class="swal2-title"]//following-sibling::div[@id="swal2-html-container"]
 #----Mess----
-
 ${messInfo}     Thông tin sinh viên
 ${messInfo_1}   Kiểm tra thông tin chính xác
 ${messInfo_2}   Thông tin sinh viên và dịch vụ đã đăng ký
@@ -22,12 +21,15 @@ ${messService}  Bạn phải là sinh viên ở phòng mới đăng ký dịch v
 ${mesMaterialRepair}    Bạn phải là sinh viên ở phòng mới đăng ký sửa chữa được
 ${messFail_Homepage}  Có lỗi xảy ra
 ${MSSV}  Mã số sinh viên
-#${NS}   Ngày sinh
-#${HoTen}    Họ tên
-#${NganhHoc}  Ngành học
-#${HoKhau}   Hộ khẩu tỉnh/TP
-#${Lop}  Lớp
-#${GT}   Giới tính
-#${sdt}  Số điện thoại cá nhân
 ${room}  Phòng
 ${day}  Dãy
+#----- Admin ----
+${lct_info_user_admin}   css=a[id="userDropdown"]>span
+${locator_nav_info}     css=div[aria-labelledby="userDropdown"]>a[routerlink="/information"]
+${locator_name_admin}   css=div[class="col-md-3 border-right"]>div>span[class="font-weight-bold"]
+${locator_mail_admin}   css=div[class="col-md-3 border-right"]>div>span[class="text-black-50"]
+${locator_logout_admin}  css=div[aria-labelledby="userDropdown"]>a[data-target="#logoutModal"]
+
+@{list_info_admin}  Số điện thoại   Địa chỉ     Giới tính   Mã số   Ngày sinh
+${lct_row_table}    xpath=//div[@class="col-md-9"]//div//div[@class="row mt-3"]//div
+${lct_table_info_admin}     xpath=//div[@class="col-md-9"]//div//div[@class="row mt-3"]//div//label[contains(text(),'{}')]//following-sibling::input

@@ -246,4 +246,55 @@ Update Status Payment In Infor Student
         Disconnect From Database
     END
 
+#-----Admin---------
+Get All Info Admin
+    [Documentation]  Return List tu 0-7
+    ...              0: SĐT , 1: Địa chỉ, 2: Giới tính, 3 ID
+    ...              4: Ngày sinh
+    [Arguments]     ${MSSV_INFO}
+    ${File}=    create list
+    ${Temp_File}=   Create List
+    Connect Database Xampp
+    ${query_sql}=    Set Variable    SELECT admin.phone,admin.address,admin.gender,admin.number_admin,admin.birthday FROM admin Where admin.number_admin = '${MSSV_INFO}';
+    ${results}=  Query    ${query_sql}
+    Disconnect From Database
+    ${length_results}=   Get Length    ${results[0]}
+    FOR    ${element}    IN RANGE    0  ${length_results}
+        IF   '${results[0][${element}]}' == '1'
+             Append To List    ${File}  Nam
+        ELSE IF  '${results[0][${element}]}' == '0'
+              Append To List    ${File}  Nữ
+        ELSE
+              Append To List  ${File}  ${results[0][${element}]}
+        END
+    END
+    RETURN  ${File}
 
+Get Name And Email Admin
+    [Documentation]  Return List tu 0-7
+    ...              0: Email , 1: Tên Admin
+    [Arguments]     ${MSSV_INFO}
+    ${File}=    create list
+    ${Temp_File}=   Create List
+    Connect Database Xampp
+    ${query_sql}=    Set Variable    SELECT admin.email,admin.name FROM admin Where admin.number_admin = '${MSSV_INFO}';
+    ${results}=  Query    ${query_sql}
+    Disconnect From Database
+    ${length_results}=   Get Length    ${results[0]}
+    FOR    ${element}    IN RANGE    0  ${length_results}
+          Append To List  ${File}  ${results[0][${element}]}
+    END
+    RETURN  ${File}
+#-----Get Sum Money According To RoomType Bill room
+Get Sum Money According To RoomType Bill
+    [Arguments]  ${room_type}    ${room}
+    ${File}=    create list
+    Connect Database Xampp
+    ${results}=    Query  SELECT bill.price FROM bill WHERE bill.room_type = '${room_type}'  AND  bill.number_room='${room}';
+    Disconnect From Database
+    IF  not ${results}
+        RETURN  Next Step
+    ELSE
+        Append To List  ${File}  ${results}[0]
+        RETURN  ${File}
+    END
