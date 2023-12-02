@@ -26,7 +26,7 @@ Validate Student Pay Online And Methods Of Using Vouchers
         And Input Full Info Card Need Payment
         And Chose Methods Use Voucher   ${method}
         And Waiting Reload Page
-        Then Verify Voucher Is Applied
+        Then Verify Voucher Is Applied  ${username}
         And Capture and Save Screenshot
 
 

@@ -10,15 +10,15 @@ Test Tags   LV
 TC_32: Validate Student Have Booking Room Have Cooking Type And 4 Of RoomType
     [Documentation]
     [Tags]  BookingRoomCooking
-    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_4}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messCooking}     ${number_4}
 TC_33: Validate Student Have Booking Room Have Cooking Type And 6 Of RoomType
     [Documentation]
     [Tags]  BookingRoomCooking
-    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_6}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messCooking}     ${number_6}
 TC_34: Validate Student Have Booking Room Have Cooking Type And 8 Of RoomType
     [Documentation]
     [Tags]  BookingRoomCooking
-    ${USERNAME}   ${PASSWORD}   ${messCooking}     ${number_8}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messCooking}     ${number_8}
 *** Keywords ***
 Validate Student Have Booking Room Have Cooking Type And Number People Of RoomType
         [Arguments]    ${USERNAME}   ${PASSWORD}   ${messCooking}   ${number_people}
@@ -46,3 +46,4 @@ Validate Student Have Booking Room Have Cooking Type And Number People Of RoomTy
         And Verify Register successfully
         And Capture and Save Screenshot
         And Validate InfoStudent Page The Same Database     ${USERNAME}
+        And Read The Response Email From The Admin

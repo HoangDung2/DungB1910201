@@ -39,6 +39,7 @@ Input Full Info Card Need Payment
 
 Click In 'Tiếp tục' Then Payment
     Wait Until Element Is Visible    ${button_continue}
+    Sleep    1s
     Click Element    ${button_continue}
 
 Verify Confirm Payment Should Be Displayed
@@ -54,8 +55,9 @@ Click In 'Thanh Toán' Then Confirm Payment Succeslly
     Click Element    ${button_confirm}
 
 Verify Online Payment Succeslly
+    [Arguments]     ${MSSV}
     Compare Text    ${locator_succesPayment}     ${mess_succesPayment}
-
+    Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}
 Use Voucher Discount If Student Wanna
    [Arguments]  ${status}
    ${conver_string}=    Convert To Lowercase    ${status}
@@ -70,7 +72,7 @@ Use Voucher Discount If Student Wanna
              Click Element    ${locator_voucher}
              Sleep    2s
         ELSE
-             RETURN   Vouchers Are Currently Sold Out
+             Pass Execution   Vouchers Are Currently Sold Out
         END
         # Check xem co duoc giam gia hay khong ?
         Check Payment Have Discount
@@ -94,7 +96,7 @@ Chose Methods Use Voucher
              Click Element    ${locator_voucher}
              Sleep    2s
         ELSE
-             RETURN   Vouchers Are Currently Sold Out
+             Pass Execution   Vouchers Are Currently Sold Out
         END
     ELSE IF  '${conver_string}' == 'code'
         ${return_status}=   Run Keyword And Return Status    Element Should Be Visible    ${locator_voucher}
@@ -107,7 +109,7 @@ Chose Methods Use Voucher
              Click Element    ${submit_code_voucher}
              Sleep    2s
         ELSE
-             RETURN   Vouchers Are Currently Sold Out
+             Pass Execution   Vouchers Are Currently Sold Out
         END
     ELSE
         Pass Execution    Student Chooses The Wrong Payment Method
@@ -164,7 +166,9 @@ Chose Voucher Input Code Then Use According To Condition
     END
 
 Verify Voucher Is Applied
+    [Arguments]     ${MSSV}
     Check Payment Have Discount
+    Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}
 
 Check Payment Have Discount
     ${text_discount}=  Get Text    ${locator_valueDiscount}
@@ -217,7 +221,8 @@ Check If The Room Student Wanna Payment Has't Return Nofication
     END
     
 Verify Online Payment Service Succeslly
-    [Arguments]    ${name_service}
+    [Arguments]    ${name_service}      ${MSSV}
     ${locator_text}=     Dymanic Xpath   ${name_service}    ${locator_inva_payment}
     ${status}=  Run Keyword And Return Status    Element Should Contain     ${locator_text}   ${mess_vali_payment}
     Should Be Equal As Strings    ${status}    True
+    Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}

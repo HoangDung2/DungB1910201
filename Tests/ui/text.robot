@@ -14,7 +14,7 @@ ${b}    B1910241
 TC_1:ABC
     [Tags]  123
     User Open Browser And Go To Website     ${NAME_PAGE_STUDENT}
-    Read Email
+#    Read Email Material
 #    Update Status Payment In Infor Student
 #    Update Time From Dabata Check-In Period Overlaps With Stay Period
 #    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}
@@ -22,7 +22,7 @@ TC_1:ABC
 #    Update Time From Dabata
 #    Delete Services And Reload Page     ${USERNAME}      ${name}
 #    TEST123     ${b}
-#     Update Time From Dabata Registration Material
+     Update Time From Dabata Registration Material
 #    Update Time Before Registration From Databa
 #    Update Time After Registration From Databa
 #Scroll From Top to Bottom of Page And Capture Page Screenshot

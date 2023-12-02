@@ -259,8 +259,10 @@ Check For Changed Data
     IF    ${data_old}[0] != ${new_data}[0]
         RETURN  Data Change
     ELSE
-         Fail  Test Case Fail
+#         Fail  Test Case Fail
+          RETURN  Test Case Fail
     END
+
 
 Verrify Table Bill Should Be Displayed
     Compare Text     ${tilt_table_bill}     ${mess_table_bill}

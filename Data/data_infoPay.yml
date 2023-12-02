@@ -6,7 +6,7 @@ OTP: "123456"
 #----User & Password Payment
 USER_PAYMENT: "B1910243"
 PASS_PAYMENT: "123"
-
+#chua thanh toan
 TC_81:
   STATUS: "No"
 
@@ -79,7 +79,7 @@ TC_100:
 #------------ Usesername And Pass Word Have paid all services and room
 USER_PAID: "B1910244"
 PASS_PAID: "123"
-
+#dathanhtoan
 TC_101:
   STATUS: "Yes"
 

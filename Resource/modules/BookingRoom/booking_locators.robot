@@ -9,6 +9,8 @@ ${submit_messfail}     xpath=//div[@class="swal2-actions"]//button[text()='OK']
 ${locatorSuccess}       xpath=//div[contains(@class,"swal2-backdrop-show")]//h2
 ${locatorSuccess_1}     xpath=//div[contains(@class,"swal2-backdrop-show")]//div[@id="swal2-html-container"]
 ${confirm_Succes}       xpath=//div[contains(@class,"swal2-backdrop-show")]//div[@class="swal2-actions"]//button[text()='OK']
+
+${lct_time_regis}   css=div[class="container"]>div>div[class="col-sm-4 text-success ng-star-inserted"]
 #----Mess----
 ${messTitleMess}    Bạn có chắc chắn đăng ký phòng này ?
 ${messTitleMess_1}  Sau khi thanh toán bạn không thể hoàn tác.
@@ -16,5 +18,6 @@ ${messSuccess}      Thành công
 ${messSuccess_1}    Đăng ký phòng thành công
 ${mess_Fail_1}    Vui lòng chọn phòng phù hợp với giới tính của bạn
 ${room_full}       Room Full Slot Or RoomType Have't Suitable For Student Gender
+${mess_time_regis}   Đây là thời gian đăng ký ở
 
 

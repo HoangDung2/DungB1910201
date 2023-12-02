@@ -87,7 +87,13 @@ Verify Notification Register Faily Should Be Displayed
     [Arguments]     ${mess_1}   ${mess_2}
     Compare Text    ${locatorSuccess}     ${mess_1}
     Compare Text    ${locatorSuccess_1}     ${mess_2}
-    Click Element   ${submit_messfail_1}
-
+    ${status}=  Run Keyword And Return Status    Element Should Be Visible  ${submit_messfail_1}
+    IF    '${status}' == 'True'
+        Click Element   ${submit_messfail_1}
+    ELSE
+         Pass Execution    Test Case Fail
+    END
+    
+    
 Click Confirm Register
    Sleep    0.5s

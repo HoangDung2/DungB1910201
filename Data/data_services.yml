@@ -5,7 +5,7 @@ TC_66:
 
 TC_67:
   TIME: "HappyCase"
-  LICENSE_PLATE: "83P1-57895"
+  LICENSE_PLATE: "83P157895"
   NAME_SERVICE:  "Gửi xe máy"
 
 TC_68:
@@ -14,9 +14,9 @@ TC_68:
   NAME_SERVICE:  "Vệ sinh khu vực"
 
 #----User & Pass Service Happycase
-USER_SERVICE: "B1910241"
+USER_SERVICE: "B1910248"
 PASS_SERVICE: "123"
-
+#chuathanhtoan
 #----User & Pass Services Faily
 USER_SERVICE_FAIL: "B1910242"
 PASS_SERVICE_FAIL: "123"
@@ -28,7 +28,7 @@ TC_69:
 
 TC_70:
   TIME: "HappyCase"
-  LICENSE_PLATE: "83P1-55789"
+  LICENSE_PLATE: "83P155789"
   NAME_SERVICE:  "Gửi xe máy"
 
 TC_71:
@@ -43,7 +43,7 @@ TC_72:
 
 TC_73:
   TIME: "Likable"
-  LICENSE_PLATE: "83P1-55789"
+  LICENSE_PLATE: "83P155789"
   NAME_SERVICE:  "Gửi xe máy"
 
 TC_74:
@@ -58,7 +58,7 @@ TC_75:
 
 TC_76:
   TIME: "Before"
-  LICENSE_PLATE: "83P1-55789"
+  LICENSE_PLATE: "83P155789"
   NAME_SERVICE:  "Gửi xe máy"
 
 TC_77:
@@ -73,7 +73,7 @@ TC_78:
 
 TC_79:
   TIME: "After"
-  LICENSE_PLATE: "83P1-55789"
+  LICENSE_PLATE: "83P155789"
   NAME_SERVICE:  "Gửi xe máy"
 
 TC_80:

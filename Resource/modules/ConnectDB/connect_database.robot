@@ -103,7 +103,7 @@ Get Row And Room In Infostudent
 Delete Register Room Student And Reload Page
     [Arguments]   ${MSSV_Infostudent}
     Connect Database Xampp
-    ${results}=     Query   Select c.id FROM contract c INNER JOIN student s ON s.user_id = c.student_id WHERE s.number_student='${MSSV_Infostudent}';
+    ${results}=     Query   Select c.id FROM contract c INNER JOIN student s ON s.id = c.student_id WHERE s.number_student='${MSSV_Infostudent}';
     Delete All Rows From Table   contract WHERE dormitory.contract.id =${results}[0][0];
     Query   Commit
     Disconnect From Database
@@ -160,6 +160,15 @@ Update Time From Dabata Registration Material
     Disconnect From Database
     Reload Page
     Wait Notification Should Be Displayed
+
+Update Set Up Data
+    Connect Database Xampp
+    ${current_datetime} =    Get Current Date
+    ${days_to_add} =    Set Variable    15
+    ${future_datetime} =    Subtract Time From Date    ${current_datetime}    ${days_to_add} days
+    Update Time From Table    `sesmester` SET `end_date` = '2023-12-31',`start_date` = '${current_datetime}', `registration_end_date` = '${current_datetime}', `registration_start_date` = '${future_datetime}' WHERE `sesmester`.`id` = 2;
+    Query   Commit
+    Disconnect From Database
 #------Booking----------
 
 Update Time Before Registration From Databa BookingRoom
@@ -221,7 +230,7 @@ Delete Services And Reload Page
     ...                 ${results}[0][1] this id Student
     [Arguments]   ${MSSV_Infostudent}   ${name_services}
     Connect Database Xampp
-    ${results}=     Query   SELECT r.service_id, r.student_id FROM register_services r INNER JOIN student s ON s.user_id = r.student_id INNER JOIN services se ON se.id = r.service_id WHERE s.number_student = '${MSSV_Infostudent} ' AND se.name = '${name_services}';
+    ${results}=     Query   SELECT r.service_id, r.student_id FROM register_services r INNER JOIN student s ON s.id = r.student_id INNER JOIN services se ON se.id = r.service_id WHERE s.number_student = '${MSSV_Infostudent} ' AND se.name = '${name_services}';
     IF  not ${results}
         RETURN  Next Step
     ELSE

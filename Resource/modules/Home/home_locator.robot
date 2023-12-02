@@ -17,7 +17,7 @@ ${sloganMess_2}   Tạo kỷ niệm tại ký túc xá - Nơi bạn gọi là nh
 @{listMenuIcon}     Hòa đồng   Thân thiện   Nơi ở   Tiết kiệm   An toàn
 @{lishDashboar}     Trang chủ   Sửa chữa vật chất   Thông tin cá nhân   Dịch vụ    Đăng xuất
 #-------- Admin------
-${title_admin}  css=h1>a
+${title_admin}  css=h1>p
 ${logo_admin}   css=ul[id="accordionSidebar"]>a>div[class="sidebar-brand-text mx-3"]
 
 ${messTitle_Admin}   HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ

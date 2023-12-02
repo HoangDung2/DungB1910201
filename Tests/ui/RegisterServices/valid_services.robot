@@ -4,21 +4,20 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
 Test Teardown   Close Browser Set Up Time
 Test Template   Validate Student Have Register Services
-#Test Tags   RegisterServices
 Test Tags   LV
 *** Test Cases ***
 TC_66: Validate Student Have Send Bicycles Register
     [Documentation]
     [Tags]  RegisterService
-    ${USER_SERVICE}   ${PASS_SERVICE_FAIL}  ${TC_66.LICENSE_PLATE}  ${TC_66.TIME}  ${TC_66.NAME_SERVICE}
+    ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_66.LICENSE_PLATE}  ${TC_66.TIME}  ${TC_66.NAME_SERVICE}
 TC_67: Validate Student Have Send Motorbike Register
     [Documentation]
     [Tags]  RegisterService
-    ${USER_SERVICE}   ${PASS_SERVICE_FAIL}  ${TC_67.LICENSE_PLATE}  ${TC_67.TIME}  ${TC_67.NAME_SERVICE}
+    ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_67.LICENSE_PLATE}  ${TC_67.TIME}  ${TC_67.NAME_SERVICE}
 TC_68: Validate Student Have Send Clean The Area Register
     [Documentation]
     [Tags]  RegisterService
-    ${USER_SERVICE}   ${PASS_SERVICE_FAIL}  ${TC_68.LICENSE_PLATE}  ${TC_68.TIME}  ${TC_68.NAME_SERVICE}
+    ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_68.LICENSE_PLATE}  ${TC_68.TIME}  ${TC_68.NAME_SERVICE}
 *** Keywords ***
 Validate Student Have Register Services
         [Documentation]

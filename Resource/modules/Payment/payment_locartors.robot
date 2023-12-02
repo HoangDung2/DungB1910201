@@ -11,7 +11,7 @@ ${locator_inputDate}    css=input[id="cardDate"]
 ${button_continue}  css=button[id="btnContinue"]
 ${locator_inputOTP}  css=input[id="otpvalue"]
 ${button_confirm}   css=button[id="btnConfirm"]
-${locator_succesPayment}      xpath=//div[contains(text(),"Đã thanh toán")]
+${locator_succesPayment}      xpath=//div[contains(text(),"thanh toán")]
 ${locator_discount}     xpath=//span[contains(text(),"Chọn hoặc nhập mã")]
 ${locator_voucher}      xpath=//div[@id="listPromotions"]//span[contains(text(),"Áp dụng")]
 

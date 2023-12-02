@@ -1,8 +1,8 @@
 *** Settings ***
 Resource    ../../../Resource/commons/init.resource
 Test Teardown   Close Browser Set Up Time
-#Test Setup     Save File Image Prev And Clear File Current Test Suite
-Test Setup     Save File Image Prev And Clear File Current Test All
+Test Setup     Save File Image Prev And Clear File Current Test Suite
+#Test Setup     Save File Image Prev And Clear File Current Test All
 #Test Tags   Info
 Test Tags   LV
 *** Test Cases ***

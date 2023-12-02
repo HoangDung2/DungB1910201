@@ -4,7 +4,6 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
 Test Teardown   Close Browser Set Up Time
 Test Template   Validate Student Have Register Services But Previous Student Are Registerd Before
-#Test Tags   RegisterServices
 Test Tags   LV
 *** Test Cases ***
 TC_69: Validate Student Have Send Bicycles Register But Previous Student Are Registerd Before

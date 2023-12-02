@@ -7,11 +7,11 @@ Test Tags   LV
 *** Test Cases ***
 TC_93: Validate Notification Student Pay Online And Unfill Info Card Payment
     [Documentation]
-    [Tags]  93
+    [Tags]  InfoCardPayment
     ${USER_PAYMENT}   ${PASS_PAYMENT}  ${TC_93.ID_CARD}    ${TC_93.NAME_PAY}    ${TC_93.DATE_PAY}
 TC_94: Validate Nofitication Student Pay Online And Input Full Info Card Faily
     [Documentation]
-    [Tags]  94
+    [Tags]  InfoCardPayment
     ${USER_PAYMENT}   ${PASS_PAYMENT}  ${TC_94.ID_CARD}    ${TC_94.NAME_PAY}    ${TC_94.DATE_PAY}
 *** Keywords ***
 Validate Notification Student Pay Online And Input Info Card Payment

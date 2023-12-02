@@ -1,0 +1,12 @@
+USERNAME_MATERIAL: "B1910201"
+PASS_MATERIAL: "123"
+TC_129:
+  DATE: 5
+
+TC_130:
+  DATE: "Today"
+  MESS: "Ngày sửa chữa phải lớn hơn ngày hiện tại"
+
+TC_131:
+  DATE: "Yesterday"
+  MESS: "Ngày sửa chữa phải lớn hơn ngày hiện tại"

@@ -11,14 +11,14 @@ ${number}   5
 TC_41: Validate Student Have Feed Back Material in Room
         [Documentation]
         [Tags]  FeedBack
-        Given Student Login Into Dormitory System     ${USER_FEEDBACK}   ${PASS_FEEDBACK}
+        Given Student Login Into Dormitory System     ${USERNAME_BOOKING}   ${PASS_BOOKING}
         Then Verify Home Page Should Be Displayed
         And Capture and Save Screenshot
         When Navigate To The Info Student Page By Click Nav Link Info Student
         Then Verify Info Student Page Should Be Displayed
-        And Check All Info Sudent With Databse  ${USER_FEEDBACK}
+        And Check All Info Sudent With Databse  ${USERNAME_BOOKING}
         And Capture and Save Screenshot
-        And Validate Student Has Previously Registered For The Room     ${USER_FEEDBACK}
+        And Validate Student Has Previously Registered For The Room     ${USERNAME_BOOKING}
         And Capture and Save Screenshot
         And Navigate To The Info Student Page By Click Nav Link Feedback Material
         Then Verify Feedback Page Should Be Displayed
@@ -33,14 +33,14 @@ TC_41: Validate Student Have Feed Back Material in Room
 TC_42: Validata Student Have All Feed Back Material
         [Documentation]
         [Tags]  FeedBack
-        Given Student Login Into Dormitory System     ${USER_FEEDBACK}   ${PASS_FEEDBACK}
+        Given Student Login Into Dormitory System     ${USERNAME_BOOKING}   ${PASS_BOOKING}
         Then Verify Home Page Should Be Displayed
         And Capture and Save Screenshot
         When Navigate To The Info Student Page By Click Nav Link Info Student
         Then Verify Info Student Page Should Be Displayed
-        And Check All Info Sudent With Databse  ${USER_FEEDBACK}
+        And Check All Info Sudent With Databse  ${USERNAME_BOOKING}
         And Capture and Save Screenshot
-        And Validate Student Has Previously Registered For The Room    ${USER_FEEDBACK}
+        And Validate Student Has Previously Registered For The Room    ${USERNAME_BOOKING}
         And Capture and Save Screenshot
         And Navigate To The Info Student Page By Click Nav Link Feedback Material
         Then Verify Feedback Page Should Be Displayed

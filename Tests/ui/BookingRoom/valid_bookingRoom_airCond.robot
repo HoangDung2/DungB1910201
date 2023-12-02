@@ -10,15 +10,15 @@ Test Tags   LV
 TC_29: Validate Student Have Booking Room Have AirCond Type And 4 Of RoomType
     [Documentation]
     [Tags]  BookingRoomAirCond
-    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_4}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messAirConditioned}     ${number_4}
 TC_30: Validate Student Have Booking Room Have AirCond Type And 6 Of RoomType
     [Documentation]
     [Tags]  BookingRoomAirCond
-    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_6}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messAirConditioned}     ${number_6}
 TC_31: Validate Student Have Booking Room Have AirCond Type And 8 Of RoomType
     [Documentation]
     [Tags]  BookingRoomAirCond
-    ${USERNAME}   ${PASSWORD}   ${messAirConditioned}     ${number_8}
+    ${USERNAME_BOOKING}   ${PASS_BOOKING}   ${messAirConditioned}     ${number_8}
 *** Keywords ***
 Validate Student Have Booking Room About AirCond Type And Number People Of RoomType
         [Arguments]   ${USERNAME}   ${PASSWORD}   ${messAirConditioned}    ${number_people}
@@ -46,3 +46,4 @@ Validate Student Have Booking Room About AirCond Type And Number People Of RoomT
         And Verify Register successfully
         And Capture and Save Screenshot
         And Validate InfoStudent Page The Same Database     ${USERNAME}
+        And Read The Response Email From The Admin

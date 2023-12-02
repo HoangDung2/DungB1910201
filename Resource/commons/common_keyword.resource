@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../Resource/commons/init.resource
 *** Variables ***
-${root_path}   D:/LuanVan/DungB1910201/Sreenshot
+${root_path}   D:/LuanVan/DungB1910201/Screenshot
 *** Keywords ***
 Student Login Into Dormitory System
     [Arguments]     ${username}     ${password}
@@ -176,23 +176,22 @@ Save File Image Prev And Clear File Current Test Suite
 #    Save File Image If Exits Test Suite
     Clear Image In File If Exits Test Suite
     Start Video
-    Update Time From Dabata
+    Update Set Up Data
 
-Save File Image Prev And Clear File Current Test All
+Save File Image Prev And Clear File Current Test Alls
 #    Save File Image If Exits Test All
     Clear Image In File If Exits Test All
 
 Close Browser Set Up Time
     Run Keyword And Ignore Error    Stop Video Recording    alias=None
-    Run Keyword And Ignore Error    Update Time From Dabata
+    Run Keyword And Ignore Error    Update Set Up Data
     Run Keyword And Ignore Error    Close Browser
 
 Close Browser Set Up Time Payment
-    [Arguments]     ${MSSV}
-    Run Keyword And Ignore Error    Update Time From Dabata
+    Run Keyword And Ignore Error    Update Set Up Data
     Run Keyword And Ignore Error    Close Browser
     Run Keyword And Ignore Error    Stop Video Recording    alias=None
-    Run Keyword And Ignore Error    Update Status Payment In Infor Student  ${MSSV}
+
 Start Video
     ${name_tag}=    Split String     ${TEST_NAME}    :
     ${path_folder}  Set Variable      ${root_path}/${TEST_TAGS}[0]/${name_tag}[0]
@@ -201,5 +200,3 @@ Start Video
     Start Video Recording    alias=None    name=${prevTag}    fps=None    size_percentage=1    embed=True    embed_width=100px    monitor=1
 #  ------
 
-Read Mail Text
-    Open Mailbox

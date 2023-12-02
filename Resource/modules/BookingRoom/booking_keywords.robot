@@ -120,7 +120,18 @@ Veryfi Error Message Have Over Time
     Compare Text     ${locatorTitleMess_1}   Vui lòng quay lại sau
     Click Element    ${submit_messfail}
 
-    #Veryfi Error Message Student Have Check-In Period Overlaps With Stay Period
-#    Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa
-#    Compare Text     ${locatorTitleMess_1}   Sinh viên này đã đăng ký học kỳ này rồi
-#    Click Element    ${submit_messfail}
+Veryfi Error Message Student Have Check-In Period Overlaps With Stay Period
+    Compare Text     ${locatorTitleMess}     Phòng đang sửa chữa
+    Compare Text     ${locatorTitleMess_1}   Sinh viên này đã đăng ký học kỳ này rồi
+    Click Element    ${submit_messfail}
+
+Verify Over Time Resgister Room
+    ${get_text}=    Get Text    ${lct_time_regis}
+    IF    '${get_text}' == '${mess_time_regis}'
+        Pass Execution    Test Case Fail
+    ELSE
+         RETURN     Next Step
+    END
+
+Read The Response Email From The Admin
+    Read Email

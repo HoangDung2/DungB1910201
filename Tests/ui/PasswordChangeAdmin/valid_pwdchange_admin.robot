@@ -5,7 +5,7 @@ Test Setup     Save File Image Prev And Clear File Current Test Suite
 Test Template   Validate The Data OF Password Change Successfully
 Test Teardown   Close Browser Set Up Time
 #Test Tags   Login
-#Test Tags   LV
+Test Tags   LV
 *** Test Cases ***
 TC_122: Validate Contains The Data OF Password Change Successfully
     [Documentation]

@@ -48,6 +48,12 @@ Resource    ../../Resource/modules/Payment/payment_locartors.robot
 #----BillRoom----
 Resource    ../../Resource/modules/BillRoom/billroom_keywords.robot
 Resource    ../../Resource/modules/BillRoom/billroom_locators.robot
+#----ResponseMaterial----
+Resource    ../../Resource/modules/ResponseMaterialAdmin/res_material_keywords.robot
+Resource    ../../Resource/modules/ResponseMaterialAdmin/res_material_locators.robot
+#----ManageServices----
+Resource    ../../Resource/modules/ManageServicesAdmin/manage_services_keywords.robot
+Resource    ../../Resource/modules/ManageServicesAdmin/manage_services_locators.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 #Variables    ../setting.yml
@@ -56,6 +62,8 @@ Variables   ../../Data/data_feedback.yml
 Variables    ../../Data/data_infoPay.yml
 Variables    ../../Data/data_services.yml
 Variables    ../../Data/data_billroom.yml
+Variables   ../../Data/data_bookingroom.yml
+Variables   ../../Data/data_response_material.yml
 #----Environment----
 Resource    ../../Tests/Environment_Test.robot
 #----Drivers----

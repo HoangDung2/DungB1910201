@@ -2,7 +2,7 @@
 Resource    ../../../Resource/commons/init.resource
 Test Setup     Save File Image Prev And Clear File Current Test Suite
 #Test Setup     Save File Image Prev And Clear File Current Test All
-Test Teardown   Close Browser Set Up Time Payment   ${USER_SERVICE}
+Test Teardown   Close Browser Set Up Time Payment
 Test Template   Validate Sudent Have Payment Online Services Or Payment Use Voucher Discount
 Test Tags   LV
 *** Test Cases ***
@@ -66,7 +66,7 @@ Validate Sudent Have Payment Online Services Or Payment Use Voucher Discount
         And Capture and Save Screenshot
         And Click In 'Thanh Toán' Then Confirm Payment Succeslly
         And Wait Page Should Be Displayed
-        And Verify Online Payment Service Succeslly  ${name_service}
+        And Verify Online Payment Service Succeslly  ${name_service}    ${username}
         And Capture and Save Screenshot
 
 
