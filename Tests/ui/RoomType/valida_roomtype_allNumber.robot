@@ -7,7 +7,7 @@ Test Teardown   Close Browser Set Up Time
 Test Tags   LV
 *** Test Cases ***
 TC_22:Validate Room Type Have Air_conditioned And Number All
-       [Documentation]  This test case verifes then All Room Type Have Air_conditioned shoulde be displayed After Login
+       [Documentation]  This test case Validate then All Room Type Have Air_conditioned shoulde be displayed After Login
        [Tags]   CheckAllRoomAir
        Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed
@@ -20,7 +20,7 @@ TC_22:Validate Room Type Have Air_conditioned And Number All
        And Verifyl Room Have All Air_conditioned Should Be Displayed
        And Scroll From Top to Bottom of Page And Capture Page Screenshot
 TC_23:Validate Room Type Have Cooking And Number All
-       [Documentation]  This test case verifes then All Room Type Have Cooking shoulde be displayed After Login
+       [Documentation]  This test case Validate then All Room Type Have Cooking shoulde be displayed After Login
        [Tags]   CheckAllRoomCook
        Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}
        Then Verify Home Page Should Be Displayed

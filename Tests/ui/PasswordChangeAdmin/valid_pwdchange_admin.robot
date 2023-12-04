@@ -9,7 +9,7 @@ Test Tags   LV
 *** Test Cases ***
 TC_122: Validate Contains The Data OF Password Change Successfully
     [Documentation]
-    [Tags]  PWDChange_Successfully
+    [Tags]  PWDChangeSuccessfully
     ${TC_122.USER_AD}  ${TC_122.PASSWORD_AD}   ${TC_122.PASSWORD_OLD}  ${TC_122.PASSWORD_NEW}  ${TC_122.PASSWORD_CONFIRM}   ${TC_122.MESSAGE}
 *** Keywords ***
 Validate The Data OF Password Change Successfully

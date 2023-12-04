@@ -1,3 +1,26 @@
-USERNAME_MANAGE_SERVICES: "B1910246"
+USERNAME_MANAGE_SERVICES: "B1810242"
 PASS_MANAGE_SERVICES: "123"
 #dangkicacdichvu
+TC_132:
+  TITLE: "Gửi xe đạp"
+  PRICES: "25000"
+  CONTENT: "Không sợ mất xe"
+  STATUS: "Stop"
+  NAME_SERVICES: "Gửi xe đạp"
+  LICENSE_PLATE: "No"
+
+TC_133:
+  TITLE: "Gửi xe máy"
+  PRICES: "50000"
+  CONTENT: ""
+  STATUS: "Stop"
+  NAME_SERVICES: "Gửi xe máy"
+  LICENSE_PLATE: "83P157895"
+
+TC_134:
+  TITLE: "Vệ sinh khu vực"
+  PRICES: "60000"
+  CONTENT: "Mỗi 2 tuần sẽ có người dọn dẹp"
+  STATUS: "Stop"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  LICENSE_PLATE: "No"

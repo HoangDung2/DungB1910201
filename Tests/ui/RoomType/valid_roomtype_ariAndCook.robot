@@ -9,23 +9,23 @@ Test Template   Validate Student Choose AirCond And Cooking Type And Number Peop
 Test Tags   LV
 *** Test Cases ***
 TC_16:Validate Room Type Have Colab AirConditioned And Cooking And Number 4 people
-       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       [Documentation]  This test case Validate then case Room Type Have AirConditioned And Cooking
        ...              And 4 people input by user it will be displayed the conditon on After Login
        [Tags]   CheckCollabRoom
        ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_4}
 TC_17:Validate Room Type Have Colab AirConditioned And Cooking' And Number 6 people
-       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       [Documentation]  This test case Validate then case Room Type Have AirConditioned And Cooking
        ...              And 6 people input by user it will be displayed the conditon on After Login
        [Tags]   CheckCollabRoom
        ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_6}
 TC_18:Validate Room Type Have Colab AirConditioned And Cooking' And Number 8 people
-       [Documentation]  This test case verifies then case Room Type Have AirConditioned And Cooking
+       [Documentation]  This test case Validate then case Room Type Have AirConditioned And Cooking
        ...              And 8 people input by user it will be displayed the conditon on After Login
        [Tags]   CheckCollabRoom
        ${USERNAME}   ${PASSWORD}  ${messCooking}  ${messAirConditioned}   ${number_8}
 *** Keywords ***
 Validate Student Choose AirCond And Cooking Type And Number People Of RoomType
-       [Documentation]  This test case verifies then All Case Room Type Have AirConditioned And Cooking
+       [Documentation]  This test case Validate then All Case Room Type Have AirConditioned And Cooking
        ...              And Number input by user it will be displayed the conditon on After Login
        [Arguments]  ${username}  ${password}   ${messCooking}   ${messAirConditioned}     ${number}
        Given Student Login Into Dormitory System     ${USERNAME}   ${PASSWORD}

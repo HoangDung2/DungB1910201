@@ -8,17 +8,17 @@ Test Template   Validate Student Choose Room Cooking And Number People Of RoomTy
 Test Tags   LV
 *** Test Cases ***
 TC_19:Validate Room Type Have Cooking And Number 4 people
-       [Documentation]  This test case verifies then All Case Room Type Have Cooking
+       [Documentation]  This test case Validate then All Case Room Type Have Cooking
        ...              And 4 people input by user it will be displayed the conditon on After Login
        [Tags]  CheckRoomCook
        ${USERNAME}   ${PASSWORD}   ${messCooking}   ${number_4}
 TC_20:Validate Room Type Have Cooking And Number 6 people
-       [Documentation]  This test case verifies then All Case Room Type Have Cooking
+       [Documentation]  This test case Validate then All Case Room Type Have Cooking
        ...              And 6 people input by user it will be displayed the conditon on After Login
        [Tags]  CheckRoomCook
        ${USERNAME}   ${PASSWORD}   ${messCooking}   ${number_6}
 TC_21:Validate Room Type Have Cooking And Number 8 people
-       [Documentation]  This test case verifies then All Case Room Type Have Cooking
+       [Documentation]  This test case Validate then All Case Room Type Have Cooking
        ...              And 8 people input by user it will be displayed the conditon on After Login
        [Tags]  CheckRoomCook
        ${USERNAME}   ${PASSWORD}   ${messCooking}   ${number_8}

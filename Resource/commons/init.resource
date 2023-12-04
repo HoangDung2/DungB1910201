@@ -64,6 +64,7 @@ Variables    ../../Data/data_services.yml
 Variables    ../../Data/data_billroom.yml
 Variables   ../../Data/data_bookingroom.yml
 Variables   ../../Data/data_response_material.yml
+Variables   ../../Data/data_manage_services.yml
 #----Environment----
 Resource    ../../Tests/Environment_Test.robot
 #----Drivers----

@@ -9,17 +9,17 @@ Test Template   Validate Student Choose AirCond Type And Number People Of RoomTy
 Test Tags   LV
 *** Test Cases ***
 TC_13:Validate Room Type Have AirConditioned And Number 4 people
-       [Documentation]  This test case verifies then case Room Type Have AirConditioned
+       [Documentation]  This test case Validate then case Room Type Have AirConditioned
        ...              and 4 people input by user it will be displayed the conditon on After Login
        [Tags]  CheckRoomAirCondition
        ${USERNAME}   ${PASSWORD}   ${messAirConditioned}   ${number_4}
 TC_14:Validate Room Type Have AirConditioned And Number 6 people
-       [Documentation]  This test case verifies then case Room Type Have AirConditioned
+       [Documentation]  This test case Validate then case Room Type Have AirConditioned
        ...              and 6 people input by user it will be displayed the conditon on After Login
        [Tags]  CheckRoomAirCondition
        ${USERNAME}   ${PASSWORD}   ${messAirConditioned}   ${number_6}
 TC_15:Validate Room Type Have AirConditioned And Number 8 people
-      [Documentation]  This test case verifies then case Room Type Have AirConditioned
+      [Documentation]  This test case Validate then case Room Type Have AirConditioned
       ...              and 6 people input by user it will be displayed the conditon on After Login
       [Tags]  CheckRoomAirCondition
       ${USERNAME}   ${PASSWORD}   ${messAirConditioned}   ${number_8}

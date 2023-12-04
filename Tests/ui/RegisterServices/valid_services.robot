@@ -7,15 +7,15 @@ Test Template   Validate Student Have Register Services
 Test Tags   LV
 *** Test Cases ***
 TC_66: Validate Student Have Send Bicycles Register
-    [Documentation]
+    [Documentation]  This test case Validate sutdent Have Send Bicycles Register successfully
     [Tags]  RegisterService
     ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_66.LICENSE_PLATE}  ${TC_66.TIME}  ${TC_66.NAME_SERVICE}
 TC_67: Validate Student Have Send Motorbike Register
-    [Documentation]
+    [Documentation]  This test case Validate sutdent Have Send Motorbike Register successfully
     [Tags]  RegisterService
     ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_67.LICENSE_PLATE}  ${TC_67.TIME}  ${TC_67.NAME_SERVICE}
 TC_68: Validate Student Have Send Clean The Area Register
-    [Documentation]
+    [Documentation]  This test case Validate sutdent Have Send Clean The Area  Register successfully
     [Tags]  RegisterService
     ${USER_SERVICE}   ${PASS_SERVICE}  ${TC_68.LICENSE_PLATE}  ${TC_68.TIME}  ${TC_68.NAME_SERVICE}
 *** Keywords ***

@@ -1,5 +1,4 @@
 *** Settings ***
-Library    SeleniumLibrary
 Resource    ../../../Resource/commons/init.resource
 *** Keywords ***
 Verify The Manage Serivces Page Should Be Displayed
@@ -8,39 +7,46 @@ Verify The Manage Serivces Page Should Be Displayed
 Input Name Service Wanna Edit
     [Arguments]     ${name_services}
     ${locator}=     Dymanic Xpath  ${name_services}  ${lct_edit_services}
-    RETURN  locator
+    RETURN  ${locator}
 
 Click 'Chỉnh sửa' Then Edit Services
     [Arguments]     ${name_services}
     ${locator}=   Input Name Service Wanna Edit  ${name_services}
     Click Element   ${locator}
+    Sleep    5s
 
 Input The Fields You Wanna To
     [Arguments]   ${name}   ${prices}   ${content}   ${status}
-    IF  not ${name}
+    ${length_name}=  Get Length  ${name}
+    IF  ${length_name} == 0
         RETURN  Next Step
     ELSE
-        ${locator_name}=     Dymanic Xpath  name ${lct_form_edit_serives}
-        Input Text  ${name}  ${locator_name}
+        ${locator_name}=     Dymanic Xpath   name   ${lct_form_edit_serives}
+        Input Text   ${locator_name}   ${name}
     END
-    IF  not ${prices}
+
+    ${length_prcies}=  Get Length  ${prices}
+    IF  ${length_prcies} == 0
         RETURN  Next Step
     ELSE
-        ${locator_prices}=     Dymanic Xpath  price ${lct_form_edit_serives}
-        Input Text  ${prices}  ${locator_prices}
+        ${locator_prices}=     Dymanic Xpath    price     ${lct_form_edit_serives}
+        Input Text   ${locator_prices}  ${prices}
     END
-    IF  not ${content}
+
+    ${length_content}=  Get Length  ${content}
+    IF  ${length_content} == 0
         RETURN  Next Step
     ELSE
         Wait Until Element Is Visible   ${lct_content_form}
-        Input Text  ${content}  ${lct_content_form}
+        Input Text   ${lct_content_form}    ${content}
     END
+
     IF    '${status}' == 'Continue'
-        ${locator_status}=     Dymanic Xpath  true ${lct_status_form}
+        ${locator_status}=     Dymanic Xpath  true  ${lct_status_form}
         Wait Until Element Is Visible   ${locator_status}
         Click Element    ${locator_status}
     ELSE
-        ${locator_status_false}=     Dymanic Xpath  false ${lct_status_form}
+        ${locator_status_false}=     Dymanic Xpath  false   ${lct_status_form}
         Wait Until Element Is Visible   ${locator_status_false}
         Click Element    ${locator_status_false}
     END
@@ -55,15 +61,15 @@ Verify Notification Update Succesfully
      Compare Text   ${locatorTitleMess_1}    Bạn đã cập nhật thành công
 
 Login Into Dormitory Student System Then Check
-        [Arguments]     ${name_service}    ${name_licensePlate}
-        Student Login Into Dormitory System     ${USER_SERVICE}   ${PASS_SERVICE}
+        [Arguments]  ${name_service}    ${name_licensePlate}
+        Student Login Into Dormitory System     ${USERNAME_MANAGE_SERVICES}   ${PASS_MANAGE_SERVICES}
         Verify Home Page Should Be Displayed
         Capture and Save Screenshot
         Navigate To The Info Student Page By Click Nav Link Info Student
         Verify Info Student Page Should Be Displayed
-        Check All Info Sudent With Databse  ${USER_SERVICE}
+        Check All Info Sudent With Databse  ${USERNAME_MANAGE_SERVICES}
         Capture and Save Screenshot
-        Check If The Service Student Wanna Register Has Connect DB Delete   ${USER_SERVICE}  ${name_service}
+        Check If The Service Student Wanna Register Has Connect DB Delete   ${USERNAME_MANAGE_SERVICES}  ${name_service}
         Navigate To The Services Page By Click Nav Link Services
         Verify Services Page Should Be Displayed
         Capture and Save Screenshot

@@ -7,7 +7,7 @@ Test Tags   LV
 *** Test Cases ***
 TC_91: Validate Notification Sudent Have Payment Online Cancel After Input Full Info Card Payment
     [Documentation]
-    [Tags]  Payment_Cancel
+    [Tags]  PaymentCancel
     Given Student Login Into Dormitory System And Check All Information In InForStudent Page        ${USER_PAYMENT}  ${PASS_PAYMENT}
     And Click In 'đây' Then Payment
     And Wait Page Should Be Displayed
@@ -25,7 +25,7 @@ TC_91: Validate Notification Sudent Have Payment Online Cancel After Input Full 
 
 TC_92: Validate Notification Sudent Have Payment Online Cancel Before Input Code OTP
     [Documentation]
-    [Tags]  Payment_Cancel
+    [Tags]  PaymentCancel
     Given Student Login Into Dormitory System And Check All Information In InForStudent Page       ${USER_PAYMENT}  ${PASS_PAYMENT}
     And Click In 'đây' Then Payment
     And Wait Page Should Be Displayed

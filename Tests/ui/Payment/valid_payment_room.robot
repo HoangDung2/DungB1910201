@@ -16,7 +16,7 @@ TC_82: Validate Sudent Have Payment Online And Use Voucher Discount Successfully
     ${USER_PAYMENT}  ${PASS_PAYMENT}  ${TC_82.STATUS}
 TC_101: Validate Noficiton Student Have Paid Online Room
     [Documentation]
-    [Tags]  101
+    [Tags]  Payment
     ${USER_PAID}  ${PASS_PAID}  ${TC_101.STATUS}
 *** Keywords ***
 Validate Sudent Have Payment Online Room Or Payment Use Voucher Discount

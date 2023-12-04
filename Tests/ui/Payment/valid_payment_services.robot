@@ -8,42 +8,42 @@ Test Tags   LV
 *** Test Cases ***
 TC_95: Validate Sudent Have Payments Online Serives 'Gửi xe máy' And Has't Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_95.STATUS}   ${TC_95.NAME_SERVICE}
 TC_96: Validate Sudent Have Payments Online Serives 'Gửi xe máy' And Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_95.STATUS}   ${TC_95.NAME_SERVICE}
 
 TC_97: Validate Sudent Have Payments Online Serives 'Gửi xe đạp' And Has't Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_97.STATUS}   ${TC_97.NAME_SERVICE}
 TC_98: Validate Sudent Have Payments Online Serives 'Gửi xe đạp' And Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_98.STATUS}   ${TC_98.NAME_SERVICE}
 
 TC_99: Validate Sudent Have Payments Online Serives 'Vệ sinh khu vực' And Has't Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_99.STATUS}   ${TC_99.NAME_SERVICE}
 TC_100: Validate Sudent Have Payments Online Serives 'Vệ sinh khu vực' And Use Voucher Discount
     [Documentation]
-    [Tags]  Payment_Service
+    [Tags]  PaymentService
     ${USER_SERVICE}     ${PASS_SERVICE}   ${TC_100.STATUS}   ${TC_100.NAME_SERVICE}
 
 TC_102: Validate Noficiton Student Have Paid Online 'Gửi xe đạp'
     [Documentation]
-    [Tags]  101
+    [Tags]  PaymentService
     ${USER_PAID}     ${PASS_PAID}   ${TC_102.STATUS}   ${TC_102.NAME_SERVICE}
 TC_103: Validate Noficiton Student Have Paid Online 'Gửi xe máy'
     [Documentation]
-    [Tags]  101
+    [Tags]  PaymentService
     ${USER_PAID}     ${PASS_PAID}   ${TC_103.STATUS}   ${TC_103.NAME_SERVICE}
 TC_104: Validate Noficiton Student Have Paid Online 'Vệ sinh khu vực'
     [Documentation]
-    [Tags]  101
+    [Tags]  PaymentService
     ${USER_PAID}     ${PASS_PAID}   ${TC_104.STATUS}   ${TC_104.NAME_SERVICE}
 *** Keywords ***
 Validate Sudent Have Payment Online Services Or Payment Use Voucher Discount

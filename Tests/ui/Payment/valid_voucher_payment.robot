@@ -7,12 +7,12 @@ Test Template   Validate Student Pay Online And Methods Of Using Vouchers
 Test Tags   LV
 *** Test Cases ***
 TC_83: Validate Student Pay Online And Method Click 'Áp dụng' Then Use Voucher
-    [Documentation]
-    [Tags]  Payment_Voucher
+    [Documentation]  This test case validate method pay online by click 'Áp dụng'
+    [Tags]  PaymentVoucher
     ${USER_PAYMENT}  ${PASS_PAYMENT}  ${TC_83.METHOD}
 TC_84: Validate Student Pay Online And Method Input Code Then Use Voucher
-    [Documentation]
-    [Tags]  Payment_Voucher
+    [Documentation]  This test case validate method pay online by input code
+    [Tags]  PaymentVoucher
     ${USER_PAYMENT}  ${PASS_PAYMENT}  ${TC_84.METHOD}
 *** Keywords ***
 Validate Student Pay Online And Methods Of Using Vouchers

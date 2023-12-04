@@ -7,12 +7,14 @@ Test Template   Verify Confirm Response Material From Admin To Student Faily
 Test Tags   LV
 *** Test Cases ***
 TC_130: Validate Contains Confirm Response Material From Admin To Student Curent Date
-       [Documentation]
-       [Tags]  12345
+        [Documentation]  This test case Validate error notification response material from admin to student
+       ...               if return notification faily
+       [Tags]  ResponseMaterialFaily
        ${USERNAME_MATERIAL}   ${TC_130.DATE}   ${TC_130.MESS}
 TC_131: Validate Contains Confirm Response Material From Admin To Student Yesterday
-       [Documentation]
-       [Tags]  12345
+       [Documentation]  This test case Validate error notification response material from admin to student
+       ...               if return notification faily
+       [Tags]  ResponseMaterialFaily
        ${USERNAME_MATERIAL}    ${TC_131.DATE}   ${TC_131.MESS}
 *** Keywords ***
 Verify Confirm Response Material From Admin To Student Faily

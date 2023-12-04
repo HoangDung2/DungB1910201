@@ -93,7 +93,7 @@ Verify Notification Register Faily Should Be Displayed
     ELSE
          Pass Execution    Test Case Fail
     END
-    
+
     
 Click Confirm Register
    Sleep    0.5s
