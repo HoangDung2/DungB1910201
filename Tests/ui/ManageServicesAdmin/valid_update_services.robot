@@ -21,6 +21,11 @@ TC_134: Validate Update Clean Register Successfully And Login Dormitory Student 
     ...                 if the parking service is working according to ${STATUS}
     [Tags]  ServicesClean
     ${TC_134.TITLE}   ${TC_134.PRICES}   ${TC_134.CONTENT}   ${TC_134.STATUS}   ${TC_134.NAME_SERVICES}   ${TC_134.LICENSE_PLATE}
+TC_140: Validate Update Content Any Servies Successfully And Login Dormitory Student System Then Check
+    [Documentation]     This test case Update Clean Bicycles Register Successfully and heck
+    ...                 if the parking service is working according to ${STATUS}
+    [Tags]  140
+    ${TC_140.TITLE}   ${TC_140.PRICES}   ${TC_140.CONTENT}   ${TC_140.STATUS}   ${TC_140.NAME_SERVICES}   ${TC_140.LICENSE_PLATE}
 *** Keywords ***
 Validate Contains Update Services From Admin
     [Arguments]  ${tilte}  ${prices}  ${content}  ${status}  ${name_services}  ${name_licensePlate}

@@ -54,6 +54,9 @@ Resource    ../../Resource/modules/ResponseMaterialAdmin/res_material_locators.r
 #----ManageServices----
 Resource    ../../Resource/modules/ManageServicesAdmin/manage_services_keywords.robot
 Resource    ../../Resource/modules/ManageServicesAdmin/manage_services_locators.robot
+#----ManaRoom----
+Resource    ../../Resource/modules/ManageRoom/manage_room.keywords.robot
+Resource    ../../Resource/modules/ManageRoom/manage_room.locators.robot
 #----Data----
 Variables    ../../Data/data_login.yml
 #Variables    ../setting.yml
@@ -65,6 +68,7 @@ Variables    ../../Data/data_billroom.yml
 Variables   ../../Data/data_bookingroom.yml
 Variables   ../../Data/data_response_material.yml
 Variables   ../../Data/data_manage_services.yml
+Variables   ../../Data/data_manage_room.yml
 #----Environment----
 Resource    ../../Tests/Environment_Test.robot
 #----Drivers----

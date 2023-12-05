@@ -172,6 +172,31 @@ Scroll From Top to Bottom of Page And Capture Page Screenshot
     Sleep    1s
     Capture and Save Screenshot
 
+Scroll From Top to Bottom of Page And Capture Page Screenshot Room
+    ${scroll_height}=    Execute JavaScript    return Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )
+    ${part_height}=    Evaluate    int(${scroll_height} / 3)
+    # First Scroll
+    Execute JavaScript    window.scrollTo(0, ${part_height})
+    Capture and Save Screenshot
+    Sleep    1s
+    # Second Scroll
+    Execute JavaScript    window.scrollTo(0, ${part_height} * 3)
+    Capture and Save Screenshot
+    Sleep    1s
+    # Third Scroll
+    Execute JavaScript    window.scrollTo(0, ${part_height} * 6)
+    Capture and Save Screenshot
+    Sleep    1s
+    # Fourth Scroll
+    Execute JavaScript    window.scrollTo(0, ${part_height} * 8)
+    Capture and Save Screenshot
+    Sleep    1s
+    # Fifth Scroll
+    Execute JavaScript    window.scrollTo(0, ${part_height} * 10)
+    Sleep    1s
+    Capture and Save Screenshot
+
+
 Save File Image Prev And Clear File Current Test Suite
 #    Save File Image If Exits Test Suite
     Clear Image In File If Exits Test Suite
@@ -183,9 +208,9 @@ Save File Image Prev And Clear File Current Test Alls
     Clear Image In File If Exits Test All
 
 Close Browser Set Up Time
-    Run Keyword And Ignore Error    Stop Video Recording    alias=None
     Run Keyword And Ignore Error    Update Set Up Data
     Run Keyword And Ignore Error    Close Browser
+    Run Keyword And Ignore Error    Stop Video Recording    alias=None
 
 Close Browser Set Up Time Payment
     Run Keyword And Ignore Error    Update Set Up Data

@@ -2,9 +2,7 @@
 Resource        ../../Resource/commons/init.resource
 Test Tags   Login123
 Test Teardown  Close Browser
-#Library     SeleniumLibrary
-#Library    DateTime
-#Library    SeleniumLibrary
+
 *** Variables ***
 ${a}    	B1910201
 ${name}     Gửi xe máy
@@ -20,19 +18,13 @@ TC_1:ABC
 #    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}
 #    Log To Console    ${list}
 #    Update Time From Dabata
+#     Update Set Up Data
+     Read Email Bill
+#     Delete Room Type   AB1
 #    Delete Services And Reload Page     ${USERNAME}      ${name}
 #    TEST123     ${b}
-     Update Time From Dabata Registration Material
+#     Update Time From Dabata Registration Material
 #    Update Time Before Registration From Databa
 #    Update Time After Registration From Databa
-#Scroll From Top to Bottom of Page And Capture Page Screenshot
-#    Open Browser    https://example.com    chrome
-#    # Your test steps here
-#    Click Element   //button[@id='your-button-id']   # Example action
-#
-#    # Use Execute JavaScript to scroll to the bottom of the page
-#    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
-#
-#    Capture Page Screenshot    full=True   # Capture the screenshot after scrolling
-#    Close Browser
+
 

@@ -21,6 +21,11 @@ TC_128: Validate Contains Unfill Data Water And Fill Ellectric
     ...              and verify notification will be displayed username or password fail
     [Tags]  UpdateBill_Faily
     ${USER_AD}   ${PASSWORD_AD}   ${TC_128.ROOMTYPE}   ${TC_128.ROOM}   ${TC_128.UPDATE_WATER}    ${TC_128.UPDATE_ELECTRIC}
+TC_157: Validate Fill Data Water And Electric A Negative Integer
+    [Documentation]  This test case verifes then a student login failly
+    ...              and verify notification will be displayed username or password fail
+    [Tags]  157
+    ${USER_AD}   ${PASSWORD_AD}   ${TC_157.ROOMTYPE}   ${TC_157.ROOM}   ${TC_157.UPDATE_WATER}    ${TC_157.UPDATE_ELECTRIC}
 *** Keywords ***
 Validate Update Data Of Bill Room Fail
     [Arguments]  ${USER_AD}  ${PASSWORD_AD}  ${ROOTYPE}  ${ROOM}   ${UPDATE_WATER}   ${UPDATE_ELECTRIC}

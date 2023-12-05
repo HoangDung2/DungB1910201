@@ -5,26 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56ababf-f766-4fbc-b54f-7b9941164ccb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/data_manage_room.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Img/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Img/old_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/modules/ManageRoom/manage_room.keywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/modules/ManageRoom/manage_room.locators.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/ManageRoom/invalid_add_room.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/ManageRoom/valid_add_room.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/ManageRoom/valid_edit_status_room.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/valid_search_student.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benchmark_1701797770.5059426.webm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/data_billroom.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_billroom.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/data_bookingroom.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_bookingroom.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/data_manage_services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_manage_services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/elementkeywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/elementkeywords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/emailkeywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/AutoLibrary/keyword/emailkeywords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/common_keyword.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/commons/init.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/commons/init.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/ConnectDB/connect_database.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/ConnectDB/connect_database.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/Home_Admin/home_admin_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home_Admin/home_admin_keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/modules/Home_Admin/home_admin_locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/Home_Admin/home_admin_locators.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/modules/ManageServicesAdmin/manage_services_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/ManageServicesAdmin/manage_services_keywords.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/modules/ManageServicesAdmin/manage_services_locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/ManageServicesAdmin/manage_services_locators.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/modules/RegisterServices/services_keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/modules/RegisterServices/services_keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/valida_update_services.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/PasswordChangeAdmin/valid_pwdchange_admin.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/PasswordChangeAdmin/valid_pwdchange_admin.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Payment/valid_cancel_payment.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_cancel_payment.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment_room.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment_room.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment_services.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_payment_services.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/Payment/valid_voucher_payment.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/Payment/valid_voucher_payment.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RegisterServices/invalid_services_timeup.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RegisterServices/invalid_services_timeup.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RegisterServices/valid_services.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RegisterServices/valid_services.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/ResponseMaterialAdmin/invalid_respone_material.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/ResponseMaterialAdmin/invalid_respone_material.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/ResponseMaterialAdmin/valid_respone_material.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/ResponseMaterialAdmin/valid_respone_material.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_airCond.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_airCond.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_ariAndCook.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_ariAndCook.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_cooking.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valid_roomtype_cooking.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ui/RoomType/valida_roomtype_allNumber.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/RoomType/valida_roomtype_allNumber.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/BillRoom/invalid_bill.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/BillRoom/invalid_bill.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/BookingRoom/valid_bookingRoom.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/BookingRoom/valid_bookingRoom.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/invalid_update_services.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/invalid_update_services.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/valid_update_services.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/ManageServicesAdmin/valid_update_services.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ui/text.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ui/text.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

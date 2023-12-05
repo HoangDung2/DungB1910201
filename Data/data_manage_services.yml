@@ -12,7 +12,7 @@ TC_132:
 TC_133:
   TITLE: "Gửi xe máy"
   PRICES: "50000"
-  CONTENT: ""
+  CONTENT: "An Toàn, Tiết Kiệm"
   STATUS: "Stop"
   NAME_SERVICES: "Gửi xe máy"
   LICENSE_PLATE: "83P157895"
@@ -24,3 +24,104 @@ TC_134:
   STATUS: "Stop"
   NAME_SERVICES: "Vệ sinh khu vực"
   LICENSE_PLATE: "No"
+
+TC_135:
+  TITLE: " "
+  PRICES: "0"
+  CONTENT: " "
+  STATUS: "Stop"
+  NAME_SERVICES: "Gửi xe đạp"
+  MESS: "Vui lòng nhập đầy đủ thông tin"
+
+TC_136:
+  TITLE: " "
+  PRICES: "0"
+  CONTENT: " "
+  STATUS: "Stop"
+  NAME_SERVICES: "Gửi xe máy"
+  MESS: "Vui lòng nhập đầy đủ thông tin"
+
+TC_137:
+  TITLE: " "
+  PRICES: "0"
+  CONTENT: " "
+  STATUS: "Stop"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  MESS: "Vui lòng nhập đầy đủ thông tin"
+
+TC_138:
+  TITLE: "Vệ sinh Khu Vực"
+  PRICES: "-1000"
+  CONTENT: "Mỗi 2 tuần sẽ có người dọn dẹp"
+  STATUS: "Continue"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  MESS: "Vui lòng nhập giá lớn hơn 0 và chia hết cho 1000"
+
+TC_139:
+  TITLE: "Vệ sinh khu vực"
+  PRICES: "1000000000000000000000000"
+  CONTENT: "Mỗi 2 tuần sẽ có người dọn dẹp"
+  STATUS: "Continue"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  MESS: "Vui lòng nhập giá lớn hơn 0 và chia hết cho 1000"
+
+TC_140:
+  TITLE: "Vệ sinh khu vực"
+  PRICES: "60000"
+  CONTENT: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  STATUS: "Continue"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  LICENSE_PLATE: "No"
+
+TC_141:
+  TITLE: "Vệ sinh khu vực"
+  PRICES: "999"
+  CONTENT: "Mỗi 2 tuần sẽ có người dọn dẹp"
+  STATUS: "Continue"
+  NAME_SERVICES: "Vệ sinh khu vực"
+  MESS: "Vui lòng nhập giá lớn hơn 0 và chia hết cho 1000"
+
+TC_142:
+  METHOD: ""
+  MSSV: ""
+  SEMESTER: "1"
+  SCHOOLYEAR: "2023-2024"
+  MAJOR: "IT"
+  NUMBERSTUDENT: "B19"
+  GENDER: "Nam"
+
+TC_143:
+  METHOD: ""
+  MSSV: ""
+  SEMESTER: "1"
+  SCHOOLYEAR: "2023-2024"
+  MAJOR: "No"
+  NUMBERSTUDENT: "B19"
+  GENDER: "Nữ"
+
+TC_144:
+  METHOD: ""
+  MSSV: ""
+  SEMESTER: "1"
+  SCHOOLYEAR: "2023-2024"
+  MAJOR: "IT"
+  NUMBERSTUDENT: "No"
+  GENDER: "Nam"
+
+TC_145:
+  METHOD: ""
+  MSSV: ""
+  SEMESTER: "1"
+  SCHOOLYEAR: "2023-2024"
+  MAJOR: "IT"
+  NUMBERSTUDENT: "B19"
+  GENDER: "No"
+
+TC_148:
+  METHOD: "InputMssv"
+  MSSV: "B1910201"
+  SEMESTER: "1"
+  SCHOOLYEAR: "2023-2024"
+  MAJOR: "IT"
+  NUMBERSTUDENT: "B19"
+  GENDER: "No"

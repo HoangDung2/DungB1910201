@@ -1,0 +1,103 @@
+TC_146:
+  ROOMTYPE: "AB1"
+  NUMBER: "4"
+  IMG: "Yes"
+  PRICE: 200000
+  ISCOOKED: "True"
+  ISAIRCONDITIONED: "False"
+
+TC_147:
+  ROOMTYPE: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  NUMBER: "4"
+  IMG: "Yes"
+  PRICE: 20000000
+  ISCOOKED: "True"
+  ISAIRCONDITIONED: "False"
+
+TC_149:
+  ROOMTYPE: ""
+  NUMBER: "No"
+  PRICE: 0
+  IMG: "No"
+  ISCOOKED : "No"
+  ISAIRCONDITIONED: "No"
+  MESS_1: "Có lỗi !"
+  MESS_2: "Vui lòng nhập đầy đủ thông tin"
+
+TC_150:
+  ROOMTYPE: "A2"
+  NUMBER: "4"
+  PRICE: 200000
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Loại phòng A2 đã tồn tại"
+
+TC_151:
+  ROOMTYPE: "AB1"
+  NUMBER: "4"
+  PRICE: 200000
+  IMG: "Fail"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: ""
+
+TC_152:
+  ROOMTYPE: "AB1"
+  NUMBER: "-1"
+  PRICE: 200000
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Vui lòng nhập số lượng từ 2 đến 8"
+
+TC_153:
+  ROOMTYPE: "AB1"
+  NUMBER: "4"
+  PRICE: -1
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Vui lòng nhập giá phòng lớn hơn 0 và chia hết cho 1000"
+
+TC_154:
+  ROOMTYPE: "AB1"
+  NUMBER: "9"
+  PRICE: 150000
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Vui lòng nhập số lượng từ 2 đến 8"
+
+TC_155:
+  ROOMTYPE: "AB1"
+  NUMBER: "1"
+  PRICE: 150000
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Vui lòng nhập số lượng từ 2 đến 8"
+
+TC_156:
+  ROOMTYPE: "AB1"
+  NUMBER: "2"
+  PRICE: 150
+  IMG: "Yes"
+  ISCOOKED : "False"
+  ISAIRCONDITIONED: "True"
+  MESS_1: "Thất bại"
+  MESS_2: "Vui lòng nhập giá phòng lớn hơn 0 và chia hết cho 1000"
+
+TC_158:
+  ROOMTYPE: "A1"
+  STATUS: "Không"
+
+TC_159:
+  ROOMTYPE: "A5"
+  NUMBERROOM: "1"

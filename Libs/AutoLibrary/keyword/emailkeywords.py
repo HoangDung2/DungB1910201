@@ -133,3 +133,41 @@ class EmailKeywords(LibraryComponent):
                 text_with_newlines = text_1.replace('. ', '.\n')
                 print(text_with_newlines)
         mail.logout()
+    @keyword
+    def read_email_bill(self):
+        # Kết nối đến máy chủ IMAP
+        email_user = 'dungb1910201@student.ctu.edu.vn'
+        email_pass = 'ytpicutullyhihtb'
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        # Đăng nhập vào tài khoản email
+        mail.login(email_user, email_pass)
+        # Chọn hộp thư
+        mail.select("INBOX")
+        # Tìm và lấy danh sách ID của các email trong hộp thư
+        _, selected_mails = mail.search(None, f'FROM "kytucxa190@gmail.com"')
+        # print("Total Messages from kytucxa190@gmail.com:", len(selected_mails[0].split()))
+        latest_email_id = selected_mails[0].split()[-1]
+        # for num in selected_mails[0].split():
+        #     print(num)
+        _, data = mail.fetch(latest_email_id, '(RFC822)')
+        _, bytes_data = data[0]
+        email_message = email.message_from_bytes(bytes_data)
+        print("\n===========================================")
+        # access data
+        print("To:", email_message["to"])
+        print("From: ", email_message["from"])
+        print("Date: ", email_message["date"])
+        decoded_subject = " ".join(
+            [text.decode(encoding or 'utf-8') for text, encoding in decode_header(email_message["subject"])])
+        print("Subject: ", decoded_subject)
+        for part in email_message.walk():
+            if part.get_content_type() == "text/plain" or part.get_content_type() == "text/html":
+                message = part.get_payload(decode=True)
+                soup = BeautifulSoup(message.decode('utf-8'), 'html.parser')
+                # print(soup)
+                parent_div = soup.find('div', class_='email-container')
+                if parent_div:
+                    full_text = parent_div.get_text(separator='\n', strip=True)
+                    print(full_text)
+                else:
+                    print("Parent div not found.")

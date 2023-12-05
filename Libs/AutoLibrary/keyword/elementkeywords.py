@@ -32,6 +32,21 @@ class  ElementKeywords(LibraryComponent):
         # locator_with_info = temp.format(locator)
         self.selenium_waiting.is_visible(xpath)
         return xpath
+    @keyword
+    def dymanic_xpath_three(self, info1,info2, info3, locator):
+        """
+        :param info1:
+        :param info2:
+        :param locator:
+        :return:
+        """
+
+        xpath=locator.format(info1, info2, info3)
+        # temp = "{} {} {}".format(info1, info2, info3)
+        #
+        # locator_with_info = temp.format(locator)
+        self.selenium_waiting.is_visible(xpath)
+        return xpath
 
     @keyword
     def compare_text(self,locator,string):

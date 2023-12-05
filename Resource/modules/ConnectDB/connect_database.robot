@@ -241,6 +241,12 @@ Delete Services And Reload Page
         Wait Notification Should Be Displayed
     END
 
+Delete Room Type
+    [Arguments]     ${name_roomtye}
+    Connect Database Xampp
+    Delete All Rows From Table   image WHERE image.name = 'image.png'
+    Delete All Rows From Table   room_type WHERE room_type.name='${name_roomtye}'
+    Disconnect From Database
 
 #----- Prepare Case Payment Happycase Tear Down
 Update Status Payment In Infor Student

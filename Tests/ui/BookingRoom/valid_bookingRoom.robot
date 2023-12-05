@@ -10,7 +10,7 @@ ${name_roomtype}    A2
 *** Test Cases ***
 TC_25: Validate Student Have Booking Room In RoomType The Select Any
         [Documentation]     This test case validate student booking  any room if students are eligible to register for a room
-        [Tags]  BookingRoom
+        [Tags]  BookingRoomAirCond
         Given Student Login Into Dormitory System     ${USERNAME_BOOKING}   ${PASS_BOOKING}
         Then Verify Home Page Should Be Displayed
         And Capture and Save Screenshot
