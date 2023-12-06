@@ -8,3 +8,6 @@ ${lct_submit_add_room}   xpath=//form//div[@class="form-row"]//input[@type="subm
 ${lct_tilt_detail_room}  xpath=//div[@class="container-fluid"]//div//h6
 ${lct_status_detail_room}   xpath=//table//tbody//td[contains(text(),"{}")]//following-sibling::td[6]
 ${lct_choose_status_room}   xpath=//table//tbody//td[contains(text(),"{}")]//following-sibling::td[6]//select//option[@value="{}"]
+
+${lct_edit_bill_detail_room}    xpath=//table//tbody//td[contains(text(),"{}")]//following-sibling::td[7]
+${lct_input_form_bill_detail}   xpath=//table//tbody//td[1][text()="{}"]//following-sibling::td[4]//div//a[@class="text-secondary"]

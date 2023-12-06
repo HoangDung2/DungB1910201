@@ -46,3 +46,9 @@ Navigate To The Detail Room Type Page
     Click Element    ${nav_dash_manage}
     Wait Until Element Is Visible   ${nav_detail_room}
     Click Element    ${nav_detail_room}
+
+Navigate To The Manage Student Page
+    Wait Until Element Is Visible   ${nav_dash_manage}
+    Click Element    ${nav_dash_manage}
+    Wait Until Element Is Visible   ${nav_manage_student}
+    Click Element    ${nav_manage_student}

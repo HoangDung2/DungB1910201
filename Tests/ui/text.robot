@@ -17,10 +17,11 @@ TC_1:ABC
 #    Update Time From Dabata Check-In Period Overlaps With Stay Period
 #    ${list}=  Get Row And Room In Infostudent   ${USER_SERVICE}
 #    Log To Console    ${list}
-#    Update Time From Dabata
+    Update Time From Dabata
 #     Update Set Up Data
-     Read Email Bill
+#     Read Email Bill
 #     Delete Room Type   AB1
+#      Delete Bill Room  A5
 #    Delete Services And Reload Page     ${USERNAME}      ${name}
 #    TEST123     ${b}
 #     Update Time From Dabata Registration Material

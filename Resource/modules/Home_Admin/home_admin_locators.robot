@@ -12,6 +12,7 @@ ${nav_manage_serives}   css=li[class="nav-item"]>div[id="collapsePages"]>div>a[r
 ${nav_manageRegis_serives}  css=li[class="nav-item"]>div[id="collapsePages"]>div>a[routerlink="/register-service"]
 ${nav_add_room}     css=li[class="nav-item"]>div[id="collapsePages"]>div>a[routerlink="/add-room-type"]
 ${nav_detail_room}  css=li[class="nav-item"]>div[id="collapsePages"]>div>a[routerlink="/room-type"]
+${nav_manage_student}   css=li[class="nav-item"]>div[id="collapsePages"]>div>a[routerlink="/contract"]
 
 #------MESS
 ${mess_tiltle}   Danh sách hóa đơn điện nước

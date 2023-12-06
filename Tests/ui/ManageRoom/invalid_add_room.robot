@@ -37,7 +37,7 @@ Validate Add Room Type Faily
     Given Admin Login Into Dormitory Manage System  ${USER_AD}  ${PASSWORD_AD}
     And Capture and Save Screenshot
     When Navigate To The Add Room Type Page
-    And Verify The Manage The Add Room Type Page Should Be   Displayed
+    And Verify The Manage The Add Room Type Page Should Be Displayed
     And Capture and Save Screenshot
     And Input Fields To Add Room   ${ROOMTYPE}   ${NUMBER}   ${PRICE}   ${IMG}  ${ISCOOKED}  ${ISAIRCONDITIONED}
     And Capture and Save Screenshot

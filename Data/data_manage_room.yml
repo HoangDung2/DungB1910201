@@ -101,3 +101,42 @@ TC_158:
 TC_159:
   ROOMTYPE: "A5"
   NUMBERROOM: "1"
+  WATER: "10"
+  ELECTRIC: "10"
+
+TC_160:
+  USER: "B1810242"
+  PASS: "123"
+  ROOMTYPE: "A3"
+  NUMBER: "2"
+  WATER: "20"
+  ELECTRIC: "20"
+  MESS: "Chỉ được nhập duy nhất một hóa đơn cho mỗi phòng mỗi tháng."
+# B1810242 phải đk phòng và có bill
+TC_161:
+  USER: "B1810242"
+  PASS: "123"
+  ROOMTYPE: "A3"
+  NUMBER: "2"
+  WATER: "10"
+  ELECTRIC: "10"
+  MESS: "Chỉ được nhập duy nhất một hóa đơn cho mỗi phòng mỗi tháng."
+
+TC_162:
+  USER: "B1810242"
+  PASS: "123"
+  ROOMTYPE: "A3"
+  NUMBER: "2"
+  WATER: "-1"
+  ELECTRIC: "-1"
+  MESS: "Vui lòng nhập chỉ số điện cuối > 0"
+
+TC_163:
+  USER: "B1810242"
+  PASS: "123"
+  ROOMTYPE: "A3"
+  NUMBER: "2"
+  WATER: "0"
+  ELECTRIC: "0"
+  MESS: "Vui lòng nhập đầy đủ thông tin"
+

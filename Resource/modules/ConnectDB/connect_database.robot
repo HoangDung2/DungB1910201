@@ -248,6 +248,17 @@ Delete Room Type
     Delete All Rows From Table   room_type WHERE room_type.name='${name_roomtye}'
     Disconnect From Database
 
+Delete Bill Room
+    [Arguments]     ${name_roomtye}
+    Connect Database Xampp
+    Delete All Rows From Table   bill WHERE bill.room_type='${name_roomtye}'
+    Disconnect From Database
+Update Status Room
+    [Arguments]     ${name_roomtye}
+    Connect Database Xampp
+    Update Time From Table   room_type SET room_type.enable='1' WHERE room_type.name='${name_roomtye}'
+    Disconnect From Database
+
 #----- Prepare Case Payment Happycase Tear Down
 Update Status Payment In Infor Student
     [Arguments]     ${MSSV}
